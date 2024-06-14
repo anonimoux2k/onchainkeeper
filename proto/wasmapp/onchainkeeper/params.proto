@@ -1,0 +1,17 @@
+syntax = "proto3";
+package wasmapp.onchainkeeper;
+
+import "amino/amino.proto";
+import "gogoproto/gogo.proto";
+
+option go_package = "wasmapp/x/onchainkeeper/types";
+
+// Params defines the parameters for the module.
+message Params {
+  option (amino.name) = "wasmapp/x/onchainkeeper/Params";
+  // Admin address that can accept a pending registered cron contract or
+  // reactivate a deactived cron contract
+  string admin_address = 1;
+  // The maximum amount of gas that can be used by a cron contract
+  uint64 cron_gas_limit = 2;
+}

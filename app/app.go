@@ -78,6 +78,7 @@ import (
 	wasmkeeper "github.com/CosmWasm/wasmd/x/wasm/keeper"
 	tmproto "github.com/cometbft/cometbft/proto/tendermint/types"
 
+	onchainkeepermodulekeeper "wasmapp/x/onchainkeeper/keeper"
 	// this line is used by starport scaffolding # stargate/app/moduleImport
 
 	"wasmapp/docs"
@@ -146,6 +147,7 @@ type App struct {
 	WasmKeeper       wasmkeeper.Keeper
 	ScopedWasmKeeper capabilitykeeper.ScopedKeeper
 
+	OnchainkeeperKeeper onchainkeepermodulekeeper.Keeper
 	// this line is used by starport scaffolding # stargate/app/keeperDeclaration
 
 	// simulation manager
@@ -284,6 +286,7 @@ func New(
 		&app.NFTKeeper,
 		&app.GroupKeeper,
 		&app.CircuitBreakerKeeper,
+		&app.OnchainkeeperKeeper,
 		// this line is used by starport scaffolding # stargate/app/keeperDefinition
 	); err != nil {
 		panic(err)

@@ -1,0 +1,54 @@
+syntax = "proto3";
+package wasmapp.onchainkeeper;
+
+import "amino/amino.proto";
+import "gogoproto/gogo.proto";
+import "google/api/annotations.proto";
+import "cosmos/base/query/v1beta1/pagination.proto";
+import "wasmapp/onchainkeeper/params.proto";
+import "wasmapp/onchainkeeper/cron.proto";
+
+option go_package = "wasmapp/x/onchainkeeper/types";
+
+// Query defines the gRPC querier service.
+service Query {
+  // Parameters queries the parameters of the module.
+  rpc Params(QueryParamsRequest) returns (QueryParamsResponse) {
+    option (google.api.http).get = "/wasmapp/onchainkeeper/params";
+  }
+  rpc CronContracts(QueryCronContracts) returns (QueryCronContractsResponse) {
+    option (google.api.http).get = "/wasmapp/onchainkeeper/crons";
+  }
+  rpc CronContract(QueryCronContract) returns (QueryCronContractResponse) {
+    option (google.api.http).get = "/wasmapp/onchainkeeper/crons/{contract_address}";
+  }
+}
+
+// QueryParamsRequest is request type for the Query/Params RPC method.
+message QueryParamsRequest {}
+
+// QueryParamsResponse is response type for the Query/Params RPC method.
+message QueryParamsResponse {
+  // params holds all the parameters of this module.
+  Params params = 1 [
+    (gogoproto.nullable) = false,
+    (amino.dont_omitempty) = true
+  ];
+}
+
+message QueryCronContracts {
+  cosmos.base.query.v1beta1.PageRequest pagination = 1;
+}
+
+message QueryCronContractsResponse {
+  repeated CronContract cron_contracts = 1 [(gogoproto.nullable) = false];
+  cosmos.base.query.v1beta1.PageResponse pagination = 2;
+}
+
+message QueryCronContract {
+  string contract_address = 1;
+}
+
+message QueryCronContractResponse {
+  CronContract cron_contract = 1 [(gogoproto.nullable) = false];
+}

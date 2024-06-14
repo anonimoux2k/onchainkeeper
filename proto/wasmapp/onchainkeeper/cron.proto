@@ -1,0 +1,11 @@
+syntax = "proto3";
+package wasmapp.onchainkeeper;
+
+option go_package = "wasmapp/x/onchainkeeper/types";
+
+message CronContract {
+    // The address of the cron contract.
+    string contract_address = 1;
+    // The status of the cron contract.
+    bool is_actived = 2;
+}
