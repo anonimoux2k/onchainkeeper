@@ -4,6 +4,10 @@ import (
 	"fmt"
 	"strings"
 
+	onchainkeeperkeeper "wasmapp/x/onchainkeeper/keeper"
+	onchainkeepermodule "wasmapp/x/onchainkeeper/module"
+	onchainkeepertypes "wasmapp/x/onchainkeeper/types"
+
 	storetypes "cosmossdk.io/store/types"
 	"github.com/CosmWasm/wasmd/x/wasm"
 	wasmkeeper "github.com/CosmWasm/wasmd/x/wasm/keeper"
@@ -45,9 +49,12 @@ func (app *App) registerWasmModules(
 	// set up non depinject support modules store keys
 	if err := app.RegisterStores(
 		storetypes.NewKVStoreKey(wasmtypes.StoreKey),
+		storetypes.NewKVStoreKey(onchainkeepertypes.StoreKey),
 	); err != nil {
 		panic(err)
 	}
+
+	app.ParamsKeeper.Subspace(onchainkeepertypes.ModuleName).WithKeyTable(onchainkeepertypes.ParamKeyTable())
 
 	scopedWasmKeeper := app.CapabilityKeeper.ScopeToModule(wasmtypes.ModuleName)
 
@@ -80,7 +87,18 @@ func (app *App) registerWasmModules(
 		wasmOpts...,
 	)
 
-	// register IBC modules
+	app.ContractKeeper = wasmkeeper.NewDefaultPermissionKeeper(&app.WasmKeeper)
+
+	app.OnchainkeeperKeeper = onchainkeeperkeeper.NewKeeper(
+		app.AppCodec(),
+		app.GetKey(onchainkeepertypes.StoreKey),
+		app.Logger(),
+		app.WasmKeeper,
+		app.ContractKeeper,
+		authtypes.NewModuleAddress(govtypes.ModuleName).String(),
+	)
+
+	// register Wasm modules
 	if err := app.RegisterModules(
 		wasm.NewAppModule(
 			app.AppCodec(),
@@ -90,6 +108,15 @@ func (app *App) registerWasmModules(
 			app.BankKeeper,
 			app.MsgServiceRouter(),
 			app.GetSubspace(wasmtypes.ModuleName),
+		)); err != nil {
+		return nil, err
+	}
+
+	// register Onchainkeeper module
+	if err := app.RegisterModules(
+		onchainkeepermodule.NewAppModule(
+			app.AppCodec(),
+			app.OnchainkeeperKeeper,
 		)); err != nil {
 		return nil, err
 	}

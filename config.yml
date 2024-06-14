@@ -18,6 +18,12 @@ faucet:
   coins:
   - 5token
   - 100000stake
+genesis:
+  app_state:
+    onchainkeeper:
+      "params":
+        "admin_address": "cosmos105khsf5w9x08alwcqx055nhag2xm7dcahxegda"
+        "cron_gas_limit": 100000
 validators:
 - name: alice
   bonded: 100000000stake

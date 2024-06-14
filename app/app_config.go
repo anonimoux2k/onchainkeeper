@@ -3,9 +3,8 @@ package app
 import (
 	"time"
 
-	onchainkeepermodulev1 "wasmapp/api/wasmapp/onchainkeeper/module"
 	_ "wasmapp/x/onchainkeeper/module" // import for side-effects
-	onchainkeepermoduletypes "wasmapp/x/onchainkeeper/types"
+	onchainkeepertypes "wasmapp/x/onchainkeeper/types"
 
 	runtimev1alpha1 "cosmossdk.io/api/cosmos/app/runtime/v1alpha1"
 	appv1alpha1 "cosmossdk.io/api/cosmos/app/v1alpha1"
@@ -96,7 +95,7 @@ var (
 		circuittypes.ModuleName,
 		// chain modules
 		wasmtypes.ModuleName,
-		onchainkeepermoduletypes.ModuleName,
+		onchainkeepertypes.ModuleName,
 		// this line is used by starport scaffolding # stargate/app/initGenesis
 	}
 
@@ -122,7 +121,7 @@ var (
 		ibcfeetypes.ModuleName,
 		// chain modules
 		wasmtypes.ModuleName,
-		onchainkeepermoduletypes.ModuleName,
+		onchainkeepertypes.ModuleName,
 		// this line is used by starport scaffolding # stargate/app/beginBlockers
 	}
 
@@ -142,7 +141,7 @@ var (
 		ibcfeetypes.ModuleName,
 		// chain modules
 		wasmtypes.ModuleName,
-		onchainkeepermoduletypes.ModuleName,
+		onchainkeepertypes.ModuleName,
 		// this line is used by starport scaffolding # stargate/app/endBlockers
 	}
 
@@ -164,6 +163,7 @@ var (
 		{Account: ibcfeetypes.ModuleName},
 		{Account: icatypes.ModuleName},
 		{Account: wasmtypes.ModuleName, Permissions: []string{authtypes.Burner}},
+		{Account: onchainkeepertypes.ModuleName},
 		// this line is used by starport scaffolding # stargate/app/maccPerms
 	}
 
@@ -298,10 +298,6 @@ var (
 			{
 				Name:   circuittypes.ModuleName,
 				Config: appconfig.WrapAny(&circuitmodulev1.Module{}),
-			},
-			{
-				Name:   onchainkeepermoduletypes.ModuleName,
-				Config: appconfig.WrapAny(&onchainkeepermodulev1.Module{}),
 			},
 			// this line is used by starport scaffolding # stargate/app/moduleConfig
 		},

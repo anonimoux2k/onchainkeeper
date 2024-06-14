@@ -9,7 +9,7 @@ const (
 
 	RouteKey = ModuleName
 
-	QuerierKey = ModuleName
+	QuerierRoute = ModuleName
 
 	// MemStoreKey defines the in-memory store key
 	MemStoreKey = "mem_onchainkeeper"
