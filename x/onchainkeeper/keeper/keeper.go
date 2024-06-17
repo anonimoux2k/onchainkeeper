@@ -89,3 +89,11 @@ func (k Keeper) SetParams(ctx sdk.Context, params types.Params) error {
 func (k Keeper) GetCdc() codec.BinaryCodec {
 	return k.cdc
 }
+
+func (k Keeper) GetContractKeeper() wasmtypes.ContractOpsKeeper {
+	return k.contractKeeper
+}
+
+func (k Keeper) GetStore() storetypes.StoreKey {
+	return k.storeKey
+}

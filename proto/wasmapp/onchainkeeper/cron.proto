@@ -7,5 +7,5 @@ message CronContract {
     // The address of the cron contract.
     string contract_address = 1;
     // The status of the cron contract.
-    bool is_actived = 2;
+    bool is_activated = 2;
 }
