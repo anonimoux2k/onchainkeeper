@@ -114,7 +114,7 @@ func (k Keeper) GetPaginatedCronContracts(ctx sdk.Context, pag *query.PageReques
 }
 
 // Register a cron contract in the KV store.
-func (k Keeper) RegisterCronContract(ctx sdk.Context, senderAddress string, cronContractAddress string) error {
+func (k Keeper) RegisterContract(ctx sdk.Context, senderAddress string, cronContractAddress string) error {
 	if k.IsCronContract(ctx, cronContractAddress) {
 		return types.ErrContractAlreadyRegistered
 	}
@@ -130,7 +130,7 @@ func (k Keeper) RegisterCronContract(ctx sdk.Context, senderAddress string, cron
 }
 
 // Unregister a cron contract from the KV store.
-func (k Keeper) UnregisterCronContract(ctx sdk.Context, senderAddress string, cronContractAddress string) error {
+func (k Keeper) UnregisterContract(ctx sdk.Context, senderAddress string, cronContractAddress string) error {
 	if !k.IsCronContract(ctx, cronContractAddress) {
 		return types.ErrContractNotRegistered
 	}

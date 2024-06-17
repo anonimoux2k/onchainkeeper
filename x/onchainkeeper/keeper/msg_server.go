@@ -23,23 +23,47 @@ func NewMsgServerImpl(keeper Keeper) types.MsgServer {
 }
 
 // RegisterCronContract implements types.MsgServer.
-func (k msgServer) RegisterCronContract(context.Context, *types.MsgRegisterCronContract) (*types.MsgRegisterCronContractResponse, error) {
-	panic("unimplemented")
+func (k msgServer) RegisterCronContract(goCtx context.Context, req *types.MsgRegisterCronContract) (*types.MsgRegisterCronContractResponse, error) {
+	ctx := sdk.UnwrapSDKContext(goCtx)
+
+	if err := req.ValidateBasic(); err != nil {
+		return nil, err
+	}
+
+	return &types.MsgRegisterCronContractResponse{}, k.RegisterContract(ctx, req.SenderAddress, req.ContractAddress)
 }
 
 // UnregisterCronContract implements types.MsgServer.
-func (k msgServer) UnregisterCronContract(context.Context, *types.MsgUnregisterCronContract) (*types.MsgUnregisterCronContractResponse, error) {
-	panic("unimplemented")
+func (k msgServer) UnregisterCronContract(goCtx context.Context, req *types.MsgUnregisterCronContract) (*types.MsgUnregisterCronContractResponse, error) {
+	ctx := sdk.UnwrapSDKContext(goCtx)
+
+	if err := req.ValidateBasic(); err != nil {
+		return nil, err
+	}
+
+	return &types.MsgUnregisterCronContractResponse{}, k.UnregisterContract(ctx, req.SenderAddress, req.ContractAddress)
 }
 
 // AcceptPendingRegisteredCronContract implements types.MsgServer.
-func (k msgServer) AcceptPendingRegisteredCronContract(context.Context, *types.MsgAcceptPendingRegisteredCronContract) (*types.MsgAcceptPendingRegisteredCronContractResponse, error) {
-	panic("unimplemented")
+func (k msgServer) AcceptPendingRegisteredCronContract(goCtx context.Context, req *types.MsgAcceptPendingRegisteredCronContract) (*types.MsgAcceptPendingRegisteredCronContractResponse, error) {
+	ctx := sdk.UnwrapSDKContext(goCtx)
+
+	if err := req.ValidateBasic(); err != nil {
+		return nil, err
+	}
+
+	return &types.MsgAcceptPendingRegisteredCronContractResponse{}, k.ActivateCronContract(ctx, req.Authority, req.ContractAddress)
 }
 
 // ReactivateDeactivatedCronContract implements types.MsgServer.
-func (k msgServer) ReactivateDeactivatedCronContract(context.Context, *types.MsgReactivateDeactivatedCronContract) (*types.MsgReactivateDeactivatedCronContractResponse, error) {
-	panic("unimplemented")
+func (k msgServer) ReactivateDeactivatedCronContract(goCtx context.Context, req *types.MsgReactivateDeactivatedCronContract) (*types.MsgReactivateDeactivatedCronContractResponse, error) {
+	ctx := sdk.UnwrapSDKContext(goCtx)
+
+	if err := req.ValidateBasic(); err != nil {
+		return nil, err
+	}
+
+	return &types.MsgReactivateDeactivatedCronContractResponse{}, k.ActivateCronContract(ctx, req.Authority, req.ContractAddress)
 }
 
 func (k msgServer) UpdateParams(goCtx context.Context, req *types.MsgUpdateParams) (*types.MsgUpdateParamsResponse, error) {

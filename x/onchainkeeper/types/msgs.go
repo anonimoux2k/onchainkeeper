@@ -28,7 +28,7 @@ func (msg MsgRegisterCronContract) Route() string { return RouteKey }
 func (msg MsgRegisterCronContract) Type() string { return TypeMsgRegisterCronContract }
 
 func (msg MsgRegisterCronContract) ValidateBasic() error {
-	return validateAddresses(msg.SenderAddress, msg.ContractAddress)
+	return ValidateAddresses(msg.SenderAddress, msg.ContractAddress)
 }
 
 func (msg *MsgRegisterCronContract) GetSignBytes() []byte {
@@ -45,7 +45,7 @@ func (msg MsgUnregisterCronContract) Route() string { return RouteKey }
 func (msg MsgUnregisterCronContract) Type() string { return TypeMsgUnregisterCronContract }
 
 func (msg MsgUnregisterCronContract) ValidateBasic() error {
-	return validateAddresses(msg.SenderAddress, msg.ContractAddress)
+	return ValidateAddresses(msg.SenderAddress, msg.ContractAddress)
 }
 
 func (msg *MsgUnregisterCronContract) GetSignBytes() []byte {
@@ -64,7 +64,7 @@ func (msg MsgAcceptPendingRegisteredCronContract) Type() string {
 }
 
 func (msg MsgAcceptPendingRegisteredCronContract) ValidateBasic() error {
-	return validateAddresses(msg.Authority, msg.ContractAddress)
+	return ValidateAddresses(msg.Authority, msg.ContractAddress)
 }
 
 func (msg *MsgAcceptPendingRegisteredCronContract) GetSignBytes() []byte {
@@ -83,7 +83,7 @@ func (msg MsgReactivateDeactivatedCronContract) Type() string {
 }
 
 func (msg MsgReactivateDeactivatedCronContract) ValidateBasic() error {
-	return validateAddresses(msg.Authority, msg.ContractAddress)
+	return ValidateAddresses(msg.Authority, msg.ContractAddress)
 }
 
 func (msg *MsgReactivateDeactivatedCronContract) GetSignBytes() []byte {
@@ -130,7 +130,7 @@ func (msg MsgUpdateParams) GetSigners() []sdk.AccAddress {
 	return []sdk.AccAddress{from}
 }
 
-func validateAddresses(addresses ...string) error {
+func ValidateAddresses(addresses ...string) error {
 	for _, address := range addresses {
 		if _, err := sdk.AccAddressFromBech32(address); err != nil {
 			return errors.Wrapf(sdkerrors.ErrInvalidAddress, "invalid address :%s", address)
