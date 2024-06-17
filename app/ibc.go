@@ -37,7 +37,11 @@ import (
 	ibckeeper "github.com/cosmos/ibc-go/v8/modules/core/keeper"
 	solomachine "github.com/cosmos/ibc-go/v8/modules/light-clients/06-solomachine"
 	ibctm "github.com/cosmos/ibc-go/v8/modules/light-clients/07-tendermint"
+
 	// this line is used by starport scaffolding # ibc/app/import
+
+	onchainkeepermodule "wasmapp/x/onchainkeeper/module"
+	onchainkeepertypes "wasmapp/x/onchainkeeper/types"
 )
 
 // registerIBCModules register IBC keepers and non dependency inject modules.
@@ -196,14 +200,15 @@ func (app *App) registerIBCModules(appOpts servertypes.AppOptions) error {
 // This needs to be removed after IBC supports App Wiring.
 func RegisterIBC(registry cdctypes.InterfaceRegistry) map[string]appmodule.AppModule {
 	modules := map[string]appmodule.AppModule{
-		ibcexported.ModuleName:      ibc.AppModule{},
-		ibctransfertypes.ModuleName: ibctransfer.AppModule{},
-		ibcfeetypes.ModuleName:      ibcfee.AppModule{},
-		icatypes.ModuleName:         icamodule.AppModule{},
-		capabilitytypes.ModuleName:  capability.AppModule{},
-		ibctm.ModuleName:            ibctm.AppModule{},
-		solomachine.ModuleName:      solomachine.AppModule{},
-		wasmtypes.ModuleName:        wasm.AppModule{},
+		ibcexported.ModuleName:        ibc.AppModule{},
+		ibctransfertypes.ModuleName:   ibctransfer.AppModule{},
+		ibcfeetypes.ModuleName:        ibcfee.AppModule{},
+		icatypes.ModuleName:           icamodule.AppModule{},
+		capabilitytypes.ModuleName:    capability.AppModule{},
+		ibctm.ModuleName:              ibctm.AppModule{},
+		solomachine.ModuleName:        solomachine.AppModule{},
+		wasmtypes.ModuleName:          wasm.AppModule{},
+		onchainkeepertypes.ModuleName: onchainkeepermodule.AppModule{},
 	}
 
 	for name, m := range modules {
