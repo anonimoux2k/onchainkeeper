@@ -303,26 +303,24 @@ func (m *MsgUnregisterCronContractResponse) XXX_DiscardUnknown() {
 
 var xxx_messageInfo_MsgUnregisterCronContractResponse proto.InternalMessageInfo
 
-type MsgAcceptPendingRegisteredCronContract struct {
+type MsgActivateCronContract struct {
 	// authority is the admin address specified in the module's parameters.
 	Authority       string `protobuf:"bytes,1,opt,name=authority,proto3" json:"authority,omitempty"`
 	ContractAddress string `protobuf:"bytes,2,opt,name=contract_address,json=contractAddress,proto3" json:"contract_address,omitempty"`
 }
 
-func (m *MsgAcceptPendingRegisteredCronContract) Reset() {
-	*m = MsgAcceptPendingRegisteredCronContract{}
-}
-func (m *MsgAcceptPendingRegisteredCronContract) String() string { return proto.CompactTextString(m) }
-func (*MsgAcceptPendingRegisteredCronContract) ProtoMessage()    {}
-func (*MsgAcceptPendingRegisteredCronContract) Descriptor() ([]byte, []int) {
+func (m *MsgActivateCronContract) Reset()         { *m = MsgActivateCronContract{} }
+func (m *MsgActivateCronContract) String() string { return proto.CompactTextString(m) }
+func (*MsgActivateCronContract) ProtoMessage()    {}
+func (*MsgActivateCronContract) Descriptor() ([]byte, []int) {
 	return fileDescriptor_f8435037b6e3d7b3, []int{6}
 }
-func (m *MsgAcceptPendingRegisteredCronContract) XXX_Unmarshal(b []byte) error {
+func (m *MsgActivateCronContract) XXX_Unmarshal(b []byte) error {
 	return m.Unmarshal(b)
 }
-func (m *MsgAcceptPendingRegisteredCronContract) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+func (m *MsgActivateCronContract) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	if deterministic {
-		return xxx_messageInfo_MsgAcceptPendingRegisteredCronContract.Marshal(b, m, deterministic)
+		return xxx_messageInfo_MsgActivateCronContract.Marshal(b, m, deterministic)
 	} else {
 		b = b[:cap(b)]
 		n, err := m.MarshalToSizedBuffer(b)
@@ -332,51 +330,47 @@ func (m *MsgAcceptPendingRegisteredCronContract) XXX_Marshal(b []byte, determini
 		return b[:n], nil
 	}
 }
-func (m *MsgAcceptPendingRegisteredCronContract) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_MsgAcceptPendingRegisteredCronContract.Merge(m, src)
+func (m *MsgActivateCronContract) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_MsgActivateCronContract.Merge(m, src)
 }
-func (m *MsgAcceptPendingRegisteredCronContract) XXX_Size() int {
+func (m *MsgActivateCronContract) XXX_Size() int {
 	return m.Size()
 }
-func (m *MsgAcceptPendingRegisteredCronContract) XXX_DiscardUnknown() {
-	xxx_messageInfo_MsgAcceptPendingRegisteredCronContract.DiscardUnknown(m)
+func (m *MsgActivateCronContract) XXX_DiscardUnknown() {
+	xxx_messageInfo_MsgActivateCronContract.DiscardUnknown(m)
 }
 
-var xxx_messageInfo_MsgAcceptPendingRegisteredCronContract proto.InternalMessageInfo
+var xxx_messageInfo_MsgActivateCronContract proto.InternalMessageInfo
 
-func (m *MsgAcceptPendingRegisteredCronContract) GetAuthority() string {
+func (m *MsgActivateCronContract) GetAuthority() string {
 	if m != nil {
 		return m.Authority
 	}
 	return ""
 }
 
-func (m *MsgAcceptPendingRegisteredCronContract) GetContractAddress() string {
+func (m *MsgActivateCronContract) GetContractAddress() string {
 	if m != nil {
 		return m.ContractAddress
 	}
 	return ""
 }
 
-type MsgAcceptPendingRegisteredCronContractResponse struct {
+type MsgActivateCronContractResponse struct {
 }
 
-func (m *MsgAcceptPendingRegisteredCronContractResponse) Reset() {
-	*m = MsgAcceptPendingRegisteredCronContractResponse{}
-}
-func (m *MsgAcceptPendingRegisteredCronContractResponse) String() string {
-	return proto.CompactTextString(m)
-}
-func (*MsgAcceptPendingRegisteredCronContractResponse) ProtoMessage() {}
-func (*MsgAcceptPendingRegisteredCronContractResponse) Descriptor() ([]byte, []int) {
+func (m *MsgActivateCronContractResponse) Reset()         { *m = MsgActivateCronContractResponse{} }
+func (m *MsgActivateCronContractResponse) String() string { return proto.CompactTextString(m) }
+func (*MsgActivateCronContractResponse) ProtoMessage()    {}
+func (*MsgActivateCronContractResponse) Descriptor() ([]byte, []int) {
 	return fileDescriptor_f8435037b6e3d7b3, []int{7}
 }
-func (m *MsgAcceptPendingRegisteredCronContractResponse) XXX_Unmarshal(b []byte) error {
+func (m *MsgActivateCronContractResponse) XXX_Unmarshal(b []byte) error {
 	return m.Unmarshal(b)
 }
-func (m *MsgAcceptPendingRegisteredCronContractResponse) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+func (m *MsgActivateCronContractResponse) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	if deterministic {
-		return xxx_messageInfo_MsgAcceptPendingRegisteredCronContractResponse.Marshal(b, m, deterministic)
+		return xxx_messageInfo_MsgActivateCronContractResponse.Marshal(b, m, deterministic)
 	} else {
 		b = b[:cap(b)]
 		n, err := m.MarshalToSizedBuffer(b)
@@ -386,110 +380,17 @@ func (m *MsgAcceptPendingRegisteredCronContractResponse) XXX_Marshal(b []byte, d
 		return b[:n], nil
 	}
 }
-func (m *MsgAcceptPendingRegisteredCronContractResponse) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_MsgAcceptPendingRegisteredCronContractResponse.Merge(m, src)
+func (m *MsgActivateCronContractResponse) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_MsgActivateCronContractResponse.Merge(m, src)
 }
-func (m *MsgAcceptPendingRegisteredCronContractResponse) XXX_Size() int {
+func (m *MsgActivateCronContractResponse) XXX_Size() int {
 	return m.Size()
 }
-func (m *MsgAcceptPendingRegisteredCronContractResponse) XXX_DiscardUnknown() {
-	xxx_messageInfo_MsgAcceptPendingRegisteredCronContractResponse.DiscardUnknown(m)
+func (m *MsgActivateCronContractResponse) XXX_DiscardUnknown() {
+	xxx_messageInfo_MsgActivateCronContractResponse.DiscardUnknown(m)
 }
 
-var xxx_messageInfo_MsgAcceptPendingRegisteredCronContractResponse proto.InternalMessageInfo
-
-type MsgReactivateDeactivatedCronContract struct {
-	// authority is the admin address specified in the module's parameters.
-	Authority       string `protobuf:"bytes,1,opt,name=authority,proto3" json:"authority,omitempty"`
-	ContractAddress string `protobuf:"bytes,2,opt,name=contract_address,json=contractAddress,proto3" json:"contract_address,omitempty"`
-}
-
-func (m *MsgReactivateDeactivatedCronContract) Reset()         { *m = MsgReactivateDeactivatedCronContract{} }
-func (m *MsgReactivateDeactivatedCronContract) String() string { return proto.CompactTextString(m) }
-func (*MsgReactivateDeactivatedCronContract) ProtoMessage()    {}
-func (*MsgReactivateDeactivatedCronContract) Descriptor() ([]byte, []int) {
-	return fileDescriptor_f8435037b6e3d7b3, []int{8}
-}
-func (m *MsgReactivateDeactivatedCronContract) XXX_Unmarshal(b []byte) error {
-	return m.Unmarshal(b)
-}
-func (m *MsgReactivateDeactivatedCronContract) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
-	if deterministic {
-		return xxx_messageInfo_MsgReactivateDeactivatedCronContract.Marshal(b, m, deterministic)
-	} else {
-		b = b[:cap(b)]
-		n, err := m.MarshalToSizedBuffer(b)
-		if err != nil {
-			return nil, err
-		}
-		return b[:n], nil
-	}
-}
-func (m *MsgReactivateDeactivatedCronContract) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_MsgReactivateDeactivatedCronContract.Merge(m, src)
-}
-func (m *MsgReactivateDeactivatedCronContract) XXX_Size() int {
-	return m.Size()
-}
-func (m *MsgReactivateDeactivatedCronContract) XXX_DiscardUnknown() {
-	xxx_messageInfo_MsgReactivateDeactivatedCronContract.DiscardUnknown(m)
-}
-
-var xxx_messageInfo_MsgReactivateDeactivatedCronContract proto.InternalMessageInfo
-
-func (m *MsgReactivateDeactivatedCronContract) GetAuthority() string {
-	if m != nil {
-		return m.Authority
-	}
-	return ""
-}
-
-func (m *MsgReactivateDeactivatedCronContract) GetContractAddress() string {
-	if m != nil {
-		return m.ContractAddress
-	}
-	return ""
-}
-
-type MsgReactivateDeactivatedCronContractResponse struct {
-}
-
-func (m *MsgReactivateDeactivatedCronContractResponse) Reset() {
-	*m = MsgReactivateDeactivatedCronContractResponse{}
-}
-func (m *MsgReactivateDeactivatedCronContractResponse) String() string {
-	return proto.CompactTextString(m)
-}
-func (*MsgReactivateDeactivatedCronContractResponse) ProtoMessage() {}
-func (*MsgReactivateDeactivatedCronContractResponse) Descriptor() ([]byte, []int) {
-	return fileDescriptor_f8435037b6e3d7b3, []int{9}
-}
-func (m *MsgReactivateDeactivatedCronContractResponse) XXX_Unmarshal(b []byte) error {
-	return m.Unmarshal(b)
-}
-func (m *MsgReactivateDeactivatedCronContractResponse) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
-	if deterministic {
-		return xxx_messageInfo_MsgReactivateDeactivatedCronContractResponse.Marshal(b, m, deterministic)
-	} else {
-		b = b[:cap(b)]
-		n, err := m.MarshalToSizedBuffer(b)
-		if err != nil {
-			return nil, err
-		}
-		return b[:n], nil
-	}
-}
-func (m *MsgReactivateDeactivatedCronContractResponse) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_MsgReactivateDeactivatedCronContractResponse.Merge(m, src)
-}
-func (m *MsgReactivateDeactivatedCronContractResponse) XXX_Size() int {
-	return m.Size()
-}
-func (m *MsgReactivateDeactivatedCronContractResponse) XXX_DiscardUnknown() {
-	xxx_messageInfo_MsgReactivateDeactivatedCronContractResponse.DiscardUnknown(m)
-}
-
-var xxx_messageInfo_MsgReactivateDeactivatedCronContractResponse proto.InternalMessageInfo
+var xxx_messageInfo_MsgActivateCronContractResponse proto.InternalMessageInfo
 
 func init() {
 	proto.RegisterType((*MsgUpdateParams)(nil), "wasmapp.onchainkeeper.MsgUpdateParams")
@@ -498,53 +399,48 @@ func init() {
 	proto.RegisterType((*MsgRegisterCronContractResponse)(nil), "wasmapp.onchainkeeper.MsgRegisterCronContractResponse")
 	proto.RegisterType((*MsgUnregisterCronContract)(nil), "wasmapp.onchainkeeper.MsgUnregisterCronContract")
 	proto.RegisterType((*MsgUnregisterCronContractResponse)(nil), "wasmapp.onchainkeeper.MsgUnregisterCronContractResponse")
-	proto.RegisterType((*MsgAcceptPendingRegisteredCronContract)(nil), "wasmapp.onchainkeeper.MsgAcceptPendingRegisteredCronContract")
-	proto.RegisterType((*MsgAcceptPendingRegisteredCronContractResponse)(nil), "wasmapp.onchainkeeper.MsgAcceptPendingRegisteredCronContractResponse")
-	proto.RegisterType((*MsgReactivateDeactivatedCronContract)(nil), "wasmapp.onchainkeeper.MsgReactivateDeactivatedCronContract")
-	proto.RegisterType((*MsgReactivateDeactivatedCronContractResponse)(nil), "wasmapp.onchainkeeper.MsgReactivateDeactivatedCronContractResponse")
+	proto.RegisterType((*MsgActivateCronContract)(nil), "wasmapp.onchainkeeper.MsgActivateCronContract")
+	proto.RegisterType((*MsgActivateCronContractResponse)(nil), "wasmapp.onchainkeeper.MsgActivateCronContractResponse")
 }
 
 func init() { proto.RegisterFile("wasmapp/onchainkeeper/tx.proto", fileDescriptor_f8435037b6e3d7b3) }
 
 var fileDescriptor_f8435037b6e3d7b3 = []byte{
-	// 592 bytes of a gzipped FileDescriptorProto
-	0x1f, 0x8b, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0xff, 0xc4, 0x55, 0x31, 0x6f, 0xd3, 0x40,
-	0x14, 0xce, 0x15, 0xb5, 0x52, 0x0e, 0x68, 0xc1, 0x04, 0x9a, 0x58, 0xd4, 0x6d, 0x5c, 0x28, 0x25,
-	0x02, 0xbb, 0x14, 0xa9, 0xa0, 0x20, 0x24, 0x9a, 0xc0, 0x18, 0xa9, 0x0a, 0x62, 0x61, 0xa9, 0x0e,
-	0xfb, 0x70, 0x2d, 0xc8, 0xdd, 0xe9, 0xee, 0x28, 0xed, 0x82, 0xaa, 0x8a, 0x89, 0x89, 0x15, 0x31,
-	0x23, 0x21, 0xb1, 0x64, 0xe0, 0x3f, 0xd0, 0xb1, 0x30, 0x31, 0x21, 0x94, 0x0c, 0xf9, 0x1b, 0xc8,
-	0xf6, 0xd9, 0x55, 0xa2, 0x38, 0x75, 0xe8, 0xd0, 0x25, 0xb1, 0xdf, 0xfb, 0xbe, 0xf7, 0xbe, 0xcf,
-	0xf7, 0x9e, 0x0e, 0x1a, 0x6f, 0x91, 0x68, 0x21, 0xc6, 0x6c, 0x4a, 0x9c, 0x2d, 0xe4, 0x93, 0x57,
-	0x18, 0x33, 0xcc, 0x6d, 0xb9, 0x63, 0x31, 0x4e, 0x25, 0xd5, 0x2e, 0xab, 0xbc, 0xd5, 0x97, 0xd7,
-	0x2f, 0xa2, 0x96, 0x4f, 0xa8, 0x1d, 0xfe, 0x46, 0x48, 0x7d, 0xd6, 0xa1, 0xa2, 0x45, 0x85, 0xdd,
-	0x12, 0x9e, 0xbd, 0x7d, 0x27, 0xf8, 0x53, 0x89, 0x52, 0x94, 0xd8, 0x0c, 0xdf, 0xec, 0xe8, 0x45,
-	0xa5, 0x0a, 0x1e, 0xf5, 0x68, 0x14, 0x0f, 0x9e, 0x54, 0xf4, 0xaa, 0x47, 0xa9, 0xf7, 0x1a, 0xdb,
-	0x88, 0xf9, 0x36, 0x22, 0x84, 0x4a, 0x24, 0x7d, 0x4a, 0x62, 0x8e, 0x39, 0x5c, 0x31, 0x43, 0x1c,
-	0xb5, 0x14, 0xc6, 0xfc, 0x01, 0xe0, 0x4c, 0x43, 0x78, 0xcf, 0x98, 0x8b, 0x24, 0xde, 0x08, 0x33,
-	0xda, 0x1a, 0xcc, 0xa3, 0x37, 0x72, 0x8b, 0x72, 0x5f, 0xee, 0x16, 0xc1, 0x02, 0x58, 0xce, 0xd7,
-	0x8a, 0xbf, 0xbe, 0xdf, 0x2e, 0x28, 0x41, 0xeb, 0xae, 0xcb, 0xb1, 0x10, 0x4f, 0x25, 0xf7, 0x89,
-	0xd7, 0x3c, 0x82, 0x6a, 0x8f, 0xe0, 0x54, 0x54, 0xbb, 0x38, 0xb1, 0x00, 0x96, 0xcf, 0xae, 0xce,
-	0x59, 0x43, 0x3f, 0x89, 0x15, 0xb5, 0xa9, 0xe5, 0x0f, 0xfe, 0xcc, 0xe7, 0xbe, 0xf6, 0xda, 0x15,
-	0xd0, 0x54, 0xbc, 0x6a, 0x75, 0xbf, 0xd7, 0xae, 0x1c, 0x55, 0xfc, 0xd0, 0x6b, 0x57, 0x6e, 0xc4,
-	0x26, 0x76, 0x06, 0x6c, 0x0c, 0xa8, 0x36, 0x4b, 0x70, 0x76, 0x20, 0xd4, 0xc4, 0x82, 0x51, 0x22,
-	0xb0, 0xb9, 0x07, 0xc2, 0x5c, 0x13, 0x7b, 0xbe, 0x90, 0x98, 0xd7, 0x39, 0x25, 0x75, 0x4a, 0x24,
-	0x47, 0x8e, 0xd4, 0xae, 0xc3, 0x69, 0x81, 0x89, 0x8b, 0xf9, 0x26, 0x8a, 0x7c, 0x45, 0x8e, 0x9b,
-	0xe7, 0xa3, 0xa8, 0x32, 0xab, 0xdd, 0x84, 0x17, 0x1c, 0x45, 0x49, 0x80, 0x13, 0x21, 0x70, 0x26,
-	0x8e, 0x2b, 0x68, 0xf5, 0x52, 0x60, 0x62, 0xa0, 0xa8, 0x59, 0x86, 0xf3, 0x29, 0x0a, 0x12, 0x95,
-	0xfb, 0x00, 0x96, 0x02, 0x07, 0x84, 0x9f, 0xa2, 0xce, 0x45, 0x58, 0x4e, 0xd5, 0x90, 0x28, 0xfd,
-	0x0c, 0xe0, 0x52, 0x43, 0x78, 0xeb, 0x8e, 0x83, 0x99, 0xdc, 0xc0, 0xc4, 0x0d, 0x06, 0x41, 0x11,
-	0xb0, 0xdb, 0x27, 0xfb, 0x7f, 0x67, 0x69, 0x0c, 0x1f, 0xd3, 0xfd, 0x43, 0x63, 0xae, 0x40, 0x2b,
-	0x9b, 0xb8, 0xc4, 0xcf, 0x27, 0x00, 0xaf, 0x85, 0xa7, 0x83, 0x1c, 0xe9, 0x6f, 0x23, 0x89, 0x1f,
-	0x27, 0x4f, 0xa7, 0xee, 0xc6, 0x82, 0xb7, 0xb2, 0x48, 0x8b, 0xbd, 0xac, 0xfe, 0x9c, 0x84, 0x67,
-	0x1a, 0xc2, 0xd3, 0x5e, 0xc2, 0x73, 0x7d, 0x4b, 0xbd, 0x94, 0xb2, 0x8c, 0x03, 0x3b, 0xa3, 0x5b,
-	0xd9, 0x70, 0x71, 0x3f, 0xed, 0x1d, 0x2c, 0x0c, 0xdd, 0xab, 0x11, 0x75, 0x86, 0xe1, 0xf5, 0xb5,
-	0xf1, 0xf0, 0x49, 0xff, 0xf7, 0x00, 0x5e, 0x49, 0x59, 0x99, 0x95, 0x11, 0x56, 0x86, 0x32, 0xf4,
-	0xfb, 0xe3, 0x32, 0x12, 0x19, 0xdf, 0x00, 0x5c, 0xcc, 0xb2, 0x0f, 0x0f, 0xd3, 0x3b, 0x64, 0xa0,
-	0xeb, 0x4f, 0x4e, 0x44, 0x4f, 0xd4, 0x7e, 0x01, 0xb0, 0x7c, 0xfc, 0xb4, 0x3f, 0x18, 0x75, 0x24,
-	0xc7, 0x90, 0xf5, 0xfa, 0x09, 0xc8, 0xb1, 0x4e, 0x7d, 0x72, 0x2f, 0xb8, 0x1e, 0x6a, 0xf7, 0x0e,
-	0x3a, 0x06, 0x38, 0xec, 0x18, 0xe0, 0x6f, 0xc7, 0x00, 0x1f, 0xbb, 0x46, 0xee, 0xb0, 0x6b, 0xe4,
-	0x7e, 0x77, 0x8d, 0xdc, 0xf3, 0xb9, 0xb4, 0xdb, 0x41, 0xee, 0x32, 0x2c, 0x5e, 0x4c, 0x85, 0x97,
-	0xdc, 0xdd, 0x7f, 0x01, 0x00, 0x00, 0xff, 0xff, 0xc7, 0x9c, 0x23, 0x95, 0xbc, 0x07, 0x00, 0x00,
+	// 533 bytes of a gzipped FileDescriptorProto
+	0x1f, 0x8b, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0xff, 0xcc, 0x54, 0x31, 0x6f, 0xd3, 0x40,
+	0x14, 0xce, 0x51, 0x51, 0x29, 0x07, 0xb4, 0x60, 0x02, 0x4d, 0x2c, 0xea, 0xb6, 0x46, 0x82, 0x12,
+	0x09, 0x1b, 0x8a, 0x54, 0x50, 0x16, 0x68, 0x3a, 0x57, 0x42, 0x46, 0x2c, 0x2c, 0xd5, 0xe1, 0x1c,
+	0x57, 0x0b, 0x7c, 0x77, 0xba, 0x3b, 0x4a, 0xbb, 0x20, 0x84, 0x98, 0x10, 0x03, 0x33, 0xe2, 0x07,
+	0x30, 0x66, 0xe0, 0x3f, 0xd0, 0xb1, 0x62, 0x62, 0x42, 0x28, 0x19, 0xf2, 0x23, 0x58, 0x90, 0x7d,
+	0xe7, 0x84, 0x58, 0xb6, 0x21, 0x4c, 0x2c, 0x49, 0xee, 0xbd, 0xef, 0xbd, 0xf7, 0x7d, 0xef, 0xbe,
+	0x1c, 0x74, 0x5e, 0x20, 0x19, 0x23, 0xce, 0x7d, 0x46, 0xc3, 0x3d, 0x14, 0xd1, 0xa7, 0x18, 0x73,
+	0x2c, 0x7c, 0x75, 0xe0, 0x71, 0xc1, 0x14, 0xb3, 0x2e, 0x98, 0xbc, 0x37, 0x95, 0xb7, 0xcf, 0xa1,
+	0x38, 0xa2, 0xcc, 0x4f, 0x3f, 0x35, 0xd2, 0x5e, 0x0a, 0x99, 0x8c, 0x99, 0xf4, 0x63, 0x49, 0xfc,
+	0xfd, 0x9b, 0xc9, 0x97, 0x49, 0xb4, 0x74, 0x62, 0x37, 0x3d, 0xf9, 0xfa, 0x60, 0x52, 0x0d, 0xc2,
+	0x08, 0xd3, 0xf1, 0xe4, 0x97, 0x89, 0x5e, 0x22, 0x8c, 0x91, 0x67, 0xd8, 0x47, 0x3c, 0xf2, 0x11,
+	0xa5, 0x4c, 0x21, 0x15, 0x31, 0x9a, 0xd5, 0xb8, 0xc5, 0x8c, 0x39, 0x12, 0x28, 0x36, 0x18, 0xf7,
+	0x0b, 0x80, 0x8b, 0x3b, 0x92, 0x3c, 0xe4, 0x3d, 0xa4, 0xf0, 0xfd, 0x34, 0x63, 0x6d, 0xc2, 0x3a,
+	0x7a, 0xae, 0xf6, 0x98, 0x88, 0xd4, 0x61, 0x13, 0xac, 0x82, 0xf5, 0x7a, 0xb7, 0xf9, 0xf5, 0xf3,
+	0xf5, 0x86, 0x21, 0xb4, 0xd5, 0xeb, 0x09, 0x2c, 0xe5, 0x03, 0x25, 0x22, 0x4a, 0x82, 0x09, 0xd4,
+	0xba, 0x07, 0xe7, 0x75, 0xef, 0xe6, 0x89, 0x55, 0xb0, 0x7e, 0x6a, 0x63, 0xd9, 0x2b, 0x5c, 0x89,
+	0xa7, 0xc7, 0x74, 0xeb, 0x47, 0xdf, 0x57, 0x6a, 0x9f, 0x46, 0xfd, 0x36, 0x08, 0x4c, 0x5d, 0xa7,
+	0xf3, 0x7a, 0xd4, 0x6f, 0x4f, 0x3a, 0xbe, 0x1d, 0xf5, 0xdb, 0x57, 0x33, 0x11, 0x07, 0x39, 0x19,
+	0x39, 0xd6, 0x6e, 0x0b, 0x2e, 0xe5, 0x42, 0x01, 0x96, 0x9c, 0x51, 0x89, 0xdd, 0x0f, 0x20, 0xcd,
+	0x05, 0x98, 0x44, 0x52, 0x61, 0xb1, 0x2d, 0x18, 0xdd, 0x66, 0x54, 0x09, 0x14, 0x2a, 0xeb, 0x2e,
+	0x5c, 0x90, 0x98, 0xf6, 0xb0, 0xd8, 0x45, 0x5a, 0xd7, 0x1f, 0x15, 0x9f, 0xd1, 0x78, 0x13, 0xb4,
+	0xae, 0xc1, 0xb3, 0xa1, 0x69, 0x36, 0x6e, 0x91, 0xe8, 0xaf, 0x07, 0x8b, 0x59, 0xdc, 0x40, 0x3b,
+	0xe7, 0x13, 0x79, 0xb9, 0x71, 0xee, 0x1a, 0x5c, 0x29, 0xe1, 0x36, 0xe6, 0xff, 0x11, 0xc0, 0x56,
+	0xa2, 0x8d, 0x8a, 0xff, 0x52, 0xc1, 0x65, 0xb8, 0x56, 0xca, 0x6e, 0xac, 0xe1, 0x9d, 0xbe, 0x83,
+	0xad, 0x50, 0x45, 0xfb, 0x48, 0xe1, 0x29, 0x05, 0xff, 0x6a, 0xb8, 0x19, 0x88, 0x2f, 0x4c, 0x3b,
+	0xcb, 0x6c, 0xbd, 0x88, 0x4d, 0xc6, 0x78, 0xe3, 0xe7, 0x1c, 0x9c, 0xdb, 0x91, 0xc4, 0x7a, 0x02,
+	0x4f, 0x4f, 0xfd, 0x3d, 0xae, 0x94, 0xd8, 0x3a, 0xe7, 0x3e, 0xdb, 0xfb, 0x3b, 0x5c, 0x36, 0xcf,
+	0x7a, 0x09, 0x1b, 0x85, 0x0e, 0xad, 0xe8, 0x53, 0x84, 0xb7, 0x37, 0x67, 0xc3, 0x8f, 0xe7, 0xbf,
+	0x01, 0xf0, 0x62, 0x89, 0xc5, 0x6e, 0x54, 0x48, 0x29, 0xac, 0xb0, 0xef, 0xcc, 0x5a, 0xf1, 0xfb,
+	0x1a, 0x0a, 0x4d, 0x52, 0xb1, 0x86, 0x22, 0x7c, 0xd5, 0x1a, 0xaa, 0xae, 0xdd, 0x3e, 0xf9, 0x2a,
+	0x79, 0x92, 0xba, 0xb7, 0x8f, 0x06, 0x0e, 0x38, 0x1e, 0x38, 0xe0, 0xc7, 0xc0, 0x01, 0xef, 0x87,
+	0x4e, 0xed, 0x78, 0xe8, 0xd4, 0xbe, 0x0d, 0x9d, 0xda, 0xa3, 0xe5, 0xb2, 0x17, 0x49, 0x1d, 0x72,
+	0x2c, 0x1f, 0xcf, 0xa7, 0x0f, 0xeb, 0xad, 0x5f, 0x01, 0x00, 0x00, 0xff, 0xff, 0xce, 0x50, 0x8d,
+	0xb0, 0x30, 0x06, 0x00, 0x00,
 }
 
 // Reference imports to suppress errors if they are not otherwise used.
@@ -564,8 +460,7 @@ type MsgClient interface {
 	UpdateParams(ctx context.Context, in *MsgUpdateParams, opts ...grpc.CallOption) (*MsgUpdateParamsResponse, error)
 	RegisterCronContract(ctx context.Context, in *MsgRegisterCronContract, opts ...grpc.CallOption) (*MsgRegisterCronContractResponse, error)
 	UnregisterCronContract(ctx context.Context, in *MsgUnregisterCronContract, opts ...grpc.CallOption) (*MsgUnregisterCronContractResponse, error)
-	AcceptPendingRegisteredCronContract(ctx context.Context, in *MsgAcceptPendingRegisteredCronContract, opts ...grpc.CallOption) (*MsgAcceptPendingRegisteredCronContractResponse, error)
-	ReactivateDeactivatedCronContract(ctx context.Context, in *MsgReactivateDeactivatedCronContract, opts ...grpc.CallOption) (*MsgReactivateDeactivatedCronContractResponse, error)
+	ActivateCronContract(ctx context.Context, in *MsgActivateCronContract, opts ...grpc.CallOption) (*MsgActivateCronContractResponse, error)
 }
 
 type msgClient struct {
@@ -603,18 +498,9 @@ func (c *msgClient) UnregisterCronContract(ctx context.Context, in *MsgUnregiste
 	return out, nil
 }
 
-func (c *msgClient) AcceptPendingRegisteredCronContract(ctx context.Context, in *MsgAcceptPendingRegisteredCronContract, opts ...grpc.CallOption) (*MsgAcceptPendingRegisteredCronContractResponse, error) {
-	out := new(MsgAcceptPendingRegisteredCronContractResponse)
-	err := c.cc.Invoke(ctx, "/wasmapp.onchainkeeper.Msg/AcceptPendingRegisteredCronContract", in, out, opts...)
-	if err != nil {
-		return nil, err
-	}
-	return out, nil
-}
-
-func (c *msgClient) ReactivateDeactivatedCronContract(ctx context.Context, in *MsgReactivateDeactivatedCronContract, opts ...grpc.CallOption) (*MsgReactivateDeactivatedCronContractResponse, error) {
-	out := new(MsgReactivateDeactivatedCronContractResponse)
-	err := c.cc.Invoke(ctx, "/wasmapp.onchainkeeper.Msg/ReactivateDeactivatedCronContract", in, out, opts...)
+func (c *msgClient) ActivateCronContract(ctx context.Context, in *MsgActivateCronContract, opts ...grpc.CallOption) (*MsgActivateCronContractResponse, error) {
+	out := new(MsgActivateCronContractResponse)
+	err := c.cc.Invoke(ctx, "/wasmapp.onchainkeeper.Msg/ActivateCronContract", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -628,8 +514,7 @@ type MsgServer interface {
 	UpdateParams(context.Context, *MsgUpdateParams) (*MsgUpdateParamsResponse, error)
 	RegisterCronContract(context.Context, *MsgRegisterCronContract) (*MsgRegisterCronContractResponse, error)
 	UnregisterCronContract(context.Context, *MsgUnregisterCronContract) (*MsgUnregisterCronContractResponse, error)
-	AcceptPendingRegisteredCronContract(context.Context, *MsgAcceptPendingRegisteredCronContract) (*MsgAcceptPendingRegisteredCronContractResponse, error)
-	ReactivateDeactivatedCronContract(context.Context, *MsgReactivateDeactivatedCronContract) (*MsgReactivateDeactivatedCronContractResponse, error)
+	ActivateCronContract(context.Context, *MsgActivateCronContract) (*MsgActivateCronContractResponse, error)
 }
 
 // UnimplementedMsgServer can be embedded to have forward compatible implementations.
@@ -645,11 +530,8 @@ func (*UnimplementedMsgServer) RegisterCronContract(ctx context.Context, req *Ms
 func (*UnimplementedMsgServer) UnregisterCronContract(ctx context.Context, req *MsgUnregisterCronContract) (*MsgUnregisterCronContractResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method UnregisterCronContract not implemented")
 }
-func (*UnimplementedMsgServer) AcceptPendingRegisteredCronContract(ctx context.Context, req *MsgAcceptPendingRegisteredCronContract) (*MsgAcceptPendingRegisteredCronContractResponse, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method AcceptPendingRegisteredCronContract not implemented")
-}
-func (*UnimplementedMsgServer) ReactivateDeactivatedCronContract(ctx context.Context, req *MsgReactivateDeactivatedCronContract) (*MsgReactivateDeactivatedCronContractResponse, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method ReactivateDeactivatedCronContract not implemented")
+func (*UnimplementedMsgServer) ActivateCronContract(ctx context.Context, req *MsgActivateCronContract) (*MsgActivateCronContractResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method ActivateCronContract not implemented")
 }
 
 func RegisterMsgServer(s grpc1.Server, srv MsgServer) {
@@ -710,38 +592,20 @@ func _Msg_UnregisterCronContract_Handler(srv interface{}, ctx context.Context, d
 	return interceptor(ctx, in, info, handler)
 }
 
-func _Msg_AcceptPendingRegisteredCronContract_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(MsgAcceptPendingRegisteredCronContract)
+func _Msg_ActivateCronContract_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(MsgActivateCronContract)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(MsgServer).AcceptPendingRegisteredCronContract(ctx, in)
+		return srv.(MsgServer).ActivateCronContract(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/wasmapp.onchainkeeper.Msg/AcceptPendingRegisteredCronContract",
+		FullMethod: "/wasmapp.onchainkeeper.Msg/ActivateCronContract",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(MsgServer).AcceptPendingRegisteredCronContract(ctx, req.(*MsgAcceptPendingRegisteredCronContract))
-	}
-	return interceptor(ctx, in, info, handler)
-}
-
-func _Msg_ReactivateDeactivatedCronContract_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(MsgReactivateDeactivatedCronContract)
-	if err := dec(in); err != nil {
-		return nil, err
-	}
-	if interceptor == nil {
-		return srv.(MsgServer).ReactivateDeactivatedCronContract(ctx, in)
-	}
-	info := &grpc.UnaryServerInfo{
-		Server:     srv,
-		FullMethod: "/wasmapp.onchainkeeper.Msg/ReactivateDeactivatedCronContract",
-	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(MsgServer).ReactivateDeactivatedCronContract(ctx, req.(*MsgReactivateDeactivatedCronContract))
+		return srv.(MsgServer).ActivateCronContract(ctx, req.(*MsgActivateCronContract))
 	}
 	return interceptor(ctx, in, info, handler)
 }
@@ -763,12 +627,8 @@ var _Msg_serviceDesc = grpc.ServiceDesc{
 			Handler:    _Msg_UnregisterCronContract_Handler,
 		},
 		{
-			MethodName: "AcceptPendingRegisteredCronContract",
-			Handler:    _Msg_AcceptPendingRegisteredCronContract_Handler,
-		},
-		{
-			MethodName: "ReactivateDeactivatedCronContract",
-			Handler:    _Msg_ReactivateDeactivatedCronContract_Handler,
+			MethodName: "ActivateCronContract",
+			Handler:    _Msg_ActivateCronContract_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
@@ -958,7 +818,7 @@ func (m *MsgUnregisterCronContractResponse) MarshalToSizedBuffer(dAtA []byte) (i
 	return len(dAtA) - i, nil
 }
 
-func (m *MsgAcceptPendingRegisteredCronContract) Marshal() (dAtA []byte, err error) {
+func (m *MsgActivateCronContract) Marshal() (dAtA []byte, err error) {
 	size := m.Size()
 	dAtA = make([]byte, size)
 	n, err := m.MarshalToSizedBuffer(dAtA[:size])
@@ -968,12 +828,12 @@ func (m *MsgAcceptPendingRegisteredCronContract) Marshal() (dAtA []byte, err err
 	return dAtA[:n], nil
 }
 
-func (m *MsgAcceptPendingRegisteredCronContract) MarshalTo(dAtA []byte) (int, error) {
+func (m *MsgActivateCronContract) MarshalTo(dAtA []byte) (int, error) {
 	size := m.Size()
 	return m.MarshalToSizedBuffer(dAtA[:size])
 }
 
-func (m *MsgAcceptPendingRegisteredCronContract) MarshalToSizedBuffer(dAtA []byte) (int, error) {
+func (m *MsgActivateCronContract) MarshalToSizedBuffer(dAtA []byte) (int, error) {
 	i := len(dAtA)
 	_ = i
 	var l int
@@ -995,7 +855,7 @@ func (m *MsgAcceptPendingRegisteredCronContract) MarshalToSizedBuffer(dAtA []byt
 	return len(dAtA) - i, nil
 }
 
-func (m *MsgAcceptPendingRegisteredCronContractResponse) Marshal() (dAtA []byte, err error) {
+func (m *MsgActivateCronContractResponse) Marshal() (dAtA []byte, err error) {
 	size := m.Size()
 	dAtA = make([]byte, size)
 	n, err := m.MarshalToSizedBuffer(dAtA[:size])
@@ -1005,72 +865,12 @@ func (m *MsgAcceptPendingRegisteredCronContractResponse) Marshal() (dAtA []byte,
 	return dAtA[:n], nil
 }
 
-func (m *MsgAcceptPendingRegisteredCronContractResponse) MarshalTo(dAtA []byte) (int, error) {
+func (m *MsgActivateCronContractResponse) MarshalTo(dAtA []byte) (int, error) {
 	size := m.Size()
 	return m.MarshalToSizedBuffer(dAtA[:size])
 }
 
-func (m *MsgAcceptPendingRegisteredCronContractResponse) MarshalToSizedBuffer(dAtA []byte) (int, error) {
-	i := len(dAtA)
-	_ = i
-	var l int
-	_ = l
-	return len(dAtA) - i, nil
-}
-
-func (m *MsgReactivateDeactivatedCronContract) Marshal() (dAtA []byte, err error) {
-	size := m.Size()
-	dAtA = make([]byte, size)
-	n, err := m.MarshalToSizedBuffer(dAtA[:size])
-	if err != nil {
-		return nil, err
-	}
-	return dAtA[:n], nil
-}
-
-func (m *MsgReactivateDeactivatedCronContract) MarshalTo(dAtA []byte) (int, error) {
-	size := m.Size()
-	return m.MarshalToSizedBuffer(dAtA[:size])
-}
-
-func (m *MsgReactivateDeactivatedCronContract) MarshalToSizedBuffer(dAtA []byte) (int, error) {
-	i := len(dAtA)
-	_ = i
-	var l int
-	_ = l
-	if len(m.ContractAddress) > 0 {
-		i -= len(m.ContractAddress)
-		copy(dAtA[i:], m.ContractAddress)
-		i = encodeVarintTx(dAtA, i, uint64(len(m.ContractAddress)))
-		i--
-		dAtA[i] = 0x12
-	}
-	if len(m.Authority) > 0 {
-		i -= len(m.Authority)
-		copy(dAtA[i:], m.Authority)
-		i = encodeVarintTx(dAtA, i, uint64(len(m.Authority)))
-		i--
-		dAtA[i] = 0xa
-	}
-	return len(dAtA) - i, nil
-}
-
-func (m *MsgReactivateDeactivatedCronContractResponse) Marshal() (dAtA []byte, err error) {
-	size := m.Size()
-	dAtA = make([]byte, size)
-	n, err := m.MarshalToSizedBuffer(dAtA[:size])
-	if err != nil {
-		return nil, err
-	}
-	return dAtA[:n], nil
-}
-
-func (m *MsgReactivateDeactivatedCronContractResponse) MarshalTo(dAtA []byte) (int, error) {
-	size := m.Size()
-	return m.MarshalToSizedBuffer(dAtA[:size])
-}
-
-func (m *MsgReactivateDeactivatedCronContractResponse) MarshalToSizedBuffer(dAtA []byte) (int, error) {
+func (m *MsgActivateCronContractResponse) MarshalToSizedBuffer(dAtA []byte) (int, error) {
 	i := len(dAtA)
 	_ = i
 	var l int
@@ -1165,7 +965,7 @@ func (m *MsgUnregisterCronContractResponse) Size() (n int) {
 	return n
 }
 
-func (m *MsgAcceptPendingRegisteredCronContract) Size() (n int) {
+func (m *MsgActivateCronContract) Size() (n int) {
 	if m == nil {
 		return 0
 	}
@@ -1182,33 +982,7 @@ func (m *MsgAcceptPendingRegisteredCronContract) Size() (n int) {
 	return n
 }
 
-func (m *MsgAcceptPendingRegisteredCronContractResponse) Size() (n int) {
-	if m == nil {
-		return 0
-	}
-	var l int
-	_ = l
-	return n
-}
-
-func (m *MsgReactivateDeactivatedCronContract) Size() (n int) {
-	if m == nil {
-		return 0
-	}
-	var l int
-	_ = l
-	l = len(m.Authority)
-	if l > 0 {
-		n += 1 + l + sovTx(uint64(l))
-	}
-	l = len(m.ContractAddress)
-	if l > 0 {
-		n += 1 + l + sovTx(uint64(l))
-	}
-	return n
-}
-
-func (m *MsgReactivateDeactivatedCronContractResponse) Size() (n int) {
+func (m *MsgActivateCronContractResponse) Size() (n int) {
 	if m == nil {
 		return 0
 	}
@@ -1716,7 +1490,7 @@ func (m *MsgUnregisterCronContractResponse) Unmarshal(dAtA []byte) error {
 	}
 	return nil
 }
-func (m *MsgAcceptPendingRegisteredCronContract) Unmarshal(dAtA []byte) error {
+func (m *MsgActivateCronContract) Unmarshal(dAtA []byte) error {
 	l := len(dAtA)
 	iNdEx := 0
 	for iNdEx < l {
@@ -1739,10 +1513,10 @@ func (m *MsgAcceptPendingRegisteredCronContract) Unmarshal(dAtA []byte) error {
 		fieldNum := int32(wire >> 3)
 		wireType := int(wire & 0x7)
 		if wireType == 4 {
-			return fmt.Errorf("proto: MsgAcceptPendingRegisteredCronContract: wiretype end group for non-group")
+			return fmt.Errorf("proto: MsgActivateCronContract: wiretype end group for non-group")
 		}
 		if fieldNum <= 0 {
-			return fmt.Errorf("proto: MsgAcceptPendingRegisteredCronContract: illegal tag %d (wire type %d)", fieldNum, wire)
+			return fmt.Errorf("proto: MsgActivateCronContract: illegal tag %d (wire type %d)", fieldNum, wire)
 		}
 		switch fieldNum {
 		case 1:
@@ -1830,7 +1604,7 @@ func (m *MsgAcceptPendingRegisteredCronContract) Unmarshal(dAtA []byte) error {
 	}
 	return nil
 }
-func (m *MsgAcceptPendingRegisteredCronContractResponse) Unmarshal(dAtA []byte) error {
+func (m *MsgActivateCronContractResponse) Unmarshal(dAtA []byte) error {
 	l := len(dAtA)
 	iNdEx := 0
 	for iNdEx < l {
@@ -1853,174 +1627,10 @@ func (m *MsgAcceptPendingRegisteredCronContractResponse) Unmarshal(dAtA []byte) 
 		fieldNum := int32(wire >> 3)
 		wireType := int(wire & 0x7)
 		if wireType == 4 {
-			return fmt.Errorf("proto: MsgAcceptPendingRegisteredCronContractResponse: wiretype end group for non-group")
+			return fmt.Errorf("proto: MsgActivateCronContractResponse: wiretype end group for non-group")
 		}
 		if fieldNum <= 0 {
-			return fmt.Errorf("proto: MsgAcceptPendingRegisteredCronContractResponse: illegal tag %d (wire type %d)", fieldNum, wire)
-		}
-		switch fieldNum {
-		default:
-			iNdEx = preIndex
-			skippy, err := skipTx(dAtA[iNdEx:])
-			if err != nil {
-				return err
-			}
-			if (skippy < 0) || (iNdEx+skippy) < 0 {
-				return ErrInvalidLengthTx
-			}
-			if (iNdEx + skippy) > l {
-				return io.ErrUnexpectedEOF
-			}
-			iNdEx += skippy
-		}
-	}
-
-	if iNdEx > l {
-		return io.ErrUnexpectedEOF
-	}
-	return nil
-}
-func (m *MsgReactivateDeactivatedCronContract) Unmarshal(dAtA []byte) error {
-	l := len(dAtA)
-	iNdEx := 0
-	for iNdEx < l {
-		preIndex := iNdEx
-		var wire uint64
-		for shift := uint(0); ; shift += 7 {
-			if shift >= 64 {
-				return ErrIntOverflowTx
-			}
-			if iNdEx >= l {
-				return io.ErrUnexpectedEOF
-			}
-			b := dAtA[iNdEx]
-			iNdEx++
-			wire |= uint64(b&0x7F) << shift
-			if b < 0x80 {
-				break
-			}
-		}
-		fieldNum := int32(wire >> 3)
-		wireType := int(wire & 0x7)
-		if wireType == 4 {
-			return fmt.Errorf("proto: MsgReactivateDeactivatedCronContract: wiretype end group for non-group")
-		}
-		if fieldNum <= 0 {
-			return fmt.Errorf("proto: MsgReactivateDeactivatedCronContract: illegal tag %d (wire type %d)", fieldNum, wire)
-		}
-		switch fieldNum {
-		case 1:
-			if wireType != 2 {
-				return fmt.Errorf("proto: wrong wireType = %d for field Authority", wireType)
-			}
-			var stringLen uint64
-			for shift := uint(0); ; shift += 7 {
-				if shift >= 64 {
-					return ErrIntOverflowTx
-				}
-				if iNdEx >= l {
-					return io.ErrUnexpectedEOF
-				}
-				b := dAtA[iNdEx]
-				iNdEx++
-				stringLen |= uint64(b&0x7F) << shift
-				if b < 0x80 {
-					break
-				}
-			}
-			intStringLen := int(stringLen)
-			if intStringLen < 0 {
-				return ErrInvalidLengthTx
-			}
-			postIndex := iNdEx + intStringLen
-			if postIndex < 0 {
-				return ErrInvalidLengthTx
-			}
-			if postIndex > l {
-				return io.ErrUnexpectedEOF
-			}
-			m.Authority = string(dAtA[iNdEx:postIndex])
-			iNdEx = postIndex
-		case 2:
-			if wireType != 2 {
-				return fmt.Errorf("proto: wrong wireType = %d for field ContractAddress", wireType)
-			}
-			var stringLen uint64
-			for shift := uint(0); ; shift += 7 {
-				if shift >= 64 {
-					return ErrIntOverflowTx
-				}
-				if iNdEx >= l {
-					return io.ErrUnexpectedEOF
-				}
-				b := dAtA[iNdEx]
-				iNdEx++
-				stringLen |= uint64(b&0x7F) << shift
-				if b < 0x80 {
-					break
-				}
-			}
-			intStringLen := int(stringLen)
-			if intStringLen < 0 {
-				return ErrInvalidLengthTx
-			}
-			postIndex := iNdEx + intStringLen
-			if postIndex < 0 {
-				return ErrInvalidLengthTx
-			}
-			if postIndex > l {
-				return io.ErrUnexpectedEOF
-			}
-			m.ContractAddress = string(dAtA[iNdEx:postIndex])
-			iNdEx = postIndex
-		default:
-			iNdEx = preIndex
-			skippy, err := skipTx(dAtA[iNdEx:])
-			if err != nil {
-				return err
-			}
-			if (skippy < 0) || (iNdEx+skippy) < 0 {
-				return ErrInvalidLengthTx
-			}
-			if (iNdEx + skippy) > l {
-				return io.ErrUnexpectedEOF
-			}
-			iNdEx += skippy
-		}
-	}
-
-	if iNdEx > l {
-		return io.ErrUnexpectedEOF
-	}
-	return nil
-}
-func (m *MsgReactivateDeactivatedCronContractResponse) Unmarshal(dAtA []byte) error {
-	l := len(dAtA)
-	iNdEx := 0
-	for iNdEx < l {
-		preIndex := iNdEx
-		var wire uint64
-		for shift := uint(0); ; shift += 7 {
-			if shift >= 64 {
-				return ErrIntOverflowTx
-			}
-			if iNdEx >= l {
-				return io.ErrUnexpectedEOF
-			}
-			b := dAtA[iNdEx]
-			iNdEx++
-			wire |= uint64(b&0x7F) << shift
-			if b < 0x80 {
-				break
-			}
-		}
-		fieldNum := int32(wire >> 3)
-		wireType := int(wire & 0x7)
-		if wireType == 4 {
-			return fmt.Errorf("proto: MsgReactivateDeactivatedCronContractResponse: wiretype end group for non-group")
-		}
-		if fieldNum <= 0 {
-			return fmt.Errorf("proto: MsgReactivateDeactivatedCronContractResponse: illegal tag %d (wire type %d)", fieldNum, wire)
+			return fmt.Errorf("proto: MsgActivateCronContractResponse: illegal tag %d (wire type %d)", fieldNum, wire)
 		}
 		switch fieldNum {
 		default:

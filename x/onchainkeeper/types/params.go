@@ -41,7 +41,6 @@ func (p *Params) ParamSetPairs() paramtypes.ParamSetPairs {
 
 // Validate validates the set of params
 func (p Params) Validate() error {
-	ValidateAddresses(p.AdminAddress)
 	minimumGas := uint64(100_000)
 	if p.CronGasLimit < minimumGas {
 		return errorsmod.Wrapf(sdkerrors.ErrInvalidRequest, "invalid cron gas limit: %d. Must be above %d", p.CronGasLimit, minimumGas)

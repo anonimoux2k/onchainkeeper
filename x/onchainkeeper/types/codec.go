@@ -21,8 +21,7 @@ func init() {
 func RegisterCodec(cdc *codec.LegacyAmino) {
 	cdc.RegisterConcrete(&MsgRegisterCronContract{}, "onchainkeeper/MsgRegisterCronContract", nil)
 	cdc.RegisterConcrete(&MsgUnregisterCronContract{}, "onchainkeeper/MsgUnregisterCronContract", nil)
-	cdc.RegisterConcrete(&MsgAcceptPendingRegisteredCronContract{}, "onchainkeeper/MsgAcceptPendingRegisteredCronContract", nil)
-	cdc.RegisterConcrete(&MsgReactivateDeactivatedCronContract{}, "onchainkeeper/MsgReactivateDeactivatedCronContract", nil)
+	cdc.RegisterConcrete(&MsgActivateCronContract{}, "onchainkeeper/MsgAcceptPendingRegisteredCronContract", nil)
 	cdc.RegisterConcrete(&MsgUpdateParams{}, "onchainkeeper/MsgUpdateParams", nil)
 }
 
@@ -33,8 +32,7 @@ func RegisterInterfaces(registry cdctypes.InterfaceRegistry) {
 		(*sdk.Msg)(nil),
 		&MsgRegisterCronContract{},
 		&MsgUnregisterCronContract{},
-		&MsgAcceptPendingRegisteredCronContract{},
-		&MsgReactivateDeactivatedCronContract{},
+		&MsgActivateCronContract{},
 		&MsgUpdateParams{},
 	)
 	msgservice.RegisterMsgServiceDesc(registry, &_Msg_serviceDesc)

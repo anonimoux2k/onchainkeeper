@@ -19,11 +19,10 @@ import (
 const _ = grpc.SupportPackageIsVersion7
 
 const (
-	Msg_UpdateParams_FullMethodName                        = "/wasmapp.onchainkeeper.Msg/UpdateParams"
-	Msg_RegisterCronContract_FullMethodName                = "/wasmapp.onchainkeeper.Msg/RegisterCronContract"
-	Msg_UnregisterCronContract_FullMethodName              = "/wasmapp.onchainkeeper.Msg/UnregisterCronContract"
-	Msg_AcceptPendingRegisteredCronContract_FullMethodName = "/wasmapp.onchainkeeper.Msg/AcceptPendingRegisteredCronContract"
-	Msg_ReactivateDeactivatedCronContract_FullMethodName   = "/wasmapp.onchainkeeper.Msg/ReactivateDeactivatedCronContract"
+	Msg_UpdateParams_FullMethodName           = "/wasmapp.onchainkeeper.Msg/UpdateParams"
+	Msg_RegisterCronContract_FullMethodName   = "/wasmapp.onchainkeeper.Msg/RegisterCronContract"
+	Msg_UnregisterCronContract_FullMethodName = "/wasmapp.onchainkeeper.Msg/UnregisterCronContract"
+	Msg_ActivateCronContract_FullMethodName   = "/wasmapp.onchainkeeper.Msg/ActivateCronContract"
 )
 
 // MsgClient is the client API for Msg service.
@@ -35,8 +34,7 @@ type MsgClient interface {
 	UpdateParams(ctx context.Context, in *MsgUpdateParams, opts ...grpc.CallOption) (*MsgUpdateParamsResponse, error)
 	RegisterCronContract(ctx context.Context, in *MsgRegisterCronContract, opts ...grpc.CallOption) (*MsgRegisterCronContractResponse, error)
 	UnregisterCronContract(ctx context.Context, in *MsgUnregisterCronContract, opts ...grpc.CallOption) (*MsgUnregisterCronContractResponse, error)
-	AcceptPendingRegisteredCronContract(ctx context.Context, in *MsgAcceptPendingRegisteredCronContract, opts ...grpc.CallOption) (*MsgAcceptPendingRegisteredCronContractResponse, error)
-	ReactivateDeactivatedCronContract(ctx context.Context, in *MsgReactivateDeactivatedCronContract, opts ...grpc.CallOption) (*MsgReactivateDeactivatedCronContractResponse, error)
+	ActivateCronContract(ctx context.Context, in *MsgActivateCronContract, opts ...grpc.CallOption) (*MsgActivateCronContractResponse, error)
 }
 
 type msgClient struct {
@@ -74,18 +72,9 @@ func (c *msgClient) UnregisterCronContract(ctx context.Context, in *MsgUnregiste
 	return out, nil
 }
 
-func (c *msgClient) AcceptPendingRegisteredCronContract(ctx context.Context, in *MsgAcceptPendingRegisteredCronContract, opts ...grpc.CallOption) (*MsgAcceptPendingRegisteredCronContractResponse, error) {
-	out := new(MsgAcceptPendingRegisteredCronContractResponse)
-	err := c.cc.Invoke(ctx, Msg_AcceptPendingRegisteredCronContract_FullMethodName, in, out, opts...)
-	if err != nil {
-		return nil, err
-	}
-	return out, nil
-}
-
-func (c *msgClient) ReactivateDeactivatedCronContract(ctx context.Context, in *MsgReactivateDeactivatedCronContract, opts ...grpc.CallOption) (*MsgReactivateDeactivatedCronContractResponse, error) {
-	out := new(MsgReactivateDeactivatedCronContractResponse)
-	err := c.cc.Invoke(ctx, Msg_ReactivateDeactivatedCronContract_FullMethodName, in, out, opts...)
+func (c *msgClient) ActivateCronContract(ctx context.Context, in *MsgActivateCronContract, opts ...grpc.CallOption) (*MsgActivateCronContractResponse, error) {
+	out := new(MsgActivateCronContractResponse)
+	err := c.cc.Invoke(ctx, Msg_ActivateCronContract_FullMethodName, in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -101,8 +90,7 @@ type MsgServer interface {
 	UpdateParams(context.Context, *MsgUpdateParams) (*MsgUpdateParamsResponse, error)
 	RegisterCronContract(context.Context, *MsgRegisterCronContract) (*MsgRegisterCronContractResponse, error)
 	UnregisterCronContract(context.Context, *MsgUnregisterCronContract) (*MsgUnregisterCronContractResponse, error)
-	AcceptPendingRegisteredCronContract(context.Context, *MsgAcceptPendingRegisteredCronContract) (*MsgAcceptPendingRegisteredCronContractResponse, error)
-	ReactivateDeactivatedCronContract(context.Context, *MsgReactivateDeactivatedCronContract) (*MsgReactivateDeactivatedCronContractResponse, error)
+	ActivateCronContract(context.Context, *MsgActivateCronContract) (*MsgActivateCronContractResponse, error)
 	mustEmbedUnimplementedMsgServer()
 }
 
@@ -119,11 +107,8 @@ func (UnimplementedMsgServer) RegisterCronContract(context.Context, *MsgRegister
 func (UnimplementedMsgServer) UnregisterCronContract(context.Context, *MsgUnregisterCronContract) (*MsgUnregisterCronContractResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method UnregisterCronContract not implemented")
 }
-func (UnimplementedMsgServer) AcceptPendingRegisteredCronContract(context.Context, *MsgAcceptPendingRegisteredCronContract) (*MsgAcceptPendingRegisteredCronContractResponse, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method AcceptPendingRegisteredCronContract not implemented")
-}
-func (UnimplementedMsgServer) ReactivateDeactivatedCronContract(context.Context, *MsgReactivateDeactivatedCronContract) (*MsgReactivateDeactivatedCronContractResponse, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method ReactivateDeactivatedCronContract not implemented")
+func (UnimplementedMsgServer) ActivateCronContract(context.Context, *MsgActivateCronContract) (*MsgActivateCronContractResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method ActivateCronContract not implemented")
 }
 func (UnimplementedMsgServer) mustEmbedUnimplementedMsgServer() {}
 
@@ -192,38 +177,20 @@ func _Msg_UnregisterCronContract_Handler(srv interface{}, ctx context.Context, d
 	return interceptor(ctx, in, info, handler)
 }
 
-func _Msg_AcceptPendingRegisteredCronContract_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(MsgAcceptPendingRegisteredCronContract)
+func _Msg_ActivateCronContract_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(MsgActivateCronContract)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(MsgServer).AcceptPendingRegisteredCronContract(ctx, in)
+		return srv.(MsgServer).ActivateCronContract(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: Msg_AcceptPendingRegisteredCronContract_FullMethodName,
+		FullMethod: Msg_ActivateCronContract_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(MsgServer).AcceptPendingRegisteredCronContract(ctx, req.(*MsgAcceptPendingRegisteredCronContract))
-	}
-	return interceptor(ctx, in, info, handler)
-}
-
-func _Msg_ReactivateDeactivatedCronContract_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(MsgReactivateDeactivatedCronContract)
-	if err := dec(in); err != nil {
-		return nil, err
-	}
-	if interceptor == nil {
-		return srv.(MsgServer).ReactivateDeactivatedCronContract(ctx, in)
-	}
-	info := &grpc.UnaryServerInfo{
-		Server:     srv,
-		FullMethod: Msg_ReactivateDeactivatedCronContract_FullMethodName,
-	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(MsgServer).ReactivateDeactivatedCronContract(ctx, req.(*MsgReactivateDeactivatedCronContract))
+		return srv.(MsgServer).ActivateCronContract(ctx, req.(*MsgActivateCronContract))
 	}
 	return interceptor(ctx, in, info, handler)
 }
@@ -248,12 +215,8 @@ var Msg_ServiceDesc = grpc.ServiceDesc{
 			Handler:    _Msg_UnregisterCronContract_Handler,
 		},
 		{
-			MethodName: "AcceptPendingRegisteredCronContract",
-			Handler:    _Msg_AcceptPendingRegisteredCronContract_Handler,
-		},
-		{
-			MethodName: "ReactivateDeactivatedCronContract",
-			Handler:    _Msg_ReactivateDeactivatedCronContract_Handler,
+			MethodName: "ActivateCronContract",
+			Handler:    _Msg_ActivateCronContract_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},

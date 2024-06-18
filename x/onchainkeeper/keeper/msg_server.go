@@ -44,26 +44,15 @@ func (k msgServer) UnregisterCronContract(goCtx context.Context, req *types.MsgU
 	return &types.MsgUnregisterCronContractResponse{}, k.UnregisterContract(ctx, req.SenderAddress, req.ContractAddress)
 }
 
-// AcceptPendingRegisteredCronContract implements types.MsgServer.
-func (k msgServer) AcceptPendingRegisteredCronContract(goCtx context.Context, req *types.MsgAcceptPendingRegisteredCronContract) (*types.MsgAcceptPendingRegisteredCronContractResponse, error) {
+// ActivateCronContract implements types.MsgServer.
+func (k msgServer) ActivateCronContract(goCtx context.Context, req *types.MsgActivateCronContract) (*types.MsgActivateCronContractResponse, error) {
 	ctx := sdk.UnwrapSDKContext(goCtx)
 
 	if err := req.ValidateBasic(); err != nil {
 		return nil, err
 	}
 
-	return &types.MsgAcceptPendingRegisteredCronContractResponse{}, k.ActivateCronContract(ctx, req.Authority, req.ContractAddress)
-}
-
-// ReactivateDeactivatedCronContract implements types.MsgServer.
-func (k msgServer) ReactivateDeactivatedCronContract(goCtx context.Context, req *types.MsgReactivateDeactivatedCronContract) (*types.MsgReactivateDeactivatedCronContractResponse, error) {
-	ctx := sdk.UnwrapSDKContext(goCtx)
-
-	if err := req.ValidateBasic(); err != nil {
-		return nil, err
-	}
-
-	return &types.MsgReactivateDeactivatedCronContractResponse{}, k.ActivateCronContract(ctx, req.Authority, req.ContractAddress)
+	return &types.MsgActivateCronContractResponse{}, k.ActivateContract(ctx, req.Authority, req.ContractAddress)
 }
 
 func (k msgServer) UpdateParams(goCtx context.Context, req *types.MsgUpdateParams) (*types.MsgUpdateParamsResponse, error) {

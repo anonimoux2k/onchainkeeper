@@ -2553,27 +2553,27 @@ func (x *fastReflection_MsgUnregisterCronContractResponse) ProtoMethods() *proto
 }
 
 var (
-	md_MsgAcceptPendingRegisteredCronContract                  protoreflect.MessageDescriptor
-	fd_MsgAcceptPendingRegisteredCronContract_authority        protoreflect.FieldDescriptor
-	fd_MsgAcceptPendingRegisteredCronContract_contract_address protoreflect.FieldDescriptor
+	md_MsgActivateCronContract                  protoreflect.MessageDescriptor
+	fd_MsgActivateCronContract_authority        protoreflect.FieldDescriptor
+	fd_MsgActivateCronContract_contract_address protoreflect.FieldDescriptor
 )
 
 func init() {
 	file_wasmapp_onchainkeeper_tx_proto_init()
-	md_MsgAcceptPendingRegisteredCronContract = File_wasmapp_onchainkeeper_tx_proto.Messages().ByName("MsgAcceptPendingRegisteredCronContract")
-	fd_MsgAcceptPendingRegisteredCronContract_authority = md_MsgAcceptPendingRegisteredCronContract.Fields().ByName("authority")
-	fd_MsgAcceptPendingRegisteredCronContract_contract_address = md_MsgAcceptPendingRegisteredCronContract.Fields().ByName("contract_address")
+	md_MsgActivateCronContract = File_wasmapp_onchainkeeper_tx_proto.Messages().ByName("MsgActivateCronContract")
+	fd_MsgActivateCronContract_authority = md_MsgActivateCronContract.Fields().ByName("authority")
+	fd_MsgActivateCronContract_contract_address = md_MsgActivateCronContract.Fields().ByName("contract_address")
 }
 
-var _ protoreflect.Message = (*fastReflection_MsgAcceptPendingRegisteredCronContract)(nil)
+var _ protoreflect.Message = (*fastReflection_MsgActivateCronContract)(nil)
 
-type fastReflection_MsgAcceptPendingRegisteredCronContract MsgAcceptPendingRegisteredCronContract
+type fastReflection_MsgActivateCronContract MsgActivateCronContract
 
-func (x *MsgAcceptPendingRegisteredCronContract) ProtoReflect() protoreflect.Message {
-	return (*fastReflection_MsgAcceptPendingRegisteredCronContract)(x)
+func (x *MsgActivateCronContract) ProtoReflect() protoreflect.Message {
+	return (*fastReflection_MsgActivateCronContract)(x)
 }
 
-func (x *MsgAcceptPendingRegisteredCronContract) slowProtoReflect() protoreflect.Message {
+func (x *MsgActivateCronContract) slowProtoReflect() protoreflect.Message {
 	mi := &file_wasmapp_onchainkeeper_tx_proto_msgTypes[6]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
@@ -2585,43 +2585,43 @@ func (x *MsgAcceptPendingRegisteredCronContract) slowProtoReflect() protoreflect
 	return mi.MessageOf(x)
 }
 
-var _fastReflection_MsgAcceptPendingRegisteredCronContract_messageType fastReflection_MsgAcceptPendingRegisteredCronContract_messageType
-var _ protoreflect.MessageType = fastReflection_MsgAcceptPendingRegisteredCronContract_messageType{}
+var _fastReflection_MsgActivateCronContract_messageType fastReflection_MsgActivateCronContract_messageType
+var _ protoreflect.MessageType = fastReflection_MsgActivateCronContract_messageType{}
 
-type fastReflection_MsgAcceptPendingRegisteredCronContract_messageType struct{}
+type fastReflection_MsgActivateCronContract_messageType struct{}
 
-func (x fastReflection_MsgAcceptPendingRegisteredCronContract_messageType) Zero() protoreflect.Message {
-	return (*fastReflection_MsgAcceptPendingRegisteredCronContract)(nil)
+func (x fastReflection_MsgActivateCronContract_messageType) Zero() protoreflect.Message {
+	return (*fastReflection_MsgActivateCronContract)(nil)
 }
-func (x fastReflection_MsgAcceptPendingRegisteredCronContract_messageType) New() protoreflect.Message {
-	return new(fastReflection_MsgAcceptPendingRegisteredCronContract)
+func (x fastReflection_MsgActivateCronContract_messageType) New() protoreflect.Message {
+	return new(fastReflection_MsgActivateCronContract)
 }
-func (x fastReflection_MsgAcceptPendingRegisteredCronContract_messageType) Descriptor() protoreflect.MessageDescriptor {
-	return md_MsgAcceptPendingRegisteredCronContract
+func (x fastReflection_MsgActivateCronContract_messageType) Descriptor() protoreflect.MessageDescriptor {
+	return md_MsgActivateCronContract
 }
 
 // Descriptor returns message descriptor, which contains only the protobuf
 // type information for the message.
-func (x *fastReflection_MsgAcceptPendingRegisteredCronContract) Descriptor() protoreflect.MessageDescriptor {
-	return md_MsgAcceptPendingRegisteredCronContract
+func (x *fastReflection_MsgActivateCronContract) Descriptor() protoreflect.MessageDescriptor {
+	return md_MsgActivateCronContract
 }
 
 // Type returns the message type, which encapsulates both Go and protobuf
 // type information. If the Go type information is not needed,
 // it is recommended that the message descriptor be used instead.
-func (x *fastReflection_MsgAcceptPendingRegisteredCronContract) Type() protoreflect.MessageType {
-	return _fastReflection_MsgAcceptPendingRegisteredCronContract_messageType
+func (x *fastReflection_MsgActivateCronContract) Type() protoreflect.MessageType {
+	return _fastReflection_MsgActivateCronContract_messageType
 }
 
 // New returns a newly allocated and mutable empty message.
-func (x *fastReflection_MsgAcceptPendingRegisteredCronContract) New() protoreflect.Message {
-	return new(fastReflection_MsgAcceptPendingRegisteredCronContract)
+func (x *fastReflection_MsgActivateCronContract) New() protoreflect.Message {
+	return new(fastReflection_MsgActivateCronContract)
 }
 
 // Interface unwraps the message reflection interface and
 // returns the underlying ProtoMessage interface.
-func (x *fastReflection_MsgAcceptPendingRegisteredCronContract) Interface() protoreflect.ProtoMessage {
-	return (*MsgAcceptPendingRegisteredCronContract)(x)
+func (x *fastReflection_MsgActivateCronContract) Interface() protoreflect.ProtoMessage {
+	return (*MsgActivateCronContract)(x)
 }
 
 // Range iterates over every populated field in an undefined order,
@@ -2629,16 +2629,16 @@ func (x *fastReflection_MsgAcceptPendingRegisteredCronContract) Interface() prot
 // Range returns immediately if f returns false.
 // While iterating, mutating operations may only be performed
 // on the current field descriptor.
-func (x *fastReflection_MsgAcceptPendingRegisteredCronContract) Range(f func(protoreflect.FieldDescriptor, protoreflect.Value) bool) {
+func (x *fastReflection_MsgActivateCronContract) Range(f func(protoreflect.FieldDescriptor, protoreflect.Value) bool) {
 	if x.Authority != "" {
 		value := protoreflect.ValueOfString(x.Authority)
-		if !f(fd_MsgAcceptPendingRegisteredCronContract_authority, value) {
+		if !f(fd_MsgActivateCronContract_authority, value) {
 			return
 		}
 	}
 	if x.ContractAddress != "" {
 		value := protoreflect.ValueOfString(x.ContractAddress)
-		if !f(fd_MsgAcceptPendingRegisteredCronContract_contract_address, value) {
+		if !f(fd_MsgActivateCronContract_contract_address, value) {
 			return
 		}
 	}
@@ -2655,17 +2655,17 @@ func (x *fastReflection_MsgAcceptPendingRegisteredCronContract) Range(f func(pro
 // In other cases (aside from the nullable cases above),
 // a proto3 scalar field is populated if it contains a non-zero value, and
 // a repeated field is populated if it is non-empty.
-func (x *fastReflection_MsgAcceptPendingRegisteredCronContract) Has(fd protoreflect.FieldDescriptor) bool {
+func (x *fastReflection_MsgActivateCronContract) Has(fd protoreflect.FieldDescriptor) bool {
 	switch fd.FullName() {
-	case "wasmapp.onchainkeeper.MsgAcceptPendingRegisteredCronContract.authority":
+	case "wasmapp.onchainkeeper.MsgActivateCronContract.authority":
 		return x.Authority != ""
-	case "wasmapp.onchainkeeper.MsgAcceptPendingRegisteredCronContract.contract_address":
+	case "wasmapp.onchainkeeper.MsgActivateCronContract.contract_address":
 		return x.ContractAddress != ""
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: wasmapp.onchainkeeper.MsgAcceptPendingRegisteredCronContract"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: wasmapp.onchainkeeper.MsgActivateCronContract"))
 		}
-		panic(fmt.Errorf("message wasmapp.onchainkeeper.MsgAcceptPendingRegisteredCronContract does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message wasmapp.onchainkeeper.MsgActivateCronContract does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -2675,17 +2675,17 @@ func (x *fastReflection_MsgAcceptPendingRegisteredCronContract) Has(fd protorefl
 // associated with the given field number.
 //
 // Clear is a mutating operation and unsafe for concurrent use.
-func (x *fastReflection_MsgAcceptPendingRegisteredCronContract) Clear(fd protoreflect.FieldDescriptor) {
+func (x *fastReflection_MsgActivateCronContract) Clear(fd protoreflect.FieldDescriptor) {
 	switch fd.FullName() {
-	case "wasmapp.onchainkeeper.MsgAcceptPendingRegisteredCronContract.authority":
+	case "wasmapp.onchainkeeper.MsgActivateCronContract.authority":
 		x.Authority = ""
-	case "wasmapp.onchainkeeper.MsgAcceptPendingRegisteredCronContract.contract_address":
+	case "wasmapp.onchainkeeper.MsgActivateCronContract.contract_address":
 		x.ContractAddress = ""
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: wasmapp.onchainkeeper.MsgAcceptPendingRegisteredCronContract"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: wasmapp.onchainkeeper.MsgActivateCronContract"))
 		}
-		panic(fmt.Errorf("message wasmapp.onchainkeeper.MsgAcceptPendingRegisteredCronContract does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message wasmapp.onchainkeeper.MsgActivateCronContract does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -2695,19 +2695,19 @@ func (x *fastReflection_MsgAcceptPendingRegisteredCronContract) Clear(fd protore
 // the default value of a bytes scalar is guaranteed to be a copy.
 // For unpopulated composite types, it returns an empty, read-only view
 // of the value; to obtain a mutable reference, use Mutable.
-func (x *fastReflection_MsgAcceptPendingRegisteredCronContract) Get(descriptor protoreflect.FieldDescriptor) protoreflect.Value {
+func (x *fastReflection_MsgActivateCronContract) Get(descriptor protoreflect.FieldDescriptor) protoreflect.Value {
 	switch descriptor.FullName() {
-	case "wasmapp.onchainkeeper.MsgAcceptPendingRegisteredCronContract.authority":
+	case "wasmapp.onchainkeeper.MsgActivateCronContract.authority":
 		value := x.Authority
 		return protoreflect.ValueOfString(value)
-	case "wasmapp.onchainkeeper.MsgAcceptPendingRegisteredCronContract.contract_address":
+	case "wasmapp.onchainkeeper.MsgActivateCronContract.contract_address":
 		value := x.ContractAddress
 		return protoreflect.ValueOfString(value)
 	default:
 		if descriptor.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: wasmapp.onchainkeeper.MsgAcceptPendingRegisteredCronContract"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: wasmapp.onchainkeeper.MsgActivateCronContract"))
 		}
-		panic(fmt.Errorf("message wasmapp.onchainkeeper.MsgAcceptPendingRegisteredCronContract does not contain field %s", descriptor.FullName()))
+		panic(fmt.Errorf("message wasmapp.onchainkeeper.MsgActivateCronContract does not contain field %s", descriptor.FullName()))
 	}
 }
 
@@ -2721,17 +2721,17 @@ func (x *fastReflection_MsgAcceptPendingRegisteredCronContract) Get(descriptor p
 // empty, read-only value, then it panics.
 //
 // Set is a mutating operation and unsafe for concurrent use.
-func (x *fastReflection_MsgAcceptPendingRegisteredCronContract) Set(fd protoreflect.FieldDescriptor, value protoreflect.Value) {
+func (x *fastReflection_MsgActivateCronContract) Set(fd protoreflect.FieldDescriptor, value protoreflect.Value) {
 	switch fd.FullName() {
-	case "wasmapp.onchainkeeper.MsgAcceptPendingRegisteredCronContract.authority":
+	case "wasmapp.onchainkeeper.MsgActivateCronContract.authority":
 		x.Authority = value.Interface().(string)
-	case "wasmapp.onchainkeeper.MsgAcceptPendingRegisteredCronContract.contract_address":
+	case "wasmapp.onchainkeeper.MsgActivateCronContract.contract_address":
 		x.ContractAddress = value.Interface().(string)
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: wasmapp.onchainkeeper.MsgAcceptPendingRegisteredCronContract"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: wasmapp.onchainkeeper.MsgActivateCronContract"))
 		}
-		panic(fmt.Errorf("message wasmapp.onchainkeeper.MsgAcceptPendingRegisteredCronContract does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message wasmapp.onchainkeeper.MsgActivateCronContract does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -2745,44 +2745,44 @@ func (x *fastReflection_MsgAcceptPendingRegisteredCronContract) Set(fd protorefl
 // It panics if the field does not contain a composite type.
 //
 // Mutable is a mutating operation and unsafe for concurrent use.
-func (x *fastReflection_MsgAcceptPendingRegisteredCronContract) Mutable(fd protoreflect.FieldDescriptor) protoreflect.Value {
+func (x *fastReflection_MsgActivateCronContract) Mutable(fd protoreflect.FieldDescriptor) protoreflect.Value {
 	switch fd.FullName() {
-	case "wasmapp.onchainkeeper.MsgAcceptPendingRegisteredCronContract.authority":
-		panic(fmt.Errorf("field authority of message wasmapp.onchainkeeper.MsgAcceptPendingRegisteredCronContract is not mutable"))
-	case "wasmapp.onchainkeeper.MsgAcceptPendingRegisteredCronContract.contract_address":
-		panic(fmt.Errorf("field contract_address of message wasmapp.onchainkeeper.MsgAcceptPendingRegisteredCronContract is not mutable"))
+	case "wasmapp.onchainkeeper.MsgActivateCronContract.authority":
+		panic(fmt.Errorf("field authority of message wasmapp.onchainkeeper.MsgActivateCronContract is not mutable"))
+	case "wasmapp.onchainkeeper.MsgActivateCronContract.contract_address":
+		panic(fmt.Errorf("field contract_address of message wasmapp.onchainkeeper.MsgActivateCronContract is not mutable"))
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: wasmapp.onchainkeeper.MsgAcceptPendingRegisteredCronContract"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: wasmapp.onchainkeeper.MsgActivateCronContract"))
 		}
-		panic(fmt.Errorf("message wasmapp.onchainkeeper.MsgAcceptPendingRegisteredCronContract does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message wasmapp.onchainkeeper.MsgActivateCronContract does not contain field %s", fd.FullName()))
 	}
 }
 
 // NewField returns a new value that is assignable to the field
 // for the given descriptor. For scalars, this returns the default value.
 // For lists, maps, and messages, this returns a new, empty, mutable value.
-func (x *fastReflection_MsgAcceptPendingRegisteredCronContract) NewField(fd protoreflect.FieldDescriptor) protoreflect.Value {
+func (x *fastReflection_MsgActivateCronContract) NewField(fd protoreflect.FieldDescriptor) protoreflect.Value {
 	switch fd.FullName() {
-	case "wasmapp.onchainkeeper.MsgAcceptPendingRegisteredCronContract.authority":
+	case "wasmapp.onchainkeeper.MsgActivateCronContract.authority":
 		return protoreflect.ValueOfString("")
-	case "wasmapp.onchainkeeper.MsgAcceptPendingRegisteredCronContract.contract_address":
+	case "wasmapp.onchainkeeper.MsgActivateCronContract.contract_address":
 		return protoreflect.ValueOfString("")
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: wasmapp.onchainkeeper.MsgAcceptPendingRegisteredCronContract"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: wasmapp.onchainkeeper.MsgActivateCronContract"))
 		}
-		panic(fmt.Errorf("message wasmapp.onchainkeeper.MsgAcceptPendingRegisteredCronContract does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message wasmapp.onchainkeeper.MsgActivateCronContract does not contain field %s", fd.FullName()))
 	}
 }
 
 // WhichOneof reports which field within the oneof is populated,
 // returning nil if none are populated.
 // It panics if the oneof descriptor does not belong to this message.
-func (x *fastReflection_MsgAcceptPendingRegisteredCronContract) WhichOneof(d protoreflect.OneofDescriptor) protoreflect.FieldDescriptor {
+func (x *fastReflection_MsgActivateCronContract) WhichOneof(d protoreflect.OneofDescriptor) protoreflect.FieldDescriptor {
 	switch d.FullName() {
 	default:
-		panic(fmt.Errorf("%s is not a oneof field in wasmapp.onchainkeeper.MsgAcceptPendingRegisteredCronContract", d.FullName()))
+		panic(fmt.Errorf("%s is not a oneof field in wasmapp.onchainkeeper.MsgActivateCronContract", d.FullName()))
 	}
 	panic("unreachable")
 }
@@ -2790,7 +2790,7 @@ func (x *fastReflection_MsgAcceptPendingRegisteredCronContract) WhichOneof(d pro
 // GetUnknown retrieves the entire list of unknown fields.
 // The caller may only mutate the contents of the RawFields
 // if the mutated bytes are stored back into the message with SetUnknown.
-func (x *fastReflection_MsgAcceptPendingRegisteredCronContract) GetUnknown() protoreflect.RawFields {
+func (x *fastReflection_MsgActivateCronContract) GetUnknown() protoreflect.RawFields {
 	return x.unknownFields
 }
 
@@ -2801,7 +2801,7 @@ func (x *fastReflection_MsgAcceptPendingRegisteredCronContract) GetUnknown() pro
 // An empty RawFields may be passed to clear the fields.
 //
 // SetUnknown is a mutating operation and unsafe for concurrent use.
-func (x *fastReflection_MsgAcceptPendingRegisteredCronContract) SetUnknown(fields protoreflect.RawFields) {
+func (x *fastReflection_MsgActivateCronContract) SetUnknown(fields protoreflect.RawFields) {
 	x.unknownFields = fields
 }
 
@@ -2813,7 +2813,7 @@ func (x *fastReflection_MsgAcceptPendingRegisteredCronContract) SetUnknown(field
 // message type, but the details are implementation dependent.
 // Validity is not part of the protobuf data model, and may not
 // be preserved in marshaling or other operations.
-func (x *fastReflection_MsgAcceptPendingRegisteredCronContract) IsValid() bool {
+func (x *fastReflection_MsgActivateCronContract) IsValid() bool {
 	return x != nil
 }
 
@@ -2823,9 +2823,9 @@ func (x *fastReflection_MsgAcceptPendingRegisteredCronContract) IsValid() bool {
 // The returned methods type is identical to
 // "google.golang.org/protobuf/runtime/protoiface".Methods.
 // Consult the protoiface package documentation for details.
-func (x *fastReflection_MsgAcceptPendingRegisteredCronContract) ProtoMethods() *protoiface.Methods {
+func (x *fastReflection_MsgActivateCronContract) ProtoMethods() *protoiface.Methods {
 	size := func(input protoiface.SizeInput) protoiface.SizeOutput {
-		x := input.Message.Interface().(*MsgAcceptPendingRegisteredCronContract)
+		x := input.Message.Interface().(*MsgActivateCronContract)
 		if x == nil {
 			return protoiface.SizeOutput{
 				NoUnkeyedLiterals: input.NoUnkeyedLiterals,
@@ -2855,7 +2855,7 @@ func (x *fastReflection_MsgAcceptPendingRegisteredCronContract) ProtoMethods() *
 	}
 
 	marshal := func(input protoiface.MarshalInput) (protoiface.MarshalOutput, error) {
-		x := input.Message.Interface().(*MsgAcceptPendingRegisteredCronContract)
+		x := input.Message.Interface().(*MsgActivateCronContract)
 		if x == nil {
 			return protoiface.MarshalOutput{
 				NoUnkeyedLiterals: input.NoUnkeyedLiterals,
@@ -2899,7 +2899,7 @@ func (x *fastReflection_MsgAcceptPendingRegisteredCronContract) ProtoMethods() *
 		}, nil
 	}
 	unmarshal := func(input protoiface.UnmarshalInput) (protoiface.UnmarshalOutput, error) {
-		x := input.Message.Interface().(*MsgAcceptPendingRegisteredCronContract)
+		x := input.Message.Interface().(*MsgActivateCronContract)
 		if x == nil {
 			return protoiface.UnmarshalOutput{
 				NoUnkeyedLiterals: input.NoUnkeyedLiterals,
@@ -2931,10 +2931,10 @@ func (x *fastReflection_MsgAcceptPendingRegisteredCronContract) ProtoMethods() *
 			fieldNum := int32(wire >> 3)
 			wireType := int(wire & 0x7)
 			if wireType == 4 {
-				return protoiface.UnmarshalOutput{NoUnkeyedLiterals: input.NoUnkeyedLiterals, Flags: input.Flags}, fmt.Errorf("proto: MsgAcceptPendingRegisteredCronContract: wiretype end group for non-group")
+				return protoiface.UnmarshalOutput{NoUnkeyedLiterals: input.NoUnkeyedLiterals, Flags: input.Flags}, fmt.Errorf("proto: MsgActivateCronContract: wiretype end group for non-group")
 			}
 			if fieldNum <= 0 {
-				return protoiface.UnmarshalOutput{NoUnkeyedLiterals: input.NoUnkeyedLiterals, Flags: input.Flags}, fmt.Errorf("proto: MsgAcceptPendingRegisteredCronContract: illegal tag %d (wire type %d)", fieldNum, wire)
+				return protoiface.UnmarshalOutput{NoUnkeyedLiterals: input.NoUnkeyedLiterals, Flags: input.Flags}, fmt.Errorf("proto: MsgActivateCronContract: illegal tag %d (wire type %d)", fieldNum, wire)
 			}
 			switch fieldNum {
 			case 1:
@@ -3037,23 +3037,23 @@ func (x *fastReflection_MsgAcceptPendingRegisteredCronContract) ProtoMethods() *
 }
 
 var (
-	md_MsgAcceptPendingRegisteredCronContractResponse protoreflect.MessageDescriptor
+	md_MsgActivateCronContractResponse protoreflect.MessageDescriptor
 )
 
 func init() {
 	file_wasmapp_onchainkeeper_tx_proto_init()
-	md_MsgAcceptPendingRegisteredCronContractResponse = File_wasmapp_onchainkeeper_tx_proto.Messages().ByName("MsgAcceptPendingRegisteredCronContractResponse")
+	md_MsgActivateCronContractResponse = File_wasmapp_onchainkeeper_tx_proto.Messages().ByName("MsgActivateCronContractResponse")
 }
 
-var _ protoreflect.Message = (*fastReflection_MsgAcceptPendingRegisteredCronContractResponse)(nil)
+var _ protoreflect.Message = (*fastReflection_MsgActivateCronContractResponse)(nil)
 
-type fastReflection_MsgAcceptPendingRegisteredCronContractResponse MsgAcceptPendingRegisteredCronContractResponse
+type fastReflection_MsgActivateCronContractResponse MsgActivateCronContractResponse
 
-func (x *MsgAcceptPendingRegisteredCronContractResponse) ProtoReflect() protoreflect.Message {
-	return (*fastReflection_MsgAcceptPendingRegisteredCronContractResponse)(x)
+func (x *MsgActivateCronContractResponse) ProtoReflect() protoreflect.Message {
+	return (*fastReflection_MsgActivateCronContractResponse)(x)
 }
 
-func (x *MsgAcceptPendingRegisteredCronContractResponse) slowProtoReflect() protoreflect.Message {
+func (x *MsgActivateCronContractResponse) slowProtoReflect() protoreflect.Message {
 	mi := &file_wasmapp_onchainkeeper_tx_proto_msgTypes[7]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
@@ -3065,43 +3065,43 @@ func (x *MsgAcceptPendingRegisteredCronContractResponse) slowProtoReflect() prot
 	return mi.MessageOf(x)
 }
 
-var _fastReflection_MsgAcceptPendingRegisteredCronContractResponse_messageType fastReflection_MsgAcceptPendingRegisteredCronContractResponse_messageType
-var _ protoreflect.MessageType = fastReflection_MsgAcceptPendingRegisteredCronContractResponse_messageType{}
+var _fastReflection_MsgActivateCronContractResponse_messageType fastReflection_MsgActivateCronContractResponse_messageType
+var _ protoreflect.MessageType = fastReflection_MsgActivateCronContractResponse_messageType{}
 
-type fastReflection_MsgAcceptPendingRegisteredCronContractResponse_messageType struct{}
+type fastReflection_MsgActivateCronContractResponse_messageType struct{}
 
-func (x fastReflection_MsgAcceptPendingRegisteredCronContractResponse_messageType) Zero() protoreflect.Message {
-	return (*fastReflection_MsgAcceptPendingRegisteredCronContractResponse)(nil)
+func (x fastReflection_MsgActivateCronContractResponse_messageType) Zero() protoreflect.Message {
+	return (*fastReflection_MsgActivateCronContractResponse)(nil)
 }
-func (x fastReflection_MsgAcceptPendingRegisteredCronContractResponse_messageType) New() protoreflect.Message {
-	return new(fastReflection_MsgAcceptPendingRegisteredCronContractResponse)
+func (x fastReflection_MsgActivateCronContractResponse_messageType) New() protoreflect.Message {
+	return new(fastReflection_MsgActivateCronContractResponse)
 }
-func (x fastReflection_MsgAcceptPendingRegisteredCronContractResponse_messageType) Descriptor() protoreflect.MessageDescriptor {
-	return md_MsgAcceptPendingRegisteredCronContractResponse
+func (x fastReflection_MsgActivateCronContractResponse_messageType) Descriptor() protoreflect.MessageDescriptor {
+	return md_MsgActivateCronContractResponse
 }
 
 // Descriptor returns message descriptor, which contains only the protobuf
 // type information for the message.
-func (x *fastReflection_MsgAcceptPendingRegisteredCronContractResponse) Descriptor() protoreflect.MessageDescriptor {
-	return md_MsgAcceptPendingRegisteredCronContractResponse
+func (x *fastReflection_MsgActivateCronContractResponse) Descriptor() protoreflect.MessageDescriptor {
+	return md_MsgActivateCronContractResponse
 }
 
 // Type returns the message type, which encapsulates both Go and protobuf
 // type information. If the Go type information is not needed,
 // it is recommended that the message descriptor be used instead.
-func (x *fastReflection_MsgAcceptPendingRegisteredCronContractResponse) Type() protoreflect.MessageType {
-	return _fastReflection_MsgAcceptPendingRegisteredCronContractResponse_messageType
+func (x *fastReflection_MsgActivateCronContractResponse) Type() protoreflect.MessageType {
+	return _fastReflection_MsgActivateCronContractResponse_messageType
 }
 
 // New returns a newly allocated and mutable empty message.
-func (x *fastReflection_MsgAcceptPendingRegisteredCronContractResponse) New() protoreflect.Message {
-	return new(fastReflection_MsgAcceptPendingRegisteredCronContractResponse)
+func (x *fastReflection_MsgActivateCronContractResponse) New() protoreflect.Message {
+	return new(fastReflection_MsgActivateCronContractResponse)
 }
 
 // Interface unwraps the message reflection interface and
 // returns the underlying ProtoMessage interface.
-func (x *fastReflection_MsgAcceptPendingRegisteredCronContractResponse) Interface() protoreflect.ProtoMessage {
-	return (*MsgAcceptPendingRegisteredCronContractResponse)(x)
+func (x *fastReflection_MsgActivateCronContractResponse) Interface() protoreflect.ProtoMessage {
+	return (*MsgActivateCronContractResponse)(x)
 }
 
 // Range iterates over every populated field in an undefined order,
@@ -3109,7 +3109,7 @@ func (x *fastReflection_MsgAcceptPendingRegisteredCronContractResponse) Interfac
 // Range returns immediately if f returns false.
 // While iterating, mutating operations may only be performed
 // on the current field descriptor.
-func (x *fastReflection_MsgAcceptPendingRegisteredCronContractResponse) Range(f func(protoreflect.FieldDescriptor, protoreflect.Value) bool) {
+func (x *fastReflection_MsgActivateCronContractResponse) Range(f func(protoreflect.FieldDescriptor, protoreflect.Value) bool) {
 }
 
 // Has reports whether a field is populated.
@@ -3123,13 +3123,13 @@ func (x *fastReflection_MsgAcceptPendingRegisteredCronContractResponse) Range(f 
 // In other cases (aside from the nullable cases above),
 // a proto3 scalar field is populated if it contains a non-zero value, and
 // a repeated field is populated if it is non-empty.
-func (x *fastReflection_MsgAcceptPendingRegisteredCronContractResponse) Has(fd protoreflect.FieldDescriptor) bool {
+func (x *fastReflection_MsgActivateCronContractResponse) Has(fd protoreflect.FieldDescriptor) bool {
 	switch fd.FullName() {
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: wasmapp.onchainkeeper.MsgAcceptPendingRegisteredCronContractResponse"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: wasmapp.onchainkeeper.MsgActivateCronContractResponse"))
 		}
-		panic(fmt.Errorf("message wasmapp.onchainkeeper.MsgAcceptPendingRegisteredCronContractResponse does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message wasmapp.onchainkeeper.MsgActivateCronContractResponse does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -3139,13 +3139,13 @@ func (x *fastReflection_MsgAcceptPendingRegisteredCronContractResponse) Has(fd p
 // associated with the given field number.
 //
 // Clear is a mutating operation and unsafe for concurrent use.
-func (x *fastReflection_MsgAcceptPendingRegisteredCronContractResponse) Clear(fd protoreflect.FieldDescriptor) {
+func (x *fastReflection_MsgActivateCronContractResponse) Clear(fd protoreflect.FieldDescriptor) {
 	switch fd.FullName() {
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: wasmapp.onchainkeeper.MsgAcceptPendingRegisteredCronContractResponse"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: wasmapp.onchainkeeper.MsgActivateCronContractResponse"))
 		}
-		panic(fmt.Errorf("message wasmapp.onchainkeeper.MsgAcceptPendingRegisteredCronContractResponse does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message wasmapp.onchainkeeper.MsgActivateCronContractResponse does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -3155,13 +3155,13 @@ func (x *fastReflection_MsgAcceptPendingRegisteredCronContractResponse) Clear(fd
 // the default value of a bytes scalar is guaranteed to be a copy.
 // For unpopulated composite types, it returns an empty, read-only view
 // of the value; to obtain a mutable reference, use Mutable.
-func (x *fastReflection_MsgAcceptPendingRegisteredCronContractResponse) Get(descriptor protoreflect.FieldDescriptor) protoreflect.Value {
+func (x *fastReflection_MsgActivateCronContractResponse) Get(descriptor protoreflect.FieldDescriptor) protoreflect.Value {
 	switch descriptor.FullName() {
 	default:
 		if descriptor.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: wasmapp.onchainkeeper.MsgAcceptPendingRegisteredCronContractResponse"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: wasmapp.onchainkeeper.MsgActivateCronContractResponse"))
 		}
-		panic(fmt.Errorf("message wasmapp.onchainkeeper.MsgAcceptPendingRegisteredCronContractResponse does not contain field %s", descriptor.FullName()))
+		panic(fmt.Errorf("message wasmapp.onchainkeeper.MsgActivateCronContractResponse does not contain field %s", descriptor.FullName()))
 	}
 }
 
@@ -3175,13 +3175,13 @@ func (x *fastReflection_MsgAcceptPendingRegisteredCronContractResponse) Get(desc
 // empty, read-only value, then it panics.
 //
 // Set is a mutating operation and unsafe for concurrent use.
-func (x *fastReflection_MsgAcceptPendingRegisteredCronContractResponse) Set(fd protoreflect.FieldDescriptor, value protoreflect.Value) {
+func (x *fastReflection_MsgActivateCronContractResponse) Set(fd protoreflect.FieldDescriptor, value protoreflect.Value) {
 	switch fd.FullName() {
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: wasmapp.onchainkeeper.MsgAcceptPendingRegisteredCronContractResponse"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: wasmapp.onchainkeeper.MsgActivateCronContractResponse"))
 		}
-		panic(fmt.Errorf("message wasmapp.onchainkeeper.MsgAcceptPendingRegisteredCronContractResponse does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message wasmapp.onchainkeeper.MsgActivateCronContractResponse does not contain field %s", fd.FullName()))
 	}
 }
 
@@ -3195,36 +3195,36 @@ func (x *fastReflection_MsgAcceptPendingRegisteredCronContractResponse) Set(fd p
 // It panics if the field does not contain a composite type.
 //
 // Mutable is a mutating operation and unsafe for concurrent use.
-func (x *fastReflection_MsgAcceptPendingRegisteredCronContractResponse) Mutable(fd protoreflect.FieldDescriptor) protoreflect.Value {
+func (x *fastReflection_MsgActivateCronContractResponse) Mutable(fd protoreflect.FieldDescriptor) protoreflect.Value {
 	switch fd.FullName() {
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: wasmapp.onchainkeeper.MsgAcceptPendingRegisteredCronContractResponse"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: wasmapp.onchainkeeper.MsgActivateCronContractResponse"))
 		}
-		panic(fmt.Errorf("message wasmapp.onchainkeeper.MsgAcceptPendingRegisteredCronContractResponse does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message wasmapp.onchainkeeper.MsgActivateCronContractResponse does not contain field %s", fd.FullName()))
 	}
 }
 
 // NewField returns a new value that is assignable to the field
 // for the given descriptor. For scalars, this returns the default value.
 // For lists, maps, and messages, this returns a new, empty, mutable value.
-func (x *fastReflection_MsgAcceptPendingRegisteredCronContractResponse) NewField(fd protoreflect.FieldDescriptor) protoreflect.Value {
+func (x *fastReflection_MsgActivateCronContractResponse) NewField(fd protoreflect.FieldDescriptor) protoreflect.Value {
 	switch fd.FullName() {
 	default:
 		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: wasmapp.onchainkeeper.MsgAcceptPendingRegisteredCronContractResponse"))
+			panic(fmt.Errorf("proto3 declared messages do not support extensions: wasmapp.onchainkeeper.MsgActivateCronContractResponse"))
 		}
-		panic(fmt.Errorf("message wasmapp.onchainkeeper.MsgAcceptPendingRegisteredCronContractResponse does not contain field %s", fd.FullName()))
+		panic(fmt.Errorf("message wasmapp.onchainkeeper.MsgActivateCronContractResponse does not contain field %s", fd.FullName()))
 	}
 }
 
 // WhichOneof reports which field within the oneof is populated,
 // returning nil if none are populated.
 // It panics if the oneof descriptor does not belong to this message.
-func (x *fastReflection_MsgAcceptPendingRegisteredCronContractResponse) WhichOneof(d protoreflect.OneofDescriptor) protoreflect.FieldDescriptor {
+func (x *fastReflection_MsgActivateCronContractResponse) WhichOneof(d protoreflect.OneofDescriptor) protoreflect.FieldDescriptor {
 	switch d.FullName() {
 	default:
-		panic(fmt.Errorf("%s is not a oneof field in wasmapp.onchainkeeper.MsgAcceptPendingRegisteredCronContractResponse", d.FullName()))
+		panic(fmt.Errorf("%s is not a oneof field in wasmapp.onchainkeeper.MsgActivateCronContractResponse", d.FullName()))
 	}
 	panic("unreachable")
 }
@@ -3232,7 +3232,7 @@ func (x *fastReflection_MsgAcceptPendingRegisteredCronContractResponse) WhichOne
 // GetUnknown retrieves the entire list of unknown fields.
 // The caller may only mutate the contents of the RawFields
 // if the mutated bytes are stored back into the message with SetUnknown.
-func (x *fastReflection_MsgAcceptPendingRegisteredCronContractResponse) GetUnknown() protoreflect.RawFields {
+func (x *fastReflection_MsgActivateCronContractResponse) GetUnknown() protoreflect.RawFields {
 	return x.unknownFields
 }
 
@@ -3243,7 +3243,7 @@ func (x *fastReflection_MsgAcceptPendingRegisteredCronContractResponse) GetUnkno
 // An empty RawFields may be passed to clear the fields.
 //
 // SetUnknown is a mutating operation and unsafe for concurrent use.
-func (x *fastReflection_MsgAcceptPendingRegisteredCronContractResponse) SetUnknown(fields protoreflect.RawFields) {
+func (x *fastReflection_MsgActivateCronContractResponse) SetUnknown(fields protoreflect.RawFields) {
 	x.unknownFields = fields
 }
 
@@ -3255,7 +3255,7 @@ func (x *fastReflection_MsgAcceptPendingRegisteredCronContractResponse) SetUnkno
 // message type, but the details are implementation dependent.
 // Validity is not part of the protobuf data model, and may not
 // be preserved in marshaling or other operations.
-func (x *fastReflection_MsgAcceptPendingRegisteredCronContractResponse) IsValid() bool {
+func (x *fastReflection_MsgActivateCronContractResponse) IsValid() bool {
 	return x != nil
 }
 
@@ -3265,9 +3265,9 @@ func (x *fastReflection_MsgAcceptPendingRegisteredCronContractResponse) IsValid(
 // The returned methods type is identical to
 // "google.golang.org/protobuf/runtime/protoiface".Methods.
 // Consult the protoiface package documentation for details.
-func (x *fastReflection_MsgAcceptPendingRegisteredCronContractResponse) ProtoMethods() *protoiface.Methods {
+func (x *fastReflection_MsgActivateCronContractResponse) ProtoMethods() *protoiface.Methods {
 	size := func(input protoiface.SizeInput) protoiface.SizeOutput {
-		x := input.Message.Interface().(*MsgAcceptPendingRegisteredCronContractResponse)
+		x := input.Message.Interface().(*MsgActivateCronContractResponse)
 		if x == nil {
 			return protoiface.SizeOutput{
 				NoUnkeyedLiterals: input.NoUnkeyedLiterals,
@@ -3289,7 +3289,7 @@ func (x *fastReflection_MsgAcceptPendingRegisteredCronContractResponse) ProtoMet
 	}
 
 	marshal := func(input protoiface.MarshalInput) (protoiface.MarshalOutput, error) {
-		x := input.Message.Interface().(*MsgAcceptPendingRegisteredCronContractResponse)
+		x := input.Message.Interface().(*MsgActivateCronContractResponse)
 		if x == nil {
 			return protoiface.MarshalOutput{
 				NoUnkeyedLiterals: input.NoUnkeyedLiterals,
@@ -3319,7 +3319,7 @@ func (x *fastReflection_MsgAcceptPendingRegisteredCronContractResponse) ProtoMet
 		}, nil
 	}
 	unmarshal := func(input protoiface.UnmarshalInput) (protoiface.UnmarshalOutput, error) {
-		x := input.Message.Interface().(*MsgAcceptPendingRegisteredCronContractResponse)
+		x := input.Message.Interface().(*MsgActivateCronContractResponse)
 		if x == nil {
 			return protoiface.UnmarshalOutput{
 				NoUnkeyedLiterals: input.NoUnkeyedLiterals,
@@ -3351,850 +3351,10 @@ func (x *fastReflection_MsgAcceptPendingRegisteredCronContractResponse) ProtoMet
 			fieldNum := int32(wire >> 3)
 			wireType := int(wire & 0x7)
 			if wireType == 4 {
-				return protoiface.UnmarshalOutput{NoUnkeyedLiterals: input.NoUnkeyedLiterals, Flags: input.Flags}, fmt.Errorf("proto: MsgAcceptPendingRegisteredCronContractResponse: wiretype end group for non-group")
+				return protoiface.UnmarshalOutput{NoUnkeyedLiterals: input.NoUnkeyedLiterals, Flags: input.Flags}, fmt.Errorf("proto: MsgActivateCronContractResponse: wiretype end group for non-group")
 			}
 			if fieldNum <= 0 {
-				return protoiface.UnmarshalOutput{NoUnkeyedLiterals: input.NoUnkeyedLiterals, Flags: input.Flags}, fmt.Errorf("proto: MsgAcceptPendingRegisteredCronContractResponse: illegal tag %d (wire type %d)", fieldNum, wire)
-			}
-			switch fieldNum {
-			default:
-				iNdEx = preIndex
-				skippy, err := runtime.Skip(dAtA[iNdEx:])
-				if err != nil {
-					return protoiface.UnmarshalOutput{NoUnkeyedLiterals: input.NoUnkeyedLiterals, Flags: input.Flags}, err
-				}
-				if (skippy < 0) || (iNdEx+skippy) < 0 {
-					return protoiface.UnmarshalOutput{NoUnkeyedLiterals: input.NoUnkeyedLiterals, Flags: input.Flags}, runtime.ErrInvalidLength
-				}
-				if (iNdEx + skippy) > l {
-					return protoiface.UnmarshalOutput{NoUnkeyedLiterals: input.NoUnkeyedLiterals, Flags: input.Flags}, io.ErrUnexpectedEOF
-				}
-				if !options.DiscardUnknown {
-					x.unknownFields = append(x.unknownFields, dAtA[iNdEx:iNdEx+skippy]...)
-				}
-				iNdEx += skippy
-			}
-		}
-
-		if iNdEx > l {
-			return protoiface.UnmarshalOutput{NoUnkeyedLiterals: input.NoUnkeyedLiterals, Flags: input.Flags}, io.ErrUnexpectedEOF
-		}
-		return protoiface.UnmarshalOutput{NoUnkeyedLiterals: input.NoUnkeyedLiterals, Flags: input.Flags}, nil
-	}
-	return &protoiface.Methods{
-		NoUnkeyedLiterals: struct{}{},
-		Flags:             protoiface.SupportMarshalDeterministic | protoiface.SupportUnmarshalDiscardUnknown,
-		Size:              size,
-		Marshal:           marshal,
-		Unmarshal:         unmarshal,
-		Merge:             nil,
-		CheckInitialized:  nil,
-	}
-}
-
-var (
-	md_MsgReactivateDeactivatedCronContract                  protoreflect.MessageDescriptor
-	fd_MsgReactivateDeactivatedCronContract_authority        protoreflect.FieldDescriptor
-	fd_MsgReactivateDeactivatedCronContract_contract_address protoreflect.FieldDescriptor
-)
-
-func init() {
-	file_wasmapp_onchainkeeper_tx_proto_init()
-	md_MsgReactivateDeactivatedCronContract = File_wasmapp_onchainkeeper_tx_proto.Messages().ByName("MsgReactivateDeactivatedCronContract")
-	fd_MsgReactivateDeactivatedCronContract_authority = md_MsgReactivateDeactivatedCronContract.Fields().ByName("authority")
-	fd_MsgReactivateDeactivatedCronContract_contract_address = md_MsgReactivateDeactivatedCronContract.Fields().ByName("contract_address")
-}
-
-var _ protoreflect.Message = (*fastReflection_MsgReactivateDeactivatedCronContract)(nil)
-
-type fastReflection_MsgReactivateDeactivatedCronContract MsgReactivateDeactivatedCronContract
-
-func (x *MsgReactivateDeactivatedCronContract) ProtoReflect() protoreflect.Message {
-	return (*fastReflection_MsgReactivateDeactivatedCronContract)(x)
-}
-
-func (x *MsgReactivateDeactivatedCronContract) slowProtoReflect() protoreflect.Message {
-	mi := &file_wasmapp_onchainkeeper_tx_proto_msgTypes[8]
-	if protoimpl.UnsafeEnabled && x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
-}
-
-var _fastReflection_MsgReactivateDeactivatedCronContract_messageType fastReflection_MsgReactivateDeactivatedCronContract_messageType
-var _ protoreflect.MessageType = fastReflection_MsgReactivateDeactivatedCronContract_messageType{}
-
-type fastReflection_MsgReactivateDeactivatedCronContract_messageType struct{}
-
-func (x fastReflection_MsgReactivateDeactivatedCronContract_messageType) Zero() protoreflect.Message {
-	return (*fastReflection_MsgReactivateDeactivatedCronContract)(nil)
-}
-func (x fastReflection_MsgReactivateDeactivatedCronContract_messageType) New() protoreflect.Message {
-	return new(fastReflection_MsgReactivateDeactivatedCronContract)
-}
-func (x fastReflection_MsgReactivateDeactivatedCronContract_messageType) Descriptor() protoreflect.MessageDescriptor {
-	return md_MsgReactivateDeactivatedCronContract
-}
-
-// Descriptor returns message descriptor, which contains only the protobuf
-// type information for the message.
-func (x *fastReflection_MsgReactivateDeactivatedCronContract) Descriptor() protoreflect.MessageDescriptor {
-	return md_MsgReactivateDeactivatedCronContract
-}
-
-// Type returns the message type, which encapsulates both Go and protobuf
-// type information. If the Go type information is not needed,
-// it is recommended that the message descriptor be used instead.
-func (x *fastReflection_MsgReactivateDeactivatedCronContract) Type() protoreflect.MessageType {
-	return _fastReflection_MsgReactivateDeactivatedCronContract_messageType
-}
-
-// New returns a newly allocated and mutable empty message.
-func (x *fastReflection_MsgReactivateDeactivatedCronContract) New() protoreflect.Message {
-	return new(fastReflection_MsgReactivateDeactivatedCronContract)
-}
-
-// Interface unwraps the message reflection interface and
-// returns the underlying ProtoMessage interface.
-func (x *fastReflection_MsgReactivateDeactivatedCronContract) Interface() protoreflect.ProtoMessage {
-	return (*MsgReactivateDeactivatedCronContract)(x)
-}
-
-// Range iterates over every populated field in an undefined order,
-// calling f for each field descriptor and value encountered.
-// Range returns immediately if f returns false.
-// While iterating, mutating operations may only be performed
-// on the current field descriptor.
-func (x *fastReflection_MsgReactivateDeactivatedCronContract) Range(f func(protoreflect.FieldDescriptor, protoreflect.Value) bool) {
-	if x.Authority != "" {
-		value := protoreflect.ValueOfString(x.Authority)
-		if !f(fd_MsgReactivateDeactivatedCronContract_authority, value) {
-			return
-		}
-	}
-	if x.ContractAddress != "" {
-		value := protoreflect.ValueOfString(x.ContractAddress)
-		if !f(fd_MsgReactivateDeactivatedCronContract_contract_address, value) {
-			return
-		}
-	}
-}
-
-// Has reports whether a field is populated.
-//
-// Some fields have the property of nullability where it is possible to
-// distinguish between the default value of a field and whether the field
-// was explicitly populated with the default value. Singular message fields,
-// member fields of a oneof, and proto2 scalar fields are nullable. Such
-// fields are populated only if explicitly set.
-//
-// In other cases (aside from the nullable cases above),
-// a proto3 scalar field is populated if it contains a non-zero value, and
-// a repeated field is populated if it is non-empty.
-func (x *fastReflection_MsgReactivateDeactivatedCronContract) Has(fd protoreflect.FieldDescriptor) bool {
-	switch fd.FullName() {
-	case "wasmapp.onchainkeeper.MsgReactivateDeactivatedCronContract.authority":
-		return x.Authority != ""
-	case "wasmapp.onchainkeeper.MsgReactivateDeactivatedCronContract.contract_address":
-		return x.ContractAddress != ""
-	default:
-		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: wasmapp.onchainkeeper.MsgReactivateDeactivatedCronContract"))
-		}
-		panic(fmt.Errorf("message wasmapp.onchainkeeper.MsgReactivateDeactivatedCronContract does not contain field %s", fd.FullName()))
-	}
-}
-
-// Clear clears the field such that a subsequent Has call reports false.
-//
-// Clearing an extension field clears both the extension type and value
-// associated with the given field number.
-//
-// Clear is a mutating operation and unsafe for concurrent use.
-func (x *fastReflection_MsgReactivateDeactivatedCronContract) Clear(fd protoreflect.FieldDescriptor) {
-	switch fd.FullName() {
-	case "wasmapp.onchainkeeper.MsgReactivateDeactivatedCronContract.authority":
-		x.Authority = ""
-	case "wasmapp.onchainkeeper.MsgReactivateDeactivatedCronContract.contract_address":
-		x.ContractAddress = ""
-	default:
-		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: wasmapp.onchainkeeper.MsgReactivateDeactivatedCronContract"))
-		}
-		panic(fmt.Errorf("message wasmapp.onchainkeeper.MsgReactivateDeactivatedCronContract does not contain field %s", fd.FullName()))
-	}
-}
-
-// Get retrieves the value for a field.
-//
-// For unpopulated scalars, it returns the default value, where
-// the default value of a bytes scalar is guaranteed to be a copy.
-// For unpopulated composite types, it returns an empty, read-only view
-// of the value; to obtain a mutable reference, use Mutable.
-func (x *fastReflection_MsgReactivateDeactivatedCronContract) Get(descriptor protoreflect.FieldDescriptor) protoreflect.Value {
-	switch descriptor.FullName() {
-	case "wasmapp.onchainkeeper.MsgReactivateDeactivatedCronContract.authority":
-		value := x.Authority
-		return protoreflect.ValueOfString(value)
-	case "wasmapp.onchainkeeper.MsgReactivateDeactivatedCronContract.contract_address":
-		value := x.ContractAddress
-		return protoreflect.ValueOfString(value)
-	default:
-		if descriptor.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: wasmapp.onchainkeeper.MsgReactivateDeactivatedCronContract"))
-		}
-		panic(fmt.Errorf("message wasmapp.onchainkeeper.MsgReactivateDeactivatedCronContract does not contain field %s", descriptor.FullName()))
-	}
-}
-
-// Set stores the value for a field.
-//
-// For a field belonging to a oneof, it implicitly clears any other field
-// that may be currently set within the same oneof.
-// For extension fields, it implicitly stores the provided ExtensionType.
-// When setting a composite type, it is unspecified whether the stored value
-// aliases the source's memory in any way. If the composite value is an
-// empty, read-only value, then it panics.
-//
-// Set is a mutating operation and unsafe for concurrent use.
-func (x *fastReflection_MsgReactivateDeactivatedCronContract) Set(fd protoreflect.FieldDescriptor, value protoreflect.Value) {
-	switch fd.FullName() {
-	case "wasmapp.onchainkeeper.MsgReactivateDeactivatedCronContract.authority":
-		x.Authority = value.Interface().(string)
-	case "wasmapp.onchainkeeper.MsgReactivateDeactivatedCronContract.contract_address":
-		x.ContractAddress = value.Interface().(string)
-	default:
-		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: wasmapp.onchainkeeper.MsgReactivateDeactivatedCronContract"))
-		}
-		panic(fmt.Errorf("message wasmapp.onchainkeeper.MsgReactivateDeactivatedCronContract does not contain field %s", fd.FullName()))
-	}
-}
-
-// Mutable returns a mutable reference to a composite type.
-//
-// If the field is unpopulated, it may allocate a composite value.
-// For a field belonging to a oneof, it implicitly clears any other field
-// that may be currently set within the same oneof.
-// For extension fields, it implicitly stores the provided ExtensionType
-// if not already stored.
-// It panics if the field does not contain a composite type.
-//
-// Mutable is a mutating operation and unsafe for concurrent use.
-func (x *fastReflection_MsgReactivateDeactivatedCronContract) Mutable(fd protoreflect.FieldDescriptor) protoreflect.Value {
-	switch fd.FullName() {
-	case "wasmapp.onchainkeeper.MsgReactivateDeactivatedCronContract.authority":
-		panic(fmt.Errorf("field authority of message wasmapp.onchainkeeper.MsgReactivateDeactivatedCronContract is not mutable"))
-	case "wasmapp.onchainkeeper.MsgReactivateDeactivatedCronContract.contract_address":
-		panic(fmt.Errorf("field contract_address of message wasmapp.onchainkeeper.MsgReactivateDeactivatedCronContract is not mutable"))
-	default:
-		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: wasmapp.onchainkeeper.MsgReactivateDeactivatedCronContract"))
-		}
-		panic(fmt.Errorf("message wasmapp.onchainkeeper.MsgReactivateDeactivatedCronContract does not contain field %s", fd.FullName()))
-	}
-}
-
-// NewField returns a new value that is assignable to the field
-// for the given descriptor. For scalars, this returns the default value.
-// For lists, maps, and messages, this returns a new, empty, mutable value.
-func (x *fastReflection_MsgReactivateDeactivatedCronContract) NewField(fd protoreflect.FieldDescriptor) protoreflect.Value {
-	switch fd.FullName() {
-	case "wasmapp.onchainkeeper.MsgReactivateDeactivatedCronContract.authority":
-		return protoreflect.ValueOfString("")
-	case "wasmapp.onchainkeeper.MsgReactivateDeactivatedCronContract.contract_address":
-		return protoreflect.ValueOfString("")
-	default:
-		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: wasmapp.onchainkeeper.MsgReactivateDeactivatedCronContract"))
-		}
-		panic(fmt.Errorf("message wasmapp.onchainkeeper.MsgReactivateDeactivatedCronContract does not contain field %s", fd.FullName()))
-	}
-}
-
-// WhichOneof reports which field within the oneof is populated,
-// returning nil if none are populated.
-// It panics if the oneof descriptor does not belong to this message.
-func (x *fastReflection_MsgReactivateDeactivatedCronContract) WhichOneof(d protoreflect.OneofDescriptor) protoreflect.FieldDescriptor {
-	switch d.FullName() {
-	default:
-		panic(fmt.Errorf("%s is not a oneof field in wasmapp.onchainkeeper.MsgReactivateDeactivatedCronContract", d.FullName()))
-	}
-	panic("unreachable")
-}
-
-// GetUnknown retrieves the entire list of unknown fields.
-// The caller may only mutate the contents of the RawFields
-// if the mutated bytes are stored back into the message with SetUnknown.
-func (x *fastReflection_MsgReactivateDeactivatedCronContract) GetUnknown() protoreflect.RawFields {
-	return x.unknownFields
-}
-
-// SetUnknown stores an entire list of unknown fields.
-// The raw fields must be syntactically valid according to the wire format.
-// An implementation may panic if this is not the case.
-// Once stored, the caller must not mutate the content of the RawFields.
-// An empty RawFields may be passed to clear the fields.
-//
-// SetUnknown is a mutating operation and unsafe for concurrent use.
-func (x *fastReflection_MsgReactivateDeactivatedCronContract) SetUnknown(fields protoreflect.RawFields) {
-	x.unknownFields = fields
-}
-
-// IsValid reports whether the message is valid.
-//
-// An invalid message is an empty, read-only value.
-//
-// An invalid message often corresponds to a nil pointer of the concrete
-// message type, but the details are implementation dependent.
-// Validity is not part of the protobuf data model, and may not
-// be preserved in marshaling or other operations.
-func (x *fastReflection_MsgReactivateDeactivatedCronContract) IsValid() bool {
-	return x != nil
-}
-
-// ProtoMethods returns optional fastReflectionFeature-path implementations of various operations.
-// This method may return nil.
-//
-// The returned methods type is identical to
-// "google.golang.org/protobuf/runtime/protoiface".Methods.
-// Consult the protoiface package documentation for details.
-func (x *fastReflection_MsgReactivateDeactivatedCronContract) ProtoMethods() *protoiface.Methods {
-	size := func(input protoiface.SizeInput) protoiface.SizeOutput {
-		x := input.Message.Interface().(*MsgReactivateDeactivatedCronContract)
-		if x == nil {
-			return protoiface.SizeOutput{
-				NoUnkeyedLiterals: input.NoUnkeyedLiterals,
-				Size:              0,
-			}
-		}
-		options := runtime.SizeInputToOptions(input)
-		_ = options
-		var n int
-		var l int
-		_ = l
-		l = len(x.Authority)
-		if l > 0 {
-			n += 1 + l + runtime.Sov(uint64(l))
-		}
-		l = len(x.ContractAddress)
-		if l > 0 {
-			n += 1 + l + runtime.Sov(uint64(l))
-		}
-		if x.unknownFields != nil {
-			n += len(x.unknownFields)
-		}
-		return protoiface.SizeOutput{
-			NoUnkeyedLiterals: input.NoUnkeyedLiterals,
-			Size:              n,
-		}
-	}
-
-	marshal := func(input protoiface.MarshalInput) (protoiface.MarshalOutput, error) {
-		x := input.Message.Interface().(*MsgReactivateDeactivatedCronContract)
-		if x == nil {
-			return protoiface.MarshalOutput{
-				NoUnkeyedLiterals: input.NoUnkeyedLiterals,
-				Buf:               input.Buf,
-			}, nil
-		}
-		options := runtime.MarshalInputToOptions(input)
-		_ = options
-		size := options.Size(x)
-		dAtA := make([]byte, size)
-		i := len(dAtA)
-		_ = i
-		var l int
-		_ = l
-		if x.unknownFields != nil {
-			i -= len(x.unknownFields)
-			copy(dAtA[i:], x.unknownFields)
-		}
-		if len(x.ContractAddress) > 0 {
-			i -= len(x.ContractAddress)
-			copy(dAtA[i:], x.ContractAddress)
-			i = runtime.EncodeVarint(dAtA, i, uint64(len(x.ContractAddress)))
-			i--
-			dAtA[i] = 0x12
-		}
-		if len(x.Authority) > 0 {
-			i -= len(x.Authority)
-			copy(dAtA[i:], x.Authority)
-			i = runtime.EncodeVarint(dAtA, i, uint64(len(x.Authority)))
-			i--
-			dAtA[i] = 0xa
-		}
-		if input.Buf != nil {
-			input.Buf = append(input.Buf, dAtA...)
-		} else {
-			input.Buf = dAtA
-		}
-		return protoiface.MarshalOutput{
-			NoUnkeyedLiterals: input.NoUnkeyedLiterals,
-			Buf:               input.Buf,
-		}, nil
-	}
-	unmarshal := func(input protoiface.UnmarshalInput) (protoiface.UnmarshalOutput, error) {
-		x := input.Message.Interface().(*MsgReactivateDeactivatedCronContract)
-		if x == nil {
-			return protoiface.UnmarshalOutput{
-				NoUnkeyedLiterals: input.NoUnkeyedLiterals,
-				Flags:             input.Flags,
-			}, nil
-		}
-		options := runtime.UnmarshalInputToOptions(input)
-		_ = options
-		dAtA := input.Buf
-		l := len(dAtA)
-		iNdEx := 0
-		for iNdEx < l {
-			preIndex := iNdEx
-			var wire uint64
-			for shift := uint(0); ; shift += 7 {
-				if shift >= 64 {
-					return protoiface.UnmarshalOutput{NoUnkeyedLiterals: input.NoUnkeyedLiterals, Flags: input.Flags}, runtime.ErrIntOverflow
-				}
-				if iNdEx >= l {
-					return protoiface.UnmarshalOutput{NoUnkeyedLiterals: input.NoUnkeyedLiterals, Flags: input.Flags}, io.ErrUnexpectedEOF
-				}
-				b := dAtA[iNdEx]
-				iNdEx++
-				wire |= uint64(b&0x7F) << shift
-				if b < 0x80 {
-					break
-				}
-			}
-			fieldNum := int32(wire >> 3)
-			wireType := int(wire & 0x7)
-			if wireType == 4 {
-				return protoiface.UnmarshalOutput{NoUnkeyedLiterals: input.NoUnkeyedLiterals, Flags: input.Flags}, fmt.Errorf("proto: MsgReactivateDeactivatedCronContract: wiretype end group for non-group")
-			}
-			if fieldNum <= 0 {
-				return protoiface.UnmarshalOutput{NoUnkeyedLiterals: input.NoUnkeyedLiterals, Flags: input.Flags}, fmt.Errorf("proto: MsgReactivateDeactivatedCronContract: illegal tag %d (wire type %d)", fieldNum, wire)
-			}
-			switch fieldNum {
-			case 1:
-				if wireType != 2 {
-					return protoiface.UnmarshalOutput{NoUnkeyedLiterals: input.NoUnkeyedLiterals, Flags: input.Flags}, fmt.Errorf("proto: wrong wireType = %d for field Authority", wireType)
-				}
-				var stringLen uint64
-				for shift := uint(0); ; shift += 7 {
-					if shift >= 64 {
-						return protoiface.UnmarshalOutput{NoUnkeyedLiterals: input.NoUnkeyedLiterals, Flags: input.Flags}, runtime.ErrIntOverflow
-					}
-					if iNdEx >= l {
-						return protoiface.UnmarshalOutput{NoUnkeyedLiterals: input.NoUnkeyedLiterals, Flags: input.Flags}, io.ErrUnexpectedEOF
-					}
-					b := dAtA[iNdEx]
-					iNdEx++
-					stringLen |= uint64(b&0x7F) << shift
-					if b < 0x80 {
-						break
-					}
-				}
-				intStringLen := int(stringLen)
-				if intStringLen < 0 {
-					return protoiface.UnmarshalOutput{NoUnkeyedLiterals: input.NoUnkeyedLiterals, Flags: input.Flags}, runtime.ErrInvalidLength
-				}
-				postIndex := iNdEx + intStringLen
-				if postIndex < 0 {
-					return protoiface.UnmarshalOutput{NoUnkeyedLiterals: input.NoUnkeyedLiterals, Flags: input.Flags}, runtime.ErrInvalidLength
-				}
-				if postIndex > l {
-					return protoiface.UnmarshalOutput{NoUnkeyedLiterals: input.NoUnkeyedLiterals, Flags: input.Flags}, io.ErrUnexpectedEOF
-				}
-				x.Authority = string(dAtA[iNdEx:postIndex])
-				iNdEx = postIndex
-			case 2:
-				if wireType != 2 {
-					return protoiface.UnmarshalOutput{NoUnkeyedLiterals: input.NoUnkeyedLiterals, Flags: input.Flags}, fmt.Errorf("proto: wrong wireType = %d for field ContractAddress", wireType)
-				}
-				var stringLen uint64
-				for shift := uint(0); ; shift += 7 {
-					if shift >= 64 {
-						return protoiface.UnmarshalOutput{NoUnkeyedLiterals: input.NoUnkeyedLiterals, Flags: input.Flags}, runtime.ErrIntOverflow
-					}
-					if iNdEx >= l {
-						return protoiface.UnmarshalOutput{NoUnkeyedLiterals: input.NoUnkeyedLiterals, Flags: input.Flags}, io.ErrUnexpectedEOF
-					}
-					b := dAtA[iNdEx]
-					iNdEx++
-					stringLen |= uint64(b&0x7F) << shift
-					if b < 0x80 {
-						break
-					}
-				}
-				intStringLen := int(stringLen)
-				if intStringLen < 0 {
-					return protoiface.UnmarshalOutput{NoUnkeyedLiterals: input.NoUnkeyedLiterals, Flags: input.Flags}, runtime.ErrInvalidLength
-				}
-				postIndex := iNdEx + intStringLen
-				if postIndex < 0 {
-					return protoiface.UnmarshalOutput{NoUnkeyedLiterals: input.NoUnkeyedLiterals, Flags: input.Flags}, runtime.ErrInvalidLength
-				}
-				if postIndex > l {
-					return protoiface.UnmarshalOutput{NoUnkeyedLiterals: input.NoUnkeyedLiterals, Flags: input.Flags}, io.ErrUnexpectedEOF
-				}
-				x.ContractAddress = string(dAtA[iNdEx:postIndex])
-				iNdEx = postIndex
-			default:
-				iNdEx = preIndex
-				skippy, err := runtime.Skip(dAtA[iNdEx:])
-				if err != nil {
-					return protoiface.UnmarshalOutput{NoUnkeyedLiterals: input.NoUnkeyedLiterals, Flags: input.Flags}, err
-				}
-				if (skippy < 0) || (iNdEx+skippy) < 0 {
-					return protoiface.UnmarshalOutput{NoUnkeyedLiterals: input.NoUnkeyedLiterals, Flags: input.Flags}, runtime.ErrInvalidLength
-				}
-				if (iNdEx + skippy) > l {
-					return protoiface.UnmarshalOutput{NoUnkeyedLiterals: input.NoUnkeyedLiterals, Flags: input.Flags}, io.ErrUnexpectedEOF
-				}
-				if !options.DiscardUnknown {
-					x.unknownFields = append(x.unknownFields, dAtA[iNdEx:iNdEx+skippy]...)
-				}
-				iNdEx += skippy
-			}
-		}
-
-		if iNdEx > l {
-			return protoiface.UnmarshalOutput{NoUnkeyedLiterals: input.NoUnkeyedLiterals, Flags: input.Flags}, io.ErrUnexpectedEOF
-		}
-		return protoiface.UnmarshalOutput{NoUnkeyedLiterals: input.NoUnkeyedLiterals, Flags: input.Flags}, nil
-	}
-	return &protoiface.Methods{
-		NoUnkeyedLiterals: struct{}{},
-		Flags:             protoiface.SupportMarshalDeterministic | protoiface.SupportUnmarshalDiscardUnknown,
-		Size:              size,
-		Marshal:           marshal,
-		Unmarshal:         unmarshal,
-		Merge:             nil,
-		CheckInitialized:  nil,
-	}
-}
-
-var (
-	md_MsgReactivateDeactivatedCronContractResponse protoreflect.MessageDescriptor
-)
-
-func init() {
-	file_wasmapp_onchainkeeper_tx_proto_init()
-	md_MsgReactivateDeactivatedCronContractResponse = File_wasmapp_onchainkeeper_tx_proto.Messages().ByName("MsgReactivateDeactivatedCronContractResponse")
-}
-
-var _ protoreflect.Message = (*fastReflection_MsgReactivateDeactivatedCronContractResponse)(nil)
-
-type fastReflection_MsgReactivateDeactivatedCronContractResponse MsgReactivateDeactivatedCronContractResponse
-
-func (x *MsgReactivateDeactivatedCronContractResponse) ProtoReflect() protoreflect.Message {
-	return (*fastReflection_MsgReactivateDeactivatedCronContractResponse)(x)
-}
-
-func (x *MsgReactivateDeactivatedCronContractResponse) slowProtoReflect() protoreflect.Message {
-	mi := &file_wasmapp_onchainkeeper_tx_proto_msgTypes[9]
-	if protoimpl.UnsafeEnabled && x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
-}
-
-var _fastReflection_MsgReactivateDeactivatedCronContractResponse_messageType fastReflection_MsgReactivateDeactivatedCronContractResponse_messageType
-var _ protoreflect.MessageType = fastReflection_MsgReactivateDeactivatedCronContractResponse_messageType{}
-
-type fastReflection_MsgReactivateDeactivatedCronContractResponse_messageType struct{}
-
-func (x fastReflection_MsgReactivateDeactivatedCronContractResponse_messageType) Zero() protoreflect.Message {
-	return (*fastReflection_MsgReactivateDeactivatedCronContractResponse)(nil)
-}
-func (x fastReflection_MsgReactivateDeactivatedCronContractResponse_messageType) New() protoreflect.Message {
-	return new(fastReflection_MsgReactivateDeactivatedCronContractResponse)
-}
-func (x fastReflection_MsgReactivateDeactivatedCronContractResponse_messageType) Descriptor() protoreflect.MessageDescriptor {
-	return md_MsgReactivateDeactivatedCronContractResponse
-}
-
-// Descriptor returns message descriptor, which contains only the protobuf
-// type information for the message.
-func (x *fastReflection_MsgReactivateDeactivatedCronContractResponse) Descriptor() protoreflect.MessageDescriptor {
-	return md_MsgReactivateDeactivatedCronContractResponse
-}
-
-// Type returns the message type, which encapsulates both Go and protobuf
-// type information. If the Go type information is not needed,
-// it is recommended that the message descriptor be used instead.
-func (x *fastReflection_MsgReactivateDeactivatedCronContractResponse) Type() protoreflect.MessageType {
-	return _fastReflection_MsgReactivateDeactivatedCronContractResponse_messageType
-}
-
-// New returns a newly allocated and mutable empty message.
-func (x *fastReflection_MsgReactivateDeactivatedCronContractResponse) New() protoreflect.Message {
-	return new(fastReflection_MsgReactivateDeactivatedCronContractResponse)
-}
-
-// Interface unwraps the message reflection interface and
-// returns the underlying ProtoMessage interface.
-func (x *fastReflection_MsgReactivateDeactivatedCronContractResponse) Interface() protoreflect.ProtoMessage {
-	return (*MsgReactivateDeactivatedCronContractResponse)(x)
-}
-
-// Range iterates over every populated field in an undefined order,
-// calling f for each field descriptor and value encountered.
-// Range returns immediately if f returns false.
-// While iterating, mutating operations may only be performed
-// on the current field descriptor.
-func (x *fastReflection_MsgReactivateDeactivatedCronContractResponse) Range(f func(protoreflect.FieldDescriptor, protoreflect.Value) bool) {
-}
-
-// Has reports whether a field is populated.
-//
-// Some fields have the property of nullability where it is possible to
-// distinguish between the default value of a field and whether the field
-// was explicitly populated with the default value. Singular message fields,
-// member fields of a oneof, and proto2 scalar fields are nullable. Such
-// fields are populated only if explicitly set.
-//
-// In other cases (aside from the nullable cases above),
-// a proto3 scalar field is populated if it contains a non-zero value, and
-// a repeated field is populated if it is non-empty.
-func (x *fastReflection_MsgReactivateDeactivatedCronContractResponse) Has(fd protoreflect.FieldDescriptor) bool {
-	switch fd.FullName() {
-	default:
-		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: wasmapp.onchainkeeper.MsgReactivateDeactivatedCronContractResponse"))
-		}
-		panic(fmt.Errorf("message wasmapp.onchainkeeper.MsgReactivateDeactivatedCronContractResponse does not contain field %s", fd.FullName()))
-	}
-}
-
-// Clear clears the field such that a subsequent Has call reports false.
-//
-// Clearing an extension field clears both the extension type and value
-// associated with the given field number.
-//
-// Clear is a mutating operation and unsafe for concurrent use.
-func (x *fastReflection_MsgReactivateDeactivatedCronContractResponse) Clear(fd protoreflect.FieldDescriptor) {
-	switch fd.FullName() {
-	default:
-		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: wasmapp.onchainkeeper.MsgReactivateDeactivatedCronContractResponse"))
-		}
-		panic(fmt.Errorf("message wasmapp.onchainkeeper.MsgReactivateDeactivatedCronContractResponse does not contain field %s", fd.FullName()))
-	}
-}
-
-// Get retrieves the value for a field.
-//
-// For unpopulated scalars, it returns the default value, where
-// the default value of a bytes scalar is guaranteed to be a copy.
-// For unpopulated composite types, it returns an empty, read-only view
-// of the value; to obtain a mutable reference, use Mutable.
-func (x *fastReflection_MsgReactivateDeactivatedCronContractResponse) Get(descriptor protoreflect.FieldDescriptor) protoreflect.Value {
-	switch descriptor.FullName() {
-	default:
-		if descriptor.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: wasmapp.onchainkeeper.MsgReactivateDeactivatedCronContractResponse"))
-		}
-		panic(fmt.Errorf("message wasmapp.onchainkeeper.MsgReactivateDeactivatedCronContractResponse does not contain field %s", descriptor.FullName()))
-	}
-}
-
-// Set stores the value for a field.
-//
-// For a field belonging to a oneof, it implicitly clears any other field
-// that may be currently set within the same oneof.
-// For extension fields, it implicitly stores the provided ExtensionType.
-// When setting a composite type, it is unspecified whether the stored value
-// aliases the source's memory in any way. If the composite value is an
-// empty, read-only value, then it panics.
-//
-// Set is a mutating operation and unsafe for concurrent use.
-func (x *fastReflection_MsgReactivateDeactivatedCronContractResponse) Set(fd protoreflect.FieldDescriptor, value protoreflect.Value) {
-	switch fd.FullName() {
-	default:
-		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: wasmapp.onchainkeeper.MsgReactivateDeactivatedCronContractResponse"))
-		}
-		panic(fmt.Errorf("message wasmapp.onchainkeeper.MsgReactivateDeactivatedCronContractResponse does not contain field %s", fd.FullName()))
-	}
-}
-
-// Mutable returns a mutable reference to a composite type.
-//
-// If the field is unpopulated, it may allocate a composite value.
-// For a field belonging to a oneof, it implicitly clears any other field
-// that may be currently set within the same oneof.
-// For extension fields, it implicitly stores the provided ExtensionType
-// if not already stored.
-// It panics if the field does not contain a composite type.
-//
-// Mutable is a mutating operation and unsafe for concurrent use.
-func (x *fastReflection_MsgReactivateDeactivatedCronContractResponse) Mutable(fd protoreflect.FieldDescriptor) protoreflect.Value {
-	switch fd.FullName() {
-	default:
-		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: wasmapp.onchainkeeper.MsgReactivateDeactivatedCronContractResponse"))
-		}
-		panic(fmt.Errorf("message wasmapp.onchainkeeper.MsgReactivateDeactivatedCronContractResponse does not contain field %s", fd.FullName()))
-	}
-}
-
-// NewField returns a new value that is assignable to the field
-// for the given descriptor. For scalars, this returns the default value.
-// For lists, maps, and messages, this returns a new, empty, mutable value.
-func (x *fastReflection_MsgReactivateDeactivatedCronContractResponse) NewField(fd protoreflect.FieldDescriptor) protoreflect.Value {
-	switch fd.FullName() {
-	default:
-		if fd.IsExtension() {
-			panic(fmt.Errorf("proto3 declared messages do not support extensions: wasmapp.onchainkeeper.MsgReactivateDeactivatedCronContractResponse"))
-		}
-		panic(fmt.Errorf("message wasmapp.onchainkeeper.MsgReactivateDeactivatedCronContractResponse does not contain field %s", fd.FullName()))
-	}
-}
-
-// WhichOneof reports which field within the oneof is populated,
-// returning nil if none are populated.
-// It panics if the oneof descriptor does not belong to this message.
-func (x *fastReflection_MsgReactivateDeactivatedCronContractResponse) WhichOneof(d protoreflect.OneofDescriptor) protoreflect.FieldDescriptor {
-	switch d.FullName() {
-	default:
-		panic(fmt.Errorf("%s is not a oneof field in wasmapp.onchainkeeper.MsgReactivateDeactivatedCronContractResponse", d.FullName()))
-	}
-	panic("unreachable")
-}
-
-// GetUnknown retrieves the entire list of unknown fields.
-// The caller may only mutate the contents of the RawFields
-// if the mutated bytes are stored back into the message with SetUnknown.
-func (x *fastReflection_MsgReactivateDeactivatedCronContractResponse) GetUnknown() protoreflect.RawFields {
-	return x.unknownFields
-}
-
-// SetUnknown stores an entire list of unknown fields.
-// The raw fields must be syntactically valid according to the wire format.
-// An implementation may panic if this is not the case.
-// Once stored, the caller must not mutate the content of the RawFields.
-// An empty RawFields may be passed to clear the fields.
-//
-// SetUnknown is a mutating operation and unsafe for concurrent use.
-func (x *fastReflection_MsgReactivateDeactivatedCronContractResponse) SetUnknown(fields protoreflect.RawFields) {
-	x.unknownFields = fields
-}
-
-// IsValid reports whether the message is valid.
-//
-// An invalid message is an empty, read-only value.
-//
-// An invalid message often corresponds to a nil pointer of the concrete
-// message type, but the details are implementation dependent.
-// Validity is not part of the protobuf data model, and may not
-// be preserved in marshaling or other operations.
-func (x *fastReflection_MsgReactivateDeactivatedCronContractResponse) IsValid() bool {
-	return x != nil
-}
-
-// ProtoMethods returns optional fastReflectionFeature-path implementations of various operations.
-// This method may return nil.
-//
-// The returned methods type is identical to
-// "google.golang.org/protobuf/runtime/protoiface".Methods.
-// Consult the protoiface package documentation for details.
-func (x *fastReflection_MsgReactivateDeactivatedCronContractResponse) ProtoMethods() *protoiface.Methods {
-	size := func(input protoiface.SizeInput) protoiface.SizeOutput {
-		x := input.Message.Interface().(*MsgReactivateDeactivatedCronContractResponse)
-		if x == nil {
-			return protoiface.SizeOutput{
-				NoUnkeyedLiterals: input.NoUnkeyedLiterals,
-				Size:              0,
-			}
-		}
-		options := runtime.SizeInputToOptions(input)
-		_ = options
-		var n int
-		var l int
-		_ = l
-		if x.unknownFields != nil {
-			n += len(x.unknownFields)
-		}
-		return protoiface.SizeOutput{
-			NoUnkeyedLiterals: input.NoUnkeyedLiterals,
-			Size:              n,
-		}
-	}
-
-	marshal := func(input protoiface.MarshalInput) (protoiface.MarshalOutput, error) {
-		x := input.Message.Interface().(*MsgReactivateDeactivatedCronContractResponse)
-		if x == nil {
-			return protoiface.MarshalOutput{
-				NoUnkeyedLiterals: input.NoUnkeyedLiterals,
-				Buf:               input.Buf,
-			}, nil
-		}
-		options := runtime.MarshalInputToOptions(input)
-		_ = options
-		size := options.Size(x)
-		dAtA := make([]byte, size)
-		i := len(dAtA)
-		_ = i
-		var l int
-		_ = l
-		if x.unknownFields != nil {
-			i -= len(x.unknownFields)
-			copy(dAtA[i:], x.unknownFields)
-		}
-		if input.Buf != nil {
-			input.Buf = append(input.Buf, dAtA...)
-		} else {
-			input.Buf = dAtA
-		}
-		return protoiface.MarshalOutput{
-			NoUnkeyedLiterals: input.NoUnkeyedLiterals,
-			Buf:               input.Buf,
-		}, nil
-	}
-	unmarshal := func(input protoiface.UnmarshalInput) (protoiface.UnmarshalOutput, error) {
-		x := input.Message.Interface().(*MsgReactivateDeactivatedCronContractResponse)
-		if x == nil {
-			return protoiface.UnmarshalOutput{
-				NoUnkeyedLiterals: input.NoUnkeyedLiterals,
-				Flags:             input.Flags,
-			}, nil
-		}
-		options := runtime.UnmarshalInputToOptions(input)
-		_ = options
-		dAtA := input.Buf
-		l := len(dAtA)
-		iNdEx := 0
-		for iNdEx < l {
-			preIndex := iNdEx
-			var wire uint64
-			for shift := uint(0); ; shift += 7 {
-				if shift >= 64 {
-					return protoiface.UnmarshalOutput{NoUnkeyedLiterals: input.NoUnkeyedLiterals, Flags: input.Flags}, runtime.ErrIntOverflow
-				}
-				if iNdEx >= l {
-					return protoiface.UnmarshalOutput{NoUnkeyedLiterals: input.NoUnkeyedLiterals, Flags: input.Flags}, io.ErrUnexpectedEOF
-				}
-				b := dAtA[iNdEx]
-				iNdEx++
-				wire |= uint64(b&0x7F) << shift
-				if b < 0x80 {
-					break
-				}
-			}
-			fieldNum := int32(wire >> 3)
-			wireType := int(wire & 0x7)
-			if wireType == 4 {
-				return protoiface.UnmarshalOutput{NoUnkeyedLiterals: input.NoUnkeyedLiterals, Flags: input.Flags}, fmt.Errorf("proto: MsgReactivateDeactivatedCronContractResponse: wiretype end group for non-group")
-			}
-			if fieldNum <= 0 {
-				return protoiface.UnmarshalOutput{NoUnkeyedLiterals: input.NoUnkeyedLiterals, Flags: input.Flags}, fmt.Errorf("proto: MsgReactivateDeactivatedCronContractResponse: illegal tag %d (wire type %d)", fieldNum, wire)
+				return protoiface.UnmarshalOutput{NoUnkeyedLiterals: input.NoUnkeyedLiterals, Flags: input.Flags}, fmt.Errorf("proto: MsgActivateCronContractResponse: illegal tag %d (wire type %d)", fieldNum, wire)
 			}
 			switch fieldNum {
 			default:
@@ -4459,7 +3619,7 @@ func (*MsgUnregisterCronContractResponse) Descriptor() ([]byte, []int) {
 	return file_wasmapp_onchainkeeper_tx_proto_rawDescGZIP(), []int{5}
 }
 
-type MsgAcceptPendingRegisteredCronContract struct {
+type MsgActivateCronContract struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
@@ -4469,8 +3629,8 @@ type MsgAcceptPendingRegisteredCronContract struct {
 	ContractAddress string `protobuf:"bytes,2,opt,name=contract_address,json=contractAddress,proto3" json:"contract_address,omitempty"`
 }
 
-func (x *MsgAcceptPendingRegisteredCronContract) Reset() {
-	*x = MsgAcceptPendingRegisteredCronContract{}
+func (x *MsgActivateCronContract) Reset() {
+	*x = MsgActivateCronContract{}
 	if protoimpl.UnsafeEnabled {
 		mi := &file_wasmapp_onchainkeeper_tx_proto_msgTypes[6]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
@@ -4478,39 +3638,39 @@ func (x *MsgAcceptPendingRegisteredCronContract) Reset() {
 	}
 }
 
-func (x *MsgAcceptPendingRegisteredCronContract) String() string {
+func (x *MsgActivateCronContract) String() string {
 	return protoimpl.X.MessageStringOf(x)
 }
 
-func (*MsgAcceptPendingRegisteredCronContract) ProtoMessage() {}
+func (*MsgActivateCronContract) ProtoMessage() {}
 
-// Deprecated: Use MsgAcceptPendingRegisteredCronContract.ProtoReflect.Descriptor instead.
-func (*MsgAcceptPendingRegisteredCronContract) Descriptor() ([]byte, []int) {
+// Deprecated: Use MsgActivateCronContract.ProtoReflect.Descriptor instead.
+func (*MsgActivateCronContract) Descriptor() ([]byte, []int) {
 	return file_wasmapp_onchainkeeper_tx_proto_rawDescGZIP(), []int{6}
 }
 
-func (x *MsgAcceptPendingRegisteredCronContract) GetAuthority() string {
+func (x *MsgActivateCronContract) GetAuthority() string {
 	if x != nil {
 		return x.Authority
 	}
 	return ""
 }
 
-func (x *MsgAcceptPendingRegisteredCronContract) GetContractAddress() string {
+func (x *MsgActivateCronContract) GetContractAddress() string {
 	if x != nil {
 		return x.ContractAddress
 	}
 	return ""
 }
 
-type MsgAcceptPendingRegisteredCronContractResponse struct {
+type MsgActivateCronContractResponse struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 }
 
-func (x *MsgAcceptPendingRegisteredCronContractResponse) Reset() {
-	*x = MsgAcceptPendingRegisteredCronContractResponse{}
+func (x *MsgActivateCronContractResponse) Reset() {
+	*x = MsgActivateCronContractResponse{}
 	if protoimpl.UnsafeEnabled {
 		mi := &file_wasmapp_onchainkeeper_tx_proto_msgTypes[7]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
@@ -4518,85 +3678,15 @@ func (x *MsgAcceptPendingRegisteredCronContractResponse) Reset() {
 	}
 }
 
-func (x *MsgAcceptPendingRegisteredCronContractResponse) String() string {
+func (x *MsgActivateCronContractResponse) String() string {
 	return protoimpl.X.MessageStringOf(x)
 }
 
-func (*MsgAcceptPendingRegisteredCronContractResponse) ProtoMessage() {}
+func (*MsgActivateCronContractResponse) ProtoMessage() {}
 
-// Deprecated: Use MsgAcceptPendingRegisteredCronContractResponse.ProtoReflect.Descriptor instead.
-func (*MsgAcceptPendingRegisteredCronContractResponse) Descriptor() ([]byte, []int) {
+// Deprecated: Use MsgActivateCronContractResponse.ProtoReflect.Descriptor instead.
+func (*MsgActivateCronContractResponse) Descriptor() ([]byte, []int) {
 	return file_wasmapp_onchainkeeper_tx_proto_rawDescGZIP(), []int{7}
-}
-
-type MsgReactivateDeactivatedCronContract struct {
-	state         protoimpl.MessageState
-	sizeCache     protoimpl.SizeCache
-	unknownFields protoimpl.UnknownFields
-
-	// authority is the admin address specified in the module's parameters.
-	Authority       string `protobuf:"bytes,1,opt,name=authority,proto3" json:"authority,omitempty"`
-	ContractAddress string `protobuf:"bytes,2,opt,name=contract_address,json=contractAddress,proto3" json:"contract_address,omitempty"`
-}
-
-func (x *MsgReactivateDeactivatedCronContract) Reset() {
-	*x = MsgReactivateDeactivatedCronContract{}
-	if protoimpl.UnsafeEnabled {
-		mi := &file_wasmapp_onchainkeeper_tx_proto_msgTypes[8]
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		ms.StoreMessageInfo(mi)
-	}
-}
-
-func (x *MsgReactivateDeactivatedCronContract) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
-
-func (*MsgReactivateDeactivatedCronContract) ProtoMessage() {}
-
-// Deprecated: Use MsgReactivateDeactivatedCronContract.ProtoReflect.Descriptor instead.
-func (*MsgReactivateDeactivatedCronContract) Descriptor() ([]byte, []int) {
-	return file_wasmapp_onchainkeeper_tx_proto_rawDescGZIP(), []int{8}
-}
-
-func (x *MsgReactivateDeactivatedCronContract) GetAuthority() string {
-	if x != nil {
-		return x.Authority
-	}
-	return ""
-}
-
-func (x *MsgReactivateDeactivatedCronContract) GetContractAddress() string {
-	if x != nil {
-		return x.ContractAddress
-	}
-	return ""
-}
-
-type MsgReactivateDeactivatedCronContractResponse struct {
-	state         protoimpl.MessageState
-	sizeCache     protoimpl.SizeCache
-	unknownFields protoimpl.UnknownFields
-}
-
-func (x *MsgReactivateDeactivatedCronContractResponse) Reset() {
-	*x = MsgReactivateDeactivatedCronContractResponse{}
-	if protoimpl.UnsafeEnabled {
-		mi := &file_wasmapp_onchainkeeper_tx_proto_msgTypes[9]
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		ms.StoreMessageInfo(mi)
-	}
-}
-
-func (x *MsgReactivateDeactivatedCronContractResponse) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
-
-func (*MsgReactivateDeactivatedCronContractResponse) ProtoMessage() {}
-
-// Deprecated: Use MsgReactivateDeactivatedCronContractResponse.ProtoReflect.Descriptor instead.
-func (*MsgReactivateDeactivatedCronContractResponse) Descriptor() ([]byte, []int) {
-	return file_wasmapp_onchainkeeper_tx_proto_rawDescGZIP(), []int{9}
 }
 
 var File_wasmapp_onchainkeeper_tx_proto protoreflect.FileDescriptor
@@ -4629,112 +3719,87 @@ var file_wasmapp_onchainkeeper_tx_proto_rawDesc = []byte{
 	0x2f, 0x78, 0x2f, 0x6f, 0x6e, 0x63, 0x68, 0x61, 0x69, 0x6e, 0x6b, 0x65, 0x65, 0x70, 0x65, 0x72,
 	0x2f, 0x4d, 0x73, 0x67, 0x55, 0x70, 0x64, 0x61, 0x74, 0x65, 0x50, 0x61, 0x72, 0x61, 0x6d, 0x73,
 	0x22, 0x19, 0x0a, 0x17, 0x4d, 0x73, 0x67, 0x55, 0x70, 0x64, 0x61, 0x74, 0x65, 0x50, 0x61, 0x72,
-	0x61, 0x6d, 0x73, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22, 0x80, 0x01, 0x0a, 0x17,
+	0x61, 0x6d, 0x73, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22, 0x9a, 0x01, 0x0a, 0x17,
 	0x4d, 0x73, 0x67, 0x52, 0x65, 0x67, 0x69, 0x73, 0x74, 0x65, 0x72, 0x43, 0x72, 0x6f, 0x6e, 0x43,
-	0x6f, 0x6e, 0x74, 0x72, 0x61, 0x63, 0x74, 0x12, 0x25, 0x0a, 0x0e, 0x73, 0x65, 0x6e, 0x64, 0x65,
-	0x72, 0x5f, 0x61, 0x64, 0x64, 0x72, 0x65, 0x73, 0x73, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52,
-	0x0d, 0x73, 0x65, 0x6e, 0x64, 0x65, 0x72, 0x41, 0x64, 0x64, 0x72, 0x65, 0x73, 0x73, 0x12, 0x29,
-	0x0a, 0x10, 0x63, 0x6f, 0x6e, 0x74, 0x72, 0x61, 0x63, 0x74, 0x5f, 0x61, 0x64, 0x64, 0x72, 0x65,
-	0x73, 0x73, 0x18, 0x02, 0x20, 0x01, 0x28, 0x09, 0x52, 0x0f, 0x63, 0x6f, 0x6e, 0x74, 0x72, 0x61,
-	0x63, 0x74, 0x41, 0x64, 0x64, 0x72, 0x65, 0x73, 0x73, 0x3a, 0x13, 0x82, 0xe7, 0xb0, 0x2a, 0x0e,
-	0x73, 0x65, 0x6e, 0x64, 0x65, 0x72, 0x5f, 0x61, 0x64, 0x64, 0x72, 0x65, 0x73, 0x73, 0x22, 0x21,
-	0x0a, 0x1f, 0x4d, 0x73, 0x67, 0x52, 0x65, 0x67, 0x69, 0x73, 0x74, 0x65, 0x72, 0x43, 0x72, 0x6f,
-	0x6e, 0x43, 0x6f, 0x6e, 0x74, 0x72, 0x61, 0x63, 0x74, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73,
-	0x65, 0x22, 0x82, 0x01, 0x0a, 0x19, 0x4d, 0x73, 0x67, 0x55, 0x6e, 0x72, 0x65, 0x67, 0x69, 0x73,
-	0x74, 0x65, 0x72, 0x43, 0x72, 0x6f, 0x6e, 0x43, 0x6f, 0x6e, 0x74, 0x72, 0x61, 0x63, 0x74, 0x12,
-	0x25, 0x0a, 0x0e, 0x73, 0x65, 0x6e, 0x64, 0x65, 0x72, 0x5f, 0x61, 0x64, 0x64, 0x72, 0x65, 0x73,
-	0x73, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x0d, 0x73, 0x65, 0x6e, 0x64, 0x65, 0x72, 0x41,
-	0x64, 0x64, 0x72, 0x65, 0x73, 0x73, 0x12, 0x29, 0x0a, 0x10, 0x63, 0x6f, 0x6e, 0x74, 0x72, 0x61,
-	0x63, 0x74, 0x5f, 0x61, 0x64, 0x64, 0x72, 0x65, 0x73, 0x73, 0x18, 0x02, 0x20, 0x01, 0x28, 0x09,
-	0x52, 0x0f, 0x63, 0x6f, 0x6e, 0x74, 0x72, 0x61, 0x63, 0x74, 0x41, 0x64, 0x64, 0x72, 0x65, 0x73,
-	0x73, 0x3a, 0x13, 0x82, 0xe7, 0xb0, 0x2a, 0x0e, 0x73, 0x65, 0x6e, 0x64, 0x65, 0x72, 0x5f, 0x61,
-	0x64, 0x64, 0x72, 0x65, 0x73, 0x73, 0x22, 0x23, 0x0a, 0x21, 0x4d, 0x73, 0x67, 0x55, 0x6e, 0x72,
+	0x6f, 0x6e, 0x74, 0x72, 0x61, 0x63, 0x74, 0x12, 0x3f, 0x0a, 0x0e, 0x73, 0x65, 0x6e, 0x64, 0x65,
+	0x72, 0x5f, 0x61, 0x64, 0x64, 0x72, 0x65, 0x73, 0x73, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x42,
+	0x18, 0xd2, 0xb4, 0x2d, 0x14, 0x63, 0x6f, 0x73, 0x6d, 0x6f, 0x73, 0x2e, 0x41, 0x64, 0x64, 0x72,
+	0x65, 0x73, 0x73, 0x53, 0x74, 0x72, 0x69, 0x6e, 0x67, 0x52, 0x0d, 0x73, 0x65, 0x6e, 0x64, 0x65,
+	0x72, 0x41, 0x64, 0x64, 0x72, 0x65, 0x73, 0x73, 0x12, 0x29, 0x0a, 0x10, 0x63, 0x6f, 0x6e, 0x74,
+	0x72, 0x61, 0x63, 0x74, 0x5f, 0x61, 0x64, 0x64, 0x72, 0x65, 0x73, 0x73, 0x18, 0x02, 0x20, 0x01,
+	0x28, 0x09, 0x52, 0x0f, 0x63, 0x6f, 0x6e, 0x74, 0x72, 0x61, 0x63, 0x74, 0x41, 0x64, 0x64, 0x72,
+	0x65, 0x73, 0x73, 0x3a, 0x13, 0x82, 0xe7, 0xb0, 0x2a, 0x0e, 0x73, 0x65, 0x6e, 0x64, 0x65, 0x72,
+	0x5f, 0x61, 0x64, 0x64, 0x72, 0x65, 0x73, 0x73, 0x22, 0x21, 0x0a, 0x1f, 0x4d, 0x73, 0x67, 0x52,
 	0x65, 0x67, 0x69, 0x73, 0x74, 0x65, 0x72, 0x43, 0x72, 0x6f, 0x6e, 0x43, 0x6f, 0x6e, 0x74, 0x72,
-	0x61, 0x63, 0x74, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22, 0x9b, 0x01, 0x0a, 0x26,
-	0x4d, 0x73, 0x67, 0x41, 0x63, 0x63, 0x65, 0x70, 0x74, 0x50, 0x65, 0x6e, 0x64, 0x69, 0x6e, 0x67,
-	0x52, 0x65, 0x67, 0x69, 0x73, 0x74, 0x65, 0x72, 0x65, 0x64, 0x43, 0x72, 0x6f, 0x6e, 0x43, 0x6f,
-	0x6e, 0x74, 0x72, 0x61, 0x63, 0x74, 0x12, 0x36, 0x0a, 0x09, 0x61, 0x75, 0x74, 0x68, 0x6f, 0x72,
-	0x69, 0x74, 0x79, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x42, 0x18, 0xd2, 0xb4, 0x2d, 0x14, 0x63,
-	0x6f, 0x73, 0x6d, 0x6f, 0x73, 0x2e, 0x41, 0x64, 0x64, 0x72, 0x65, 0x73, 0x73, 0x53, 0x74, 0x72,
-	0x69, 0x6e, 0x67, 0x52, 0x09, 0x61, 0x75, 0x74, 0x68, 0x6f, 0x72, 0x69, 0x74, 0x79, 0x12, 0x29,
-	0x0a, 0x10, 0x63, 0x6f, 0x6e, 0x74, 0x72, 0x61, 0x63, 0x74, 0x5f, 0x61, 0x64, 0x64, 0x72, 0x65,
-	0x73, 0x73, 0x18, 0x02, 0x20, 0x01, 0x28, 0x09, 0x52, 0x0f, 0x63, 0x6f, 0x6e, 0x74, 0x72, 0x61,
-	0x63, 0x74, 0x41, 0x64, 0x64, 0x72, 0x65, 0x73, 0x73, 0x3a, 0x0e, 0x82, 0xe7, 0xb0, 0x2a, 0x09,
-	0x61, 0x75, 0x74, 0x68, 0x6f, 0x72, 0x69, 0x74, 0x79, 0x22, 0x30, 0x0a, 0x2e, 0x4d, 0x73, 0x67,
-	0x41, 0x63, 0x63, 0x65, 0x70, 0x74, 0x50, 0x65, 0x6e, 0x64, 0x69, 0x6e, 0x67, 0x52, 0x65, 0x67,
-	0x69, 0x73, 0x74, 0x65, 0x72, 0x65, 0x64, 0x43, 0x72, 0x6f, 0x6e, 0x43, 0x6f, 0x6e, 0x74, 0x72,
-	0x61, 0x63, 0x74, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22, 0x99, 0x01, 0x0a, 0x24,
-	0x4d, 0x73, 0x67, 0x52, 0x65, 0x61, 0x63, 0x74, 0x69, 0x76, 0x61, 0x74, 0x65, 0x44, 0x65, 0x61,
-	0x63, 0x74, 0x69, 0x76, 0x61, 0x74, 0x65, 0x64, 0x43, 0x72, 0x6f, 0x6e, 0x43, 0x6f, 0x6e, 0x74,
-	0x72, 0x61, 0x63, 0x74, 0x12, 0x36, 0x0a, 0x09, 0x61, 0x75, 0x74, 0x68, 0x6f, 0x72, 0x69, 0x74,
-	0x79, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x42, 0x18, 0xd2, 0xb4, 0x2d, 0x14, 0x63, 0x6f, 0x73,
-	0x6d, 0x6f, 0x73, 0x2e, 0x41, 0x64, 0x64, 0x72, 0x65, 0x73, 0x73, 0x53, 0x74, 0x72, 0x69, 0x6e,
-	0x67, 0x52, 0x09, 0x61, 0x75, 0x74, 0x68, 0x6f, 0x72, 0x69, 0x74, 0x79, 0x12, 0x29, 0x0a, 0x10,
-	0x63, 0x6f, 0x6e, 0x74, 0x72, 0x61, 0x63, 0x74, 0x5f, 0x61, 0x64, 0x64, 0x72, 0x65, 0x73, 0x73,
-	0x18, 0x02, 0x20, 0x01, 0x28, 0x09, 0x52, 0x0f, 0x63, 0x6f, 0x6e, 0x74, 0x72, 0x61, 0x63, 0x74,
-	0x41, 0x64, 0x64, 0x72, 0x65, 0x73, 0x73, 0x3a, 0x0e, 0x82, 0xe7, 0xb0, 0x2a, 0x09, 0x61, 0x75,
-	0x74, 0x68, 0x6f, 0x72, 0x69, 0x74, 0x79, 0x22, 0x2e, 0x0a, 0x2c, 0x4d, 0x73, 0x67, 0x52, 0x65,
-	0x61, 0x63, 0x74, 0x69, 0x76, 0x61, 0x74, 0x65, 0x44, 0x65, 0x61, 0x63, 0x74, 0x69, 0x76, 0x61,
-	0x74, 0x65, 0x64, 0x43, 0x72, 0x6f, 0x6e, 0x43, 0x6f, 0x6e, 0x74, 0x72, 0x61, 0x63, 0x74, 0x52,
-	0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x32, 0xd1, 0x05, 0x0a, 0x03, 0x4d, 0x73, 0x67, 0x12,
-	0x66, 0x0a, 0x0c, 0x55, 0x70, 0x64, 0x61, 0x74, 0x65, 0x50, 0x61, 0x72, 0x61, 0x6d, 0x73, 0x12,
-	0x26, 0x2e, 0x77, 0x61, 0x73, 0x6d, 0x61, 0x70, 0x70, 0x2e, 0x6f, 0x6e, 0x63, 0x68, 0x61, 0x69,
-	0x6e, 0x6b, 0x65, 0x65, 0x70, 0x65, 0x72, 0x2e, 0x4d, 0x73, 0x67, 0x55, 0x70, 0x64, 0x61, 0x74,
-	0x65, 0x50, 0x61, 0x72, 0x61, 0x6d, 0x73, 0x1a, 0x2e, 0x2e, 0x77, 0x61, 0x73, 0x6d, 0x61, 0x70,
-	0x70, 0x2e, 0x6f, 0x6e, 0x63, 0x68, 0x61, 0x69, 0x6e, 0x6b, 0x65, 0x65, 0x70, 0x65, 0x72, 0x2e,
-	0x4d, 0x73, 0x67, 0x55, 0x70, 0x64, 0x61, 0x74, 0x65, 0x50, 0x61, 0x72, 0x61, 0x6d, 0x73, 0x52,
-	0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x12, 0x7e, 0x0a, 0x14, 0x52, 0x65, 0x67, 0x69, 0x73,
-	0x74, 0x65, 0x72, 0x43, 0x72, 0x6f, 0x6e, 0x43, 0x6f, 0x6e, 0x74, 0x72, 0x61, 0x63, 0x74, 0x12,
-	0x2e, 0x2e, 0x77, 0x61, 0x73, 0x6d, 0x61, 0x70, 0x70, 0x2e, 0x6f, 0x6e, 0x63, 0x68, 0x61, 0x69,
-	0x6e, 0x6b, 0x65, 0x65, 0x70, 0x65, 0x72, 0x2e, 0x4d, 0x73, 0x67, 0x52, 0x65, 0x67, 0x69, 0x73,
-	0x74, 0x65, 0x72, 0x43, 0x72, 0x6f, 0x6e, 0x43, 0x6f, 0x6e, 0x74, 0x72, 0x61, 0x63, 0x74, 0x1a,
-	0x36, 0x2e, 0x77, 0x61, 0x73, 0x6d, 0x61, 0x70, 0x70, 0x2e, 0x6f, 0x6e, 0x63, 0x68, 0x61, 0x69,
-	0x6e, 0x6b, 0x65, 0x65, 0x70, 0x65, 0x72, 0x2e, 0x4d, 0x73, 0x67, 0x52, 0x65, 0x67, 0x69, 0x73,
-	0x74, 0x65, 0x72, 0x43, 0x72, 0x6f, 0x6e, 0x43, 0x6f, 0x6e, 0x74, 0x72, 0x61, 0x63, 0x74, 0x52,
-	0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x12, 0x84, 0x01, 0x0a, 0x16, 0x55, 0x6e, 0x72, 0x65,
-	0x67, 0x69, 0x73, 0x74, 0x65, 0x72, 0x43, 0x72, 0x6f, 0x6e, 0x43, 0x6f, 0x6e, 0x74, 0x72, 0x61,
-	0x63, 0x74, 0x12, 0x30, 0x2e, 0x77, 0x61, 0x73, 0x6d, 0x61, 0x70, 0x70, 0x2e, 0x6f, 0x6e, 0x63,
-	0x68, 0x61, 0x69, 0x6e, 0x6b, 0x65, 0x65, 0x70, 0x65, 0x72, 0x2e, 0x4d, 0x73, 0x67, 0x55, 0x6e,
-	0x72, 0x65, 0x67, 0x69, 0x73, 0x74, 0x65, 0x72, 0x43, 0x72, 0x6f, 0x6e, 0x43, 0x6f, 0x6e, 0x74,
-	0x72, 0x61, 0x63, 0x74, 0x1a, 0x38, 0x2e, 0x77, 0x61, 0x73, 0x6d, 0x61, 0x70, 0x70, 0x2e, 0x6f,
-	0x6e, 0x63, 0x68, 0x61, 0x69, 0x6e, 0x6b, 0x65, 0x65, 0x70, 0x65, 0x72, 0x2e, 0x4d, 0x73, 0x67,
-	0x55, 0x6e, 0x72, 0x65, 0x67, 0x69, 0x73, 0x74, 0x65, 0x72, 0x43, 0x72, 0x6f, 0x6e, 0x43, 0x6f,
-	0x6e, 0x74, 0x72, 0x61, 0x63, 0x74, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x12, 0xab,
-	0x01, 0x0a, 0x23, 0x41, 0x63, 0x63, 0x65, 0x70, 0x74, 0x50, 0x65, 0x6e, 0x64, 0x69, 0x6e, 0x67,
-	0x52, 0x65, 0x67, 0x69, 0x73, 0x74, 0x65, 0x72, 0x65, 0x64, 0x43, 0x72, 0x6f, 0x6e, 0x43, 0x6f,
-	0x6e, 0x74, 0x72, 0x61, 0x63, 0x74, 0x12, 0x3d, 0x2e, 0x77, 0x61, 0x73, 0x6d, 0x61, 0x70, 0x70,
-	0x2e, 0x6f, 0x6e, 0x63, 0x68, 0x61, 0x69, 0x6e, 0x6b, 0x65, 0x65, 0x70, 0x65, 0x72, 0x2e, 0x4d,
-	0x73, 0x67, 0x41, 0x63, 0x63, 0x65, 0x70, 0x74, 0x50, 0x65, 0x6e, 0x64, 0x69, 0x6e, 0x67, 0x52,
-	0x65, 0x67, 0x69, 0x73, 0x74, 0x65, 0x72, 0x65, 0x64, 0x43, 0x72, 0x6f, 0x6e, 0x43, 0x6f, 0x6e,
-	0x74, 0x72, 0x61, 0x63, 0x74, 0x1a, 0x45, 0x2e, 0x77, 0x61, 0x73, 0x6d, 0x61, 0x70, 0x70, 0x2e,
-	0x6f, 0x6e, 0x63, 0x68, 0x61, 0x69, 0x6e, 0x6b, 0x65, 0x65, 0x70, 0x65, 0x72, 0x2e, 0x4d, 0x73,
-	0x67, 0x41, 0x63, 0x63, 0x65, 0x70, 0x74, 0x50, 0x65, 0x6e, 0x64, 0x69, 0x6e, 0x67, 0x52, 0x65,
-	0x67, 0x69, 0x73, 0x74, 0x65, 0x72, 0x65, 0x64, 0x43, 0x72, 0x6f, 0x6e, 0x43, 0x6f, 0x6e, 0x74,
-	0x72, 0x61, 0x63, 0x74, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x12, 0xa5, 0x01, 0x0a,
-	0x21, 0x52, 0x65, 0x61, 0x63, 0x74, 0x69, 0x76, 0x61, 0x74, 0x65, 0x44, 0x65, 0x61, 0x63, 0x74,
-	0x69, 0x76, 0x61, 0x74, 0x65, 0x64, 0x43, 0x72, 0x6f, 0x6e, 0x43, 0x6f, 0x6e, 0x74, 0x72, 0x61,
-	0x63, 0x74, 0x12, 0x3b, 0x2e, 0x77, 0x61, 0x73, 0x6d, 0x61, 0x70, 0x70, 0x2e, 0x6f, 0x6e, 0x63,
-	0x68, 0x61, 0x69, 0x6e, 0x6b, 0x65, 0x65, 0x70, 0x65, 0x72, 0x2e, 0x4d, 0x73, 0x67, 0x52, 0x65,
-	0x61, 0x63, 0x74, 0x69, 0x76, 0x61, 0x74, 0x65, 0x44, 0x65, 0x61, 0x63, 0x74, 0x69, 0x76, 0x61,
-	0x74, 0x65, 0x64, 0x43, 0x72, 0x6f, 0x6e, 0x43, 0x6f, 0x6e, 0x74, 0x72, 0x61, 0x63, 0x74, 0x1a,
-	0x43, 0x2e, 0x77, 0x61, 0x73, 0x6d, 0x61, 0x70, 0x70, 0x2e, 0x6f, 0x6e, 0x63, 0x68, 0x61, 0x69,
-	0x6e, 0x6b, 0x65, 0x65, 0x70, 0x65, 0x72, 0x2e, 0x4d, 0x73, 0x67, 0x52, 0x65, 0x61, 0x63, 0x74,
-	0x69, 0x76, 0x61, 0x74, 0x65, 0x44, 0x65, 0x61, 0x63, 0x74, 0x69, 0x76, 0x61, 0x74, 0x65, 0x64,
-	0x43, 0x72, 0x6f, 0x6e, 0x43, 0x6f, 0x6e, 0x74, 0x72, 0x61, 0x63, 0x74, 0x52, 0x65, 0x73, 0x70,
-	0x6f, 0x6e, 0x73, 0x65, 0x1a, 0x05, 0x80, 0xe7, 0xb0, 0x2a, 0x01, 0x42, 0xc1, 0x01, 0x0a, 0x19,
-	0x63, 0x6f, 0x6d, 0x2e, 0x77, 0x61, 0x73, 0x6d, 0x61, 0x70, 0x70, 0x2e, 0x6f, 0x6e, 0x63, 0x68,
-	0x61, 0x69, 0x6e, 0x6b, 0x65, 0x65, 0x70, 0x65, 0x72, 0x42, 0x07, 0x54, 0x78, 0x50, 0x72, 0x6f,
-	0x74, 0x6f, 0x50, 0x01, 0x5a, 0x26, 0x63, 0x6f, 0x73, 0x6d, 0x6f, 0x73, 0x73, 0x64, 0x6b, 0x2e,
-	0x69, 0x6f, 0x2f, 0x61, 0x70, 0x69, 0x2f, 0x77, 0x61, 0x73, 0x6d, 0x61, 0x70, 0x70, 0x2f, 0x6f,
-	0x6e, 0x63, 0x68, 0x61, 0x69, 0x6e, 0x6b, 0x65, 0x65, 0x70, 0x65, 0x72, 0xa2, 0x02, 0x03, 0x57,
-	0x4f, 0x58, 0xaa, 0x02, 0x15, 0x57, 0x61, 0x73, 0x6d, 0x61, 0x70, 0x70, 0x2e, 0x4f, 0x6e, 0x63,
-	0x68, 0x61, 0x69, 0x6e, 0x6b, 0x65, 0x65, 0x70, 0x65, 0x72, 0xca, 0x02, 0x15, 0x57, 0x61, 0x73,
-	0x6d, 0x61, 0x70, 0x70, 0x5c, 0x4f, 0x6e, 0x63, 0x68, 0x61, 0x69, 0x6e, 0x6b, 0x65, 0x65, 0x70,
-	0x65, 0x72, 0xe2, 0x02, 0x21, 0x57, 0x61, 0x73, 0x6d, 0x61, 0x70, 0x70, 0x5c, 0x4f, 0x6e, 0x63,
-	0x68, 0x61, 0x69, 0x6e, 0x6b, 0x65, 0x65, 0x70, 0x65, 0x72, 0x5c, 0x47, 0x50, 0x42, 0x4d, 0x65,
-	0x74, 0x61, 0x64, 0x61, 0x74, 0x61, 0xea, 0x02, 0x16, 0x57, 0x61, 0x73, 0x6d, 0x61, 0x70, 0x70,
-	0x3a, 0x3a, 0x4f, 0x6e, 0x63, 0x68, 0x61, 0x69, 0x6e, 0x6b, 0x65, 0x65, 0x70, 0x65, 0x72, 0x62,
-	0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
+	0x61, 0x63, 0x74, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22, 0x9c, 0x01, 0x0a, 0x19,
+	0x4d, 0x73, 0x67, 0x55, 0x6e, 0x72, 0x65, 0x67, 0x69, 0x73, 0x74, 0x65, 0x72, 0x43, 0x72, 0x6f,
+	0x6e, 0x43, 0x6f, 0x6e, 0x74, 0x72, 0x61, 0x63, 0x74, 0x12, 0x3f, 0x0a, 0x0e, 0x73, 0x65, 0x6e,
+	0x64, 0x65, 0x72, 0x5f, 0x61, 0x64, 0x64, 0x72, 0x65, 0x73, 0x73, 0x18, 0x01, 0x20, 0x01, 0x28,
+	0x09, 0x42, 0x18, 0xd2, 0xb4, 0x2d, 0x14, 0x63, 0x6f, 0x73, 0x6d, 0x6f, 0x73, 0x2e, 0x41, 0x64,
+	0x64, 0x72, 0x65, 0x73, 0x73, 0x53, 0x74, 0x72, 0x69, 0x6e, 0x67, 0x52, 0x0d, 0x73, 0x65, 0x6e,
+	0x64, 0x65, 0x72, 0x41, 0x64, 0x64, 0x72, 0x65, 0x73, 0x73, 0x12, 0x29, 0x0a, 0x10, 0x63, 0x6f,
+	0x6e, 0x74, 0x72, 0x61, 0x63, 0x74, 0x5f, 0x61, 0x64, 0x64, 0x72, 0x65, 0x73, 0x73, 0x18, 0x02,
+	0x20, 0x01, 0x28, 0x09, 0x52, 0x0f, 0x63, 0x6f, 0x6e, 0x74, 0x72, 0x61, 0x63, 0x74, 0x41, 0x64,
+	0x64, 0x72, 0x65, 0x73, 0x73, 0x3a, 0x13, 0x82, 0xe7, 0xb0, 0x2a, 0x0e, 0x73, 0x65, 0x6e, 0x64,
+	0x65, 0x72, 0x5f, 0x61, 0x64, 0x64, 0x72, 0x65, 0x73, 0x73, 0x22, 0x23, 0x0a, 0x21, 0x4d, 0x73,
+	0x67, 0x55, 0x6e, 0x72, 0x65, 0x67, 0x69, 0x73, 0x74, 0x65, 0x72, 0x43, 0x72, 0x6f, 0x6e, 0x43,
+	0x6f, 0x6e, 0x74, 0x72, 0x61, 0x63, 0x74, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22,
+	0x8c, 0x01, 0x0a, 0x17, 0x4d, 0x73, 0x67, 0x41, 0x63, 0x74, 0x69, 0x76, 0x61, 0x74, 0x65, 0x43,
+	0x72, 0x6f, 0x6e, 0x43, 0x6f, 0x6e, 0x74, 0x72, 0x61, 0x63, 0x74, 0x12, 0x36, 0x0a, 0x09, 0x61,
+	0x75, 0x74, 0x68, 0x6f, 0x72, 0x69, 0x74, 0x79, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x42, 0x18,
+	0xd2, 0xb4, 0x2d, 0x14, 0x63, 0x6f, 0x73, 0x6d, 0x6f, 0x73, 0x2e, 0x41, 0x64, 0x64, 0x72, 0x65,
+	0x73, 0x73, 0x53, 0x74, 0x72, 0x69, 0x6e, 0x67, 0x52, 0x09, 0x61, 0x75, 0x74, 0x68, 0x6f, 0x72,
+	0x69, 0x74, 0x79, 0x12, 0x29, 0x0a, 0x10, 0x63, 0x6f, 0x6e, 0x74, 0x72, 0x61, 0x63, 0x74, 0x5f,
+	0x61, 0x64, 0x64, 0x72, 0x65, 0x73, 0x73, 0x18, 0x02, 0x20, 0x01, 0x28, 0x09, 0x52, 0x0f, 0x63,
+	0x6f, 0x6e, 0x74, 0x72, 0x61, 0x63, 0x74, 0x41, 0x64, 0x64, 0x72, 0x65, 0x73, 0x73, 0x3a, 0x0e,
+	0x82, 0xe7, 0xb0, 0x2a, 0x09, 0x61, 0x75, 0x74, 0x68, 0x6f, 0x72, 0x69, 0x74, 0x79, 0x22, 0x21,
+	0x0a, 0x1f, 0x4d, 0x73, 0x67, 0x41, 0x63, 0x74, 0x69, 0x76, 0x61, 0x74, 0x65, 0x43, 0x72, 0x6f,
+	0x6e, 0x43, 0x6f, 0x6e, 0x74, 0x72, 0x61, 0x63, 0x74, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73,
+	0x65, 0x32, 0xfb, 0x03, 0x0a, 0x03, 0x4d, 0x73, 0x67, 0x12, 0x66, 0x0a, 0x0c, 0x55, 0x70, 0x64,
+	0x61, 0x74, 0x65, 0x50, 0x61, 0x72, 0x61, 0x6d, 0x73, 0x12, 0x26, 0x2e, 0x77, 0x61, 0x73, 0x6d,
+	0x61, 0x70, 0x70, 0x2e, 0x6f, 0x6e, 0x63, 0x68, 0x61, 0x69, 0x6e, 0x6b, 0x65, 0x65, 0x70, 0x65,
+	0x72, 0x2e, 0x4d, 0x73, 0x67, 0x55, 0x70, 0x64, 0x61, 0x74, 0x65, 0x50, 0x61, 0x72, 0x61, 0x6d,
+	0x73, 0x1a, 0x2e, 0x2e, 0x77, 0x61, 0x73, 0x6d, 0x61, 0x70, 0x70, 0x2e, 0x6f, 0x6e, 0x63, 0x68,
+	0x61, 0x69, 0x6e, 0x6b, 0x65, 0x65, 0x70, 0x65, 0x72, 0x2e, 0x4d, 0x73, 0x67, 0x55, 0x70, 0x64,
+	0x61, 0x74, 0x65, 0x50, 0x61, 0x72, 0x61, 0x6d, 0x73, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73,
+	0x65, 0x12, 0x7e, 0x0a, 0x14, 0x52, 0x65, 0x67, 0x69, 0x73, 0x74, 0x65, 0x72, 0x43, 0x72, 0x6f,
+	0x6e, 0x43, 0x6f, 0x6e, 0x74, 0x72, 0x61, 0x63, 0x74, 0x12, 0x2e, 0x2e, 0x77, 0x61, 0x73, 0x6d,
+	0x61, 0x70, 0x70, 0x2e, 0x6f, 0x6e, 0x63, 0x68, 0x61, 0x69, 0x6e, 0x6b, 0x65, 0x65, 0x70, 0x65,
+	0x72, 0x2e, 0x4d, 0x73, 0x67, 0x52, 0x65, 0x67, 0x69, 0x73, 0x74, 0x65, 0x72, 0x43, 0x72, 0x6f,
+	0x6e, 0x43, 0x6f, 0x6e, 0x74, 0x72, 0x61, 0x63, 0x74, 0x1a, 0x36, 0x2e, 0x77, 0x61, 0x73, 0x6d,
+	0x61, 0x70, 0x70, 0x2e, 0x6f, 0x6e, 0x63, 0x68, 0x61, 0x69, 0x6e, 0x6b, 0x65, 0x65, 0x70, 0x65,
+	0x72, 0x2e, 0x4d, 0x73, 0x67, 0x52, 0x65, 0x67, 0x69, 0x73, 0x74, 0x65, 0x72, 0x43, 0x72, 0x6f,
+	0x6e, 0x43, 0x6f, 0x6e, 0x74, 0x72, 0x61, 0x63, 0x74, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73,
+	0x65, 0x12, 0x84, 0x01, 0x0a, 0x16, 0x55, 0x6e, 0x72, 0x65, 0x67, 0x69, 0x73, 0x74, 0x65, 0x72,
+	0x43, 0x72, 0x6f, 0x6e, 0x43, 0x6f, 0x6e, 0x74, 0x72, 0x61, 0x63, 0x74, 0x12, 0x30, 0x2e, 0x77,
+	0x61, 0x73, 0x6d, 0x61, 0x70, 0x70, 0x2e, 0x6f, 0x6e, 0x63, 0x68, 0x61, 0x69, 0x6e, 0x6b, 0x65,
+	0x65, 0x70, 0x65, 0x72, 0x2e, 0x4d, 0x73, 0x67, 0x55, 0x6e, 0x72, 0x65, 0x67, 0x69, 0x73, 0x74,
+	0x65, 0x72, 0x43, 0x72, 0x6f, 0x6e, 0x43, 0x6f, 0x6e, 0x74, 0x72, 0x61, 0x63, 0x74, 0x1a, 0x38,
+	0x2e, 0x77, 0x61, 0x73, 0x6d, 0x61, 0x70, 0x70, 0x2e, 0x6f, 0x6e, 0x63, 0x68, 0x61, 0x69, 0x6e,
+	0x6b, 0x65, 0x65, 0x70, 0x65, 0x72, 0x2e, 0x4d, 0x73, 0x67, 0x55, 0x6e, 0x72, 0x65, 0x67, 0x69,
+	0x73, 0x74, 0x65, 0x72, 0x43, 0x72, 0x6f, 0x6e, 0x43, 0x6f, 0x6e, 0x74, 0x72, 0x61, 0x63, 0x74,
+	0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x12, 0x7e, 0x0a, 0x14, 0x41, 0x63, 0x74, 0x69,
+	0x76, 0x61, 0x74, 0x65, 0x43, 0x72, 0x6f, 0x6e, 0x43, 0x6f, 0x6e, 0x74, 0x72, 0x61, 0x63, 0x74,
+	0x12, 0x2e, 0x2e, 0x77, 0x61, 0x73, 0x6d, 0x61, 0x70, 0x70, 0x2e, 0x6f, 0x6e, 0x63, 0x68, 0x61,
+	0x69, 0x6e, 0x6b, 0x65, 0x65, 0x70, 0x65, 0x72, 0x2e, 0x4d, 0x73, 0x67, 0x41, 0x63, 0x74, 0x69,
+	0x76, 0x61, 0x74, 0x65, 0x43, 0x72, 0x6f, 0x6e, 0x43, 0x6f, 0x6e, 0x74, 0x72, 0x61, 0x63, 0x74,
+	0x1a, 0x36, 0x2e, 0x77, 0x61, 0x73, 0x6d, 0x61, 0x70, 0x70, 0x2e, 0x6f, 0x6e, 0x63, 0x68, 0x61,
+	0x69, 0x6e, 0x6b, 0x65, 0x65, 0x70, 0x65, 0x72, 0x2e, 0x4d, 0x73, 0x67, 0x41, 0x63, 0x74, 0x69,
+	0x76, 0x61, 0x74, 0x65, 0x43, 0x72, 0x6f, 0x6e, 0x43, 0x6f, 0x6e, 0x74, 0x72, 0x61, 0x63, 0x74,
+	0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x1a, 0x05, 0x80, 0xe7, 0xb0, 0x2a, 0x01, 0x42,
+	0xc1, 0x01, 0x0a, 0x19, 0x63, 0x6f, 0x6d, 0x2e, 0x77, 0x61, 0x73, 0x6d, 0x61, 0x70, 0x70, 0x2e,
+	0x6f, 0x6e, 0x63, 0x68, 0x61, 0x69, 0x6e, 0x6b, 0x65, 0x65, 0x70, 0x65, 0x72, 0x42, 0x07, 0x54,
+	0x78, 0x50, 0x72, 0x6f, 0x74, 0x6f, 0x50, 0x01, 0x5a, 0x26, 0x63, 0x6f, 0x73, 0x6d, 0x6f, 0x73,
+	0x73, 0x64, 0x6b, 0x2e, 0x69, 0x6f, 0x2f, 0x61, 0x70, 0x69, 0x2f, 0x77, 0x61, 0x73, 0x6d, 0x61,
+	0x70, 0x70, 0x2f, 0x6f, 0x6e, 0x63, 0x68, 0x61, 0x69, 0x6e, 0x6b, 0x65, 0x65, 0x70, 0x65, 0x72,
+	0xa2, 0x02, 0x03, 0x57, 0x4f, 0x58, 0xaa, 0x02, 0x15, 0x57, 0x61, 0x73, 0x6d, 0x61, 0x70, 0x70,
+	0x2e, 0x4f, 0x6e, 0x63, 0x68, 0x61, 0x69, 0x6e, 0x6b, 0x65, 0x65, 0x70, 0x65, 0x72, 0xca, 0x02,
+	0x15, 0x57, 0x61, 0x73, 0x6d, 0x61, 0x70, 0x70, 0x5c, 0x4f, 0x6e, 0x63, 0x68, 0x61, 0x69, 0x6e,
+	0x6b, 0x65, 0x65, 0x70, 0x65, 0x72, 0xe2, 0x02, 0x21, 0x57, 0x61, 0x73, 0x6d, 0x61, 0x70, 0x70,
+	0x5c, 0x4f, 0x6e, 0x63, 0x68, 0x61, 0x69, 0x6e, 0x6b, 0x65, 0x65, 0x70, 0x65, 0x72, 0x5c, 0x47,
+	0x50, 0x42, 0x4d, 0x65, 0x74, 0x61, 0x64, 0x61, 0x74, 0x61, 0xea, 0x02, 0x16, 0x57, 0x61, 0x73,
+	0x6d, 0x61, 0x70, 0x70, 0x3a, 0x3a, 0x4f, 0x6e, 0x63, 0x68, 0x61, 0x69, 0x6e, 0x6b, 0x65, 0x65,
+	0x70, 0x65, 0x72, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
 }
 
 var (
@@ -4749,37 +3814,33 @@ func file_wasmapp_onchainkeeper_tx_proto_rawDescGZIP() []byte {
 	return file_wasmapp_onchainkeeper_tx_proto_rawDescData
 }
 
-var file_wasmapp_onchainkeeper_tx_proto_msgTypes = make([]protoimpl.MessageInfo, 10)
+var file_wasmapp_onchainkeeper_tx_proto_msgTypes = make([]protoimpl.MessageInfo, 8)
 var file_wasmapp_onchainkeeper_tx_proto_goTypes = []interface{}{
-	(*MsgUpdateParams)(nil),                                // 0: wasmapp.onchainkeeper.MsgUpdateParams
-	(*MsgUpdateParamsResponse)(nil),                        // 1: wasmapp.onchainkeeper.MsgUpdateParamsResponse
-	(*MsgRegisterCronContract)(nil),                        // 2: wasmapp.onchainkeeper.MsgRegisterCronContract
-	(*MsgRegisterCronContractResponse)(nil),                // 3: wasmapp.onchainkeeper.MsgRegisterCronContractResponse
-	(*MsgUnregisterCronContract)(nil),                      // 4: wasmapp.onchainkeeper.MsgUnregisterCronContract
-	(*MsgUnregisterCronContractResponse)(nil),              // 5: wasmapp.onchainkeeper.MsgUnregisterCronContractResponse
-	(*MsgAcceptPendingRegisteredCronContract)(nil),         // 6: wasmapp.onchainkeeper.MsgAcceptPendingRegisteredCronContract
-	(*MsgAcceptPendingRegisteredCronContractResponse)(nil), // 7: wasmapp.onchainkeeper.MsgAcceptPendingRegisteredCronContractResponse
-	(*MsgReactivateDeactivatedCronContract)(nil),           // 8: wasmapp.onchainkeeper.MsgReactivateDeactivatedCronContract
-	(*MsgReactivateDeactivatedCronContractResponse)(nil),   // 9: wasmapp.onchainkeeper.MsgReactivateDeactivatedCronContractResponse
-	(*Params)(nil), // 10: wasmapp.onchainkeeper.Params
+	(*MsgUpdateParams)(nil),                   // 0: wasmapp.onchainkeeper.MsgUpdateParams
+	(*MsgUpdateParamsResponse)(nil),           // 1: wasmapp.onchainkeeper.MsgUpdateParamsResponse
+	(*MsgRegisterCronContract)(nil),           // 2: wasmapp.onchainkeeper.MsgRegisterCronContract
+	(*MsgRegisterCronContractResponse)(nil),   // 3: wasmapp.onchainkeeper.MsgRegisterCronContractResponse
+	(*MsgUnregisterCronContract)(nil),         // 4: wasmapp.onchainkeeper.MsgUnregisterCronContract
+	(*MsgUnregisterCronContractResponse)(nil), // 5: wasmapp.onchainkeeper.MsgUnregisterCronContractResponse
+	(*MsgActivateCronContract)(nil),           // 6: wasmapp.onchainkeeper.MsgActivateCronContract
+	(*MsgActivateCronContractResponse)(nil),   // 7: wasmapp.onchainkeeper.MsgActivateCronContractResponse
+	(*Params)(nil),                            // 8: wasmapp.onchainkeeper.Params
 }
 var file_wasmapp_onchainkeeper_tx_proto_depIdxs = []int32{
-	10, // 0: wasmapp.onchainkeeper.MsgUpdateParams.params:type_name -> wasmapp.onchainkeeper.Params
-	0,  // 1: wasmapp.onchainkeeper.Msg.UpdateParams:input_type -> wasmapp.onchainkeeper.MsgUpdateParams
-	2,  // 2: wasmapp.onchainkeeper.Msg.RegisterCronContract:input_type -> wasmapp.onchainkeeper.MsgRegisterCronContract
-	4,  // 3: wasmapp.onchainkeeper.Msg.UnregisterCronContract:input_type -> wasmapp.onchainkeeper.MsgUnregisterCronContract
-	6,  // 4: wasmapp.onchainkeeper.Msg.AcceptPendingRegisteredCronContract:input_type -> wasmapp.onchainkeeper.MsgAcceptPendingRegisteredCronContract
-	8,  // 5: wasmapp.onchainkeeper.Msg.ReactivateDeactivatedCronContract:input_type -> wasmapp.onchainkeeper.MsgReactivateDeactivatedCronContract
-	1,  // 6: wasmapp.onchainkeeper.Msg.UpdateParams:output_type -> wasmapp.onchainkeeper.MsgUpdateParamsResponse
-	3,  // 7: wasmapp.onchainkeeper.Msg.RegisterCronContract:output_type -> wasmapp.onchainkeeper.MsgRegisterCronContractResponse
-	5,  // 8: wasmapp.onchainkeeper.Msg.UnregisterCronContract:output_type -> wasmapp.onchainkeeper.MsgUnregisterCronContractResponse
-	7,  // 9: wasmapp.onchainkeeper.Msg.AcceptPendingRegisteredCronContract:output_type -> wasmapp.onchainkeeper.MsgAcceptPendingRegisteredCronContractResponse
-	9,  // 10: wasmapp.onchainkeeper.Msg.ReactivateDeactivatedCronContract:output_type -> wasmapp.onchainkeeper.MsgReactivateDeactivatedCronContractResponse
-	6,  // [6:11] is the sub-list for method output_type
-	1,  // [1:6] is the sub-list for method input_type
-	1,  // [1:1] is the sub-list for extension type_name
-	1,  // [1:1] is the sub-list for extension extendee
-	0,  // [0:1] is the sub-list for field type_name
+	8, // 0: wasmapp.onchainkeeper.MsgUpdateParams.params:type_name -> wasmapp.onchainkeeper.Params
+	0, // 1: wasmapp.onchainkeeper.Msg.UpdateParams:input_type -> wasmapp.onchainkeeper.MsgUpdateParams
+	2, // 2: wasmapp.onchainkeeper.Msg.RegisterCronContract:input_type -> wasmapp.onchainkeeper.MsgRegisterCronContract
+	4, // 3: wasmapp.onchainkeeper.Msg.UnregisterCronContract:input_type -> wasmapp.onchainkeeper.MsgUnregisterCronContract
+	6, // 4: wasmapp.onchainkeeper.Msg.ActivateCronContract:input_type -> wasmapp.onchainkeeper.MsgActivateCronContract
+	1, // 5: wasmapp.onchainkeeper.Msg.UpdateParams:output_type -> wasmapp.onchainkeeper.MsgUpdateParamsResponse
+	3, // 6: wasmapp.onchainkeeper.Msg.RegisterCronContract:output_type -> wasmapp.onchainkeeper.MsgRegisterCronContractResponse
+	5, // 7: wasmapp.onchainkeeper.Msg.UnregisterCronContract:output_type -> wasmapp.onchainkeeper.MsgUnregisterCronContractResponse
+	7, // 8: wasmapp.onchainkeeper.Msg.ActivateCronContract:output_type -> wasmapp.onchainkeeper.MsgActivateCronContractResponse
+	5, // [5:9] is the sub-list for method output_type
+	1, // [1:5] is the sub-list for method input_type
+	1, // [1:1] is the sub-list for extension type_name
+	1, // [1:1] is the sub-list for extension extendee
+	0, // [0:1] is the sub-list for field type_name
 }
 
 func init() { file_wasmapp_onchainkeeper_tx_proto_init() }
@@ -4862,7 +3923,7 @@ func file_wasmapp_onchainkeeper_tx_proto_init() {
 			}
 		}
 		file_wasmapp_onchainkeeper_tx_proto_msgTypes[6].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*MsgAcceptPendingRegisteredCronContract); i {
+			switch v := v.(*MsgActivateCronContract); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -4874,31 +3935,7 @@ func file_wasmapp_onchainkeeper_tx_proto_init() {
 			}
 		}
 		file_wasmapp_onchainkeeper_tx_proto_msgTypes[7].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*MsgAcceptPendingRegisteredCronContractResponse); i {
-			case 0:
-				return &v.state
-			case 1:
-				return &v.sizeCache
-			case 2:
-				return &v.unknownFields
-			default:
-				return nil
-			}
-		}
-		file_wasmapp_onchainkeeper_tx_proto_msgTypes[8].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*MsgReactivateDeactivatedCronContract); i {
-			case 0:
-				return &v.state
-			case 1:
-				return &v.sizeCache
-			case 2:
-				return &v.unknownFields
-			default:
-				return nil
-			}
-		}
-		file_wasmapp_onchainkeeper_tx_proto_msgTypes[9].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*MsgReactivateDeactivatedCronContractResponse); i {
+			switch v := v.(*MsgActivateCronContractResponse); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -4916,7 +3953,7 @@ func file_wasmapp_onchainkeeper_tx_proto_init() {
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
 			RawDescriptor: file_wasmapp_onchainkeeper_tx_proto_rawDesc,
 			NumEnums:      0,
-			NumMessages:   10,
+			NumMessages:   8,
 			NumExtensions: 0,
 			NumServices:   1,
 		},
