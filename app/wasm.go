@@ -2,7 +2,6 @@ package app
 
 import (
 	"fmt"
-	"strings"
 
 	onchainkeeperkeeper "wasmapp/x/onchainkeeper/keeper"
 	onchainkeepermodule "wasmapp/x/onchainkeeper/module"
@@ -65,7 +64,6 @@ func (app *App) registerWasmModules(
 
 	// The last arguments can contain custom message handlers, and custom query handlers,
 	// if we want to allow any custom callbacks
-	availableCapabilities := strings.Join(AllCapabilities(), ",")
 	app.WasmKeeper = wasmkeeper.NewKeeper(
 		app.AppCodec(),
 		runtime.NewKVStoreService(app.GetKey(wasmtypes.StoreKey)),
@@ -82,7 +80,7 @@ func (app *App) registerWasmModules(
 		app.GRPCQueryRouter(),
 		DefaultNodeHome,
 		wasmConfig,
-		availableCapabilities,
+		wasmkeeper.BuiltInCapabilities(),
 		authtypes.NewModuleAddress(govtypes.ModuleName).String(),
 		wasmOpts...,
 	)
