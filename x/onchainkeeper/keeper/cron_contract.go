@@ -143,7 +143,7 @@ func (k Keeper) UnregisterContract(ctx sdk.Context, senderAddress string, cronCo
 	return nil
 }
 
-// Activated a cron contract (pending registered or deactivated).
+// Activate a cron contract (pending registered or deactivated).
 func (k Keeper) ActivateContract(ctx sdk.Context, senderAddress string, cronContractAddress string) error {
 	if !k.IsCronContract(ctx, cronContractAddress) {
 		return types.ErrContractNotRegistered
@@ -160,6 +160,24 @@ func (k Keeper) ActivateContract(ctx sdk.Context, senderAddress string, cronCont
 	}
 
 	cron.IsActivated = true
+	k.SetCronContract(ctx, *cron)
+
+	return nil
+}
+
+// Deactivate a cron contract
+func (k Keeper) DeactivateCron(ctx sdk.Context, cronContractAddress string) error {
+	if !k.IsCronContract(ctx, cronContractAddress) {
+		return types.ErrContractNotRegistered
+	}
+
+	cron, _ := k.GetCronContract(ctx, cronContractAddress)
+
+	if !cron.IsActivated {
+		return types.ErrContractAlreadyDeactivated
+	}
+
+	cron.IsActivated = false
 	k.SetCronContract(ctx, *cron)
 
 	return nil

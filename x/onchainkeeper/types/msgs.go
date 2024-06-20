@@ -7,6 +7,12 @@ import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
 )
 
+const (
+	// Sudo Message called on the contracts
+	BeginBlockSudoMessage = `{"cron_begin_block":{}}`
+	EndBlockSudoMessage   = `{"cron_end_block":{}}`
+)
+
 var (
 	_ sdk.Msg = &MsgRegisterCronContract{}
 	_ sdk.Msg = &MsgUnregisterCronContract{}
